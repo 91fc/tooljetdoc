@@ -103,9 +103,9 @@ module.exports = {
       copyright: `版权 © ${new Date().getFullYear()} ToolJet Solutions, Inc.中文翻译由达州小黄仁科技有限公司完成`,
     },
     algolia: {
-      appId: 'O8HQRLI0WA',
-      apiKey: process.env.ALGOLIA_API_KEY || 'development', // Public API key: it is safe to commit it
-      indexName: 'tooljet',
+      appId: '2Q8LT30XV1',
+      apiKey: process.env.ALGOLIA_API_KEY || '3812f4e6598c41b852e4f364a140192a', // Public API key: it is safe to commit it
+      indexName: 'tooljetdocs',
       contextualSearch: true,
       externalUrlRegex: 'external\\.com|domain\\.com',
     },
