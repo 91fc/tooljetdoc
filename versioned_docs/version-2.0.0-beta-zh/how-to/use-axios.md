@@ -1,19 +1,19 @@
 ---
 id: use-axios-in-runjs
-title: Use Axios in RunJS
+title: 在 RunJS 中使用 Axios
 ---
 
-ToolJet allows you to utilize the three [libraries](/docs/data-sources/run-js#libraries) - **Moment.js**, **Lodash**, and **Axios**. In this guide, we will see a few examples on how to use **Axios** library using RunJS query.
+ToolJet 允许您使用三个 [库](/docs/data-sources/run-js#libraries) - **Moment.js**、**Lodash** 和 **Axios**。在本指南中，我们将看到一些有关如何使用 **Axios** 库使用 RunJS 查询的示例。
 
-**[Axios](https://axios-http.com/docs/intro)** is a promise-based HTTP library that lets developers make requests to either their own or a third-party server to fetch data. It offers different ways of making requests such as `GET`, `POST`, `PUT/PATCH`, and `DELETE`.
+**[Axios](https://axios-http.com/docs/intro)** 是一个基于 promise 的 HTTP 库，允许开发人员向他们自己的或第三方服务器发出请求以获取数据。它提供了不同的请求方式，例如 `GET` 、 `POST` 、 `PUT/PATCH` 和 `DELETE` 。
 
-## Making Axios HTTP requests
+## 发出 Axios HTTP 请求
 
-In this section, you will make `GET` and `PUT` requests. You will be using a free “fake” API: **[JSONPlaceholder](https://jsonplaceholder.typicode.com/)**.
+在本节中，您将发出 `GET` 和 `PUT` 请求。您将使用免费的 `假` API：**[JSONPlaceholder](https://jsonplaceholder.typicode.com/)**。
 
-### Making a GET request
+### 发出 GET 请求
 
-Create a RunJS query and copy the code below:
+创建一个 RunJS 查询并复制以下代码：
 
 ```javascript
 var url = "https://jsonplaceholder.typicode.com/users/1";
@@ -23,17 +23,17 @@ var data = (await axios.get(url)).data;
 return data
 ```
 
-In the code snippet, a variable url is declared which is assigned the URL of the  JSON API. Then another variable is decalared which sends a GET request to the JSON API. Save the query and hit Preview to view the data returned by the API.
+在代码片段中，声明了一个变量 url，它被分配了 JSON API 的 URL。然后声明另一个变量，它向 JSON API 发送 GET 请求。保存查询并点击预览以查看 API 返回的数据。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/how-to/use-axios/get.png" alt="Use Axios in RunJS"/>
+<img className="screenshot-full" src="/img/how-to/use-axios/get.png" alt="在 RunJS 中使用 Axios"/>
 
 </div>
 
-### Making a POST request
+### 发出 POST 请求
 
-A post request is a little different because you will be passing some data in the request to the server. In the request, you will be creating a user and passing in details for that user. The code snippet for the request will look something like this:
+post 请求有点不同，因为您将请求中的一些数据传递给服务器。在请求中，您将创建一个用户并传递该用户的详细信息。请求的代码片段如下所示：
 
 ```javascript
 var url = "https://jsonplaceholder.typicode.com/users";
@@ -47,16 +47,16 @@ var data = axios.post(url,{
 return data
 ```
 
-The Axios POST request uses an object after the request URL to define the properties you want to create for your user. Once the operation has been completed, there will be a response from the server. In the screenshot below, you can see the that it return **Status: 201** which means the request has been fulfilled and resulted in a new resource being created.
+Axios POST 请求在请求 URL 之后使用一个对象来定义您要为用户创建的属性。一旦操作完成，就会有来自服务器的响应。在下面的屏幕截图中，您可以看到它返回 **Status: 201**，这意味着请求已完成并导致创建新资源。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/how-to/use-axios/post.png" alt="Use Axios in RunJS"/>
+<img className="screenshot-full" src="/img/how-to/use-axios/post.png" alt="在 RunJS 中使用 Axios"/>
 
 </div>
 
 :::tip
-Check out the tutorial on **[Build GitHub star history tracker](https://blog.tooljet.com/build-github-stars-history-app-in-5-minutes-using-low-code/)** that utlizes the axios library.
+查看教程**[构建 GitHub star 历史跟踪器](https://blog.tooljet.com/build-github-stars-history-app-in-5-minutes-using-low-code/)**它利用了 axios 库。
 :::
 
 

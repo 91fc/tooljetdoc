@@ -1,115 +1,115 @@
 ---
 id: run-actions-from-runjs
-title: Run Actions from RunJS query
+title: 从 RunJS 查询运行操作
 ---
 
-# Run `Actions` from RunJS query
+# 从 RunJS 查询运行 `Actions`
 
-Now you can trigger all the `actions` available in ToolJet from within the `RunJS` query. This guide includes the syntax for each action along with the example.
+现在，您可以从 RunJS 查询中触发 ToolJet 中可用的所有 `操作` 。本指南包括每个操作的语法以及示例。
 
-### Run Query
+### 运行查询
 
-**Syntax:**
+**句法：**
 
 ```js
 queries.queryName.run()
 ```
-or
+或者
 ```js
 await actions.runQuery('queryName') 
 ```
 
-**Example:** In the screenshot below, we are triggering the two different queries `customers` and `getData` using the two different syntax available for `Run Query` action.
+**示例：** 在下面的屏幕截图中，我们使用可用于 `运行查询` 操作的两种不同语法触发两个不同的查询 `客户` 和 `getData` 。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/runquery.png)
+![ToolJet - 如何 - 从 RunJS 查询运行操作](/img/how-to/run-actions-from-runjs/runquery.png)
 
 </div>
 
-### Set Variable
+### 设置变量
 
-**Syntax:**
+**句法：**
 
 ```javascript
 actions.setVariable(variableName, variableValue)
 ```
 
-**Example:** In the screenshot below, we are setting the two variables `test` and `test2`. `test` variable includes a numerical value so we haven't wrapped it inside the quotes but the variable `test2` is a string so we have wrapped it in quotes.
+**示例：** 在下面的屏幕截图中，我们正在设置两个变量 `test` 和 `test2`。 `test` 变量包含一个数值，因此我们没有将其括在引号中，但变量 `test2` 是一个字符串，因此我们将其括在引号中。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/setvariable.png)
+![ToolJet - 如何 - 从 RunJS 查询运行操作](/img/how-to/run-actions-from-runjs/setvariable.png)
 
 </div>
 
-### Unset Variable
+### 取消设置变量
 
-**Syntax:**
+**句法：**
 
 ```javascript
-actions.unSetVariable(variableName)
+actions.unSetVariable(变量名)
 ```
 
-**Example:** In the screenshot below, we are unsetting the variable `test2` that we created in the previous step.
+**示例：** 在下面的屏幕截图中，我们正在取消设置我们在上一步中创建的变量 `test2`。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/unsetvariable.png)
+![ToolJet - 如何 - 从 RunJS 查询运行操作](/img/how-to/run-actions-from-runjs/unsetvariable.png)
 
 </div>
 
-### Logout
+### 登出
 
-**Syntax:**
+**句法：**
 
 ```javascript
 actions.logout()
 ```
 
-**Example:** Triggering `actions.logout()` will log out the current logged in user from the ToolJet and will redirect to sign in page.
+**示例：** 触发 `actions.logout()` 将从 ToolJet 注销当前登录的用户，并将重定向到登录页面。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/logout.png)
+![ToolJet - 如何 - 从 RunJS 查询运行操作](/img/how-to/run-actions-from-runjs/logout.png)
 
 </div>
 
-### Show Modal
+### 显示模态
 
-**Syntax:**
+**句法：**
 
 ```javascript
 actions.showModal('modalName')
 ```
 
-**Example:** In the screenshot below, there is a modal on the canvas (renamed it to `formModal` from `modal1`) and we are using RunJS query to show the modal.
+**示例：** 在下面的屏幕截图中，画布上有一个模态框（将其从 `modal1` 重命名为 `formModal`），我们使用 RunJS 查询来显示模态框。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/showmodal.png)
+![ToolJet - 如何 - 从 RunJS 查询运行操作](/img/how-to/run-actions-from-runjs/showmodal.png)
 
 </div>
 
-### Close Modal
+### 关闭模式
 
-**Syntax:**
+**句法：**
 
 ```javascript
 actions.closeModal('modalName')
 ```
 
-**Example:** In the screenshot below, we have used RunJS query to close the modal that we showed up in previous step.
+**示例：** 在下面的屏幕截图中，我们使用 RunJS 查询来关闭我们在上一步中显示的模式。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/closemodal.png)
+![ToolJet - 如何 - 从 RunJS 查询运行操作](/img/how-to/run-actions-from-runjs/closemodal.png)
 
 </div>
 
-### Set Local Storage
+### 设置本地存储
 
-**Syntax:**
+**句法：**
 
 ```javascript
 actions.setLocalStorage('key','value')
@@ -117,13 +117,13 @@ actions.setLocalStorage('key','value')
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/setlocalstorage.png)
+![ToolJet - 如何 - 从 RunJS 查询运行操作](/img/how-to/run-actions-from-runjs/setlocalstorage.png)
 
 </div>
 
-### Copy to Clipboard
+### 复制到剪贴板
 
-**Syntax:**
+**句法：**
 
 ```javascript
 actions.copyToClipboard('contentToCopy')
@@ -131,54 +131,54 @@ actions.copyToClipboard('contentToCopy')
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/copytoclipboard.png)
+![ToolJet - 如何 - 从 RunJS 查询运行操作](/img/how-to/run-actions-from-runjs/copytoclipboard.png)
 
 </div>
 
-### Generate File
+### 生成文件
 
-**Syntax:**
+**句法：**
 
 ```javascript
 actions.generateFile('fileName', 'fileType', 'data')
 ```
 
-**Example:** `fileName` is the name that you want to give the file(string), `fileType` can be `csv` or `text`, and `data` is the data that you want to store in the file.
+**示例：** `fileName` 是您要给文件的名称（字符串），`fileType` 可以是 `csv` 或 `text`，而 `data` 是您要存储在文件。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/generatefile.png)
+![ToolJet - 如何 - 从 RunJS 查询运行操作](/img/how-to/run-actions-from-runjs/generatefile.png)
 
 </div>
 
-### Go to App
+### 转到应用程序
 
-**Syntax:**
+**句法：**
 
 ```javascript
 actions.goToApp('slug',queryparams) 
 ```
 
-- `slug` can be found in URL of the released app after the `application/`, or in the `Share` modal
-- `queryparams` can be provided like this `[{"key":"value"}, {"key2":"value2"}]`
+- `slug` 可以在 `application/` 之后的已发布应用程序的 URL 中找到，或者在 `Share` 模式中找到
+- `queryparams` 可以像这样提供 `[{"key":"value"}, {"key2":"value2"}]`
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/gotoapp1.png)
+![ToolJet - 如何 - 从 RunJS 查询运行操作](/img/how-to/run-actions-from-runjs/gotoapp1.png)
 
 </div>
 
-### Show Alert
+### 显示警报
 
-**Syntax:**
+**句法：**
 
 ```javascript
-actions.showAlert(alert type , message ) // alert types are info, success, warning, and danger
+actions.showAlert(alert type , message ) // 警报类型有 info, success, warning, and danger
 ```
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Run Actions from RunJS query](/img/how-to/run-actions-from-runjs/showalert.png)
+![ToolJet - 如何 - 从 RunJS 查询运行操作](/img/how-to/run-actions-from-runjs/showalert.png)
 
 </div>
 

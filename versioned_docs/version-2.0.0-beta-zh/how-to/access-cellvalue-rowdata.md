@@ -1,115 +1,115 @@
 ---
 id: access-cellvalue-rowdata
-title: Change text color in columns of the table
+title: 更改表格列中的文本颜色
 ---
 
-# Change text color in columns by accessing `cellValue` and `rowData` in the table
+# 通过访问表中的 `cellValue` 和 `rowData` 更改列中的文本颜色
 
-In this how-to guide, we will build an app that will use a sample RestAPI to display the data in the table, and then we will change the text color of the columns according to the condition.
+在此操作指南中，我们将构建一个应用程序，该应用程序将使用示例 RestAPI 来显示表中的数据，然后我们将根据条件更改列的文本颜色。
 
-- Let's start by creating a new application and then adding a table widget into the canvas.
-
-<div style={{textAlign: 'center'}}>
-
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/newapp.gif)
-
-</div>
-
-- Now go to the **Query Panel** at the bottom of the app editor and click on the `+` button.
-- Choose **RestAPI** data source
+- 让我们从创建一个新应用程序开始，然后将一个表格小部件添加到画布中。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/restapi.png)
+![ToolJet - 如何 - 更改表格列中的文本颜色](/img/how-to/change-text-color/newapp.gif)
 
 </div>
 
-- Now we will use a sample RestAPI endpoint -  I have used the API provided by **coinstats.app**, API-URL:
+- 现在转到应用程序编辑器底部的**查询面板**，然后单击 `+` 按钮。
+- 选择 **RestAPI** 数据源
+
+<div style={{textAlign: 'center'}}>
+
+![ToolJet - 如何 - 更改表格列中的文本颜色](/img/how-to/change-text-color/restapi.png)
+
+</div>
+
+- 现在我们将使用示例 RestAPI 端点 - 我使用了 **coinstats.app** 提供的 API，API-URL：
 https://api.coinstats.app/public/v1/coins?skip=0&limit=100&currency=USD
-- Choose `GET` method, enter the request URL (API URL in previous step), name the query - I have named it `crypto`, and then **Create** the query
+- 选择 `GET` 方法，输入请求 URL（上一步中的 API URL），为查询命名 - 我将其命名为 `crypto`，然后**创建**查询
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/apiendpoint.png)
+![ToolJet - 如何 - 更改表格列中的文本颜色](/img/how-to/change-text-color/apiendpoint.png)
 
 </div>
 
-- Now hit the **Run** button next to the query name to run the query.
+- 现在点击查询名称旁边的 **Run** 按钮来运行查询。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/runquery.png)
+![ToolJet - 如何 - 更改表格列中的文本颜色](/img/how-to/change-text-color/runquery.png)
 
 </div>
 
-- Once you run the query, you can check the data returned by the query in the **Inspector** on the left sidebar.
+- 运行查询后，您可以在左侧边栏的**检查器**中检查查询返回的数据。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/inspectord.png)
+![ToolJet - 如何 - 更改表格列中的文本颜色](/img/how-to/change-text-color/inspectord.png)
 
 </div>
 
-- Now that we have got the data, we will display it on the table. To do this, click on the widget handle of the table to open its properties in the right sidebar. 
-- In the Table Data field, enter `{{queries.crypto.data.coins}}` - as you can see in the screenshot of the inspector the data is inside the `coins` array. You'll see the data in the Preview(green box) below the field.
+- 现在我们已经得到了数据，我们将把它显示在表格上。为此，请单击表格的小部件句柄以在右侧栏中打开其属性。
+- 在表数据字段中，输入 `{{queries.crypto.data.coins}}` - 正如您在检查器的屏幕截图中看到的，数据位于 `coins` 数组中。您将在字段下方的预览（绿色框）中看到数据。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/data.png)
+![ToolJet - 如何 - 更改表格列中的文本颜色](/img/how-to/change-text-color/data.png)
 
 </div>
 
-- Let's add the columns that we want to display on the table. Go to the **Columns** section, Add columns, set their Names, and set **key** for each column. I have added 5 columns: **Rank**, **Name**, **Symbol**, **Price**, and **Market Cap**.
+- 让我们添加要在表格上显示的列。转到 **Columns** 部分，添加列，设置它们的名称，并为每列设置 **key**。我添加了 5 列：**Rank**、**Name**、**Symbol**、**Price** 和 **Market Cap**。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/columns.png)
+![ToolJet - 如何 - 更改表格列中的文本颜色](/img/how-to/change-text-color/columns.png)
 
 </div>
 
-- Once you've added the columns, you'll get the table like this:
+- 添加列后，您将获得如下表格：
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/table.png)
+![ToolJet - 如何 - 更改表格列中的文本颜色](/img/how-to/change-text-color/table.png)
 
 </div>
 
-### Using cellValue to change column text color
+### 使用 cellValue 改变列文本颜色
 
-Now that we have our data on the table, we will change the color of the text in the **Price** and **Market Cap** columns.
+现在我们在表格中有了数据，我们将更改 **Price** 和 **Market Cap** 列中的文本颜色。
 
-- Edit table properties, go to **Columns**, and click on the Price Column to open its properties.
-- For **Price** column, we want to change color of those cells who have value which is greater than 1000 to red else to green if it is less than 1000. So to do this, we will set a condition in **Text Color** property of this column: `{{cellValue >= 1000 ? 'red' : 'green'}}`
+- 编辑表格属性，转到 **Columns**，然后单击 Price Column 以打开其属性。
+- 对于 **Price** 列，我们希望将值大于 1000 的单元格的颜色更改为红色，如果小于 1000，则更改为绿色。为此，我们将在 ** 中设置条件此列的文本颜色**属性：`{{cellValue >= 1000 ? '红色'：'绿色'}}`
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/price.png)
+![ToolJet - 如何 - 更改表格列中的文本颜色](/img/how-to/change-text-color/price.png)
 
 </div>
 
-- Similarly, we will do for **Market Cap** column. We want to change the text color of those cells who have value which is greater than 60000000000 to red else to green if it is less than 60000000000. so the condition will be `{{cellValue >= 60000000000 ? 'red' : 'green'}}`
-- Now the text color of cells in the columns will be updated.
+- 同样，我们将为 **Market Cap** 列做。我们想将那些值大于 60000000000 的单元格的文本颜色更改为红色，如果小于 60000000000 则更改为绿色。因此条件将为 `{{cellValue >= 60000000000？ '红色'：'绿色'}}`
+- 现在列中单元格的文本颜色将被更新。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/cellvalue.png)
+![ToolJet - 如何 - 更改表格列中的文本颜色](/img/how-to/change-text-color/cellvalue.png)
 
 </div>
 
 :::info
-You can also use Hex Color Code instead of mentioning color in plane text.
+您也可以使用 Hex Color Code 而不是在平面文本中提及颜色。
 :::
 
-### Using rowData to change column text color
+### 使用 rowData 改变列文本颜色
 
-- To change the color of the text using `rowData` variable it is required to mention the column name whose cell value we will be comparing in the condition. Let's take a look by changing the text color of **Symbol** column. 
-- We will add a condition to look in the row data and if the row has column called `name` which has value `Solana` then it should change the color to red else the color should be green.
-- Edit the properties of the Symbol column, set the **Text Color** field value to `{{rowData.name ===  'Solana' ? 'red' : 'green'}}`.
-- You'll see that in the Symbols column all the values has become green except the one that has Solana in Name column.
+- 要使用 `rowData` 变量更改文本的颜色，需要提及我们将在条件中比较其单元格值的列名。让我们通过更改 **Symbol** 列的文本颜色来查看。
+- 我们将添加一个条件来查看行数据，如果该行具有名为 `name` 的列，其值为 `Solana` ，那么它应该将颜色更改为红色，否则颜色应为绿色。
+- 编辑 Symbol 列的属性，将 **Text Color** 字段值设置为 `{{rowData.name === 'Solana' ? '红色'：'绿色'}}`。
+- 您会看到，在 Symbols 列中，除了名称列中具有 Solana 的值外，所有值都变为绿色。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Change text color in columns of the table](/img/how-to/change-text-color/rowData.png)
+![ToolJet - 如何 - 更改表格列中的文本颜色](/img/how-to/change-text-color/rowData.png)
 
 </div>

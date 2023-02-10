@@ -1,45 +1,45 @@
 ---
 id: loading-image-pdf-from-db
-title: Loading image/PDF from base64 string
+title: 从 base64 字符串加载图像/PDF
 ---
 
-In this how-to guide we will see how we can load an image or PDF file using the base64 string available on the database. In this how-to, we have used the postgres database which already has the base64 strings for the image or the PDF files available.
+在本操作指南中，我们将了解如何使用数据库中可用的 base64 字符串加载图像或 PDF 文件。在本操作指南中，我们使用了 postgres 数据库，该数据库已经具有图像或可用 PDF 文件的 base64 字符串。
 
-- Let's drag a **filepicker** component onto the canvas, and pick one image and one pdf file
+- 让我们将一个 **filepicker** 组件拖到画布上，然后选择一个图像和一个 pdf 文件
     <div style={{textAlign: 'center'}}>
 
-    <img className="screenshot-full" src="/img/how-to/load-base64/filepicker.png" alt="Loading image from base64 string" width="700" />
+    <img className="screenshot-full" src="/img/how-to/load-base64/filepicker.png" alt="从 base64 字符串加载图像" width="700" />
 
     </div>
 
-- Now, create a query for inserting an image from the filepicker. As you can see in the screenshot below, we are using the **exposed variable** of the filepicker component to retrieve the **base64** data of the uploaded files.
+- 现在，创建一个从文件选择器插入图像的查询。正如您在下面的屏幕截图中看到的，我们正在使用 filepicker 组件的 **exposed 变量** 来检索上传文件的 **base64** 数据。
     <div style={{textAlign: 'center'}}>
 
-    <img className="screenshot-full" src="/img/how-to/load-base64/insert.png" alt="Loading image from base64 string" width="500"/>
+    <img className="screenshot-full" src="/img/how-to/load-base64/insert.png" alt="从 base64 字符串加载图像" width="500"/>
 
     </div>
 
-- Create another query for returning the data from the database and we will use this base64 data returned in this query to display on the image and pdf components.
+- 创建另一个查询以从数据库返回数据，我们将使用此查询中返回的 base64 数据显示在图像和 pdf 组件上。
     <div style={{textAlign: 'center'}}>
 
-    <img className="screenshot-full" src="/img/how-to/load-base64/get.png" alt="Loading image from base64 string" width="500"/>
+    <img className="screenshot-full" src="/img/how-to/load-base64/get.png" alt="从 base64 字符串加载图像" width="500"/>
 
     </div>
 
-- Drag the image and a PDF component on the canvas. Edit the property of the PDF component and in the **file URL** enter:
+- 在画布上拖动图像和 PDF 组件。编辑 PDF 组件的属性并在 **文件 URL** 中输入：
     ```js
     {{'data:image/png;base64,' + queries.get.data[7].pdf}}
     ```
-    Similarly for the image component:
+    同样对于图像组件：
     ```js
     {{'data:image/jpeg;base64,' + queries.get.data[7].image}}
     ```
     <div style={{textAlign: 'center'}}>
 
-    <img className="screenshot-full" src="/img/how-to/load-base64/pdf.png" alt="Loading image from base64 string" />
+    <img className="screenshot-full" src="/img/how-to/load-base64/pdf.png" alt="从 base64 字符串加载图像" />
 
     </div>
 
 :::info
-You can also use transformations in the query response and concat `data:image/jpeg;base64,` to the base64 data.
+您还可以在查询响应中使用转换并将 data:image/jpeg;base64 连接到 base64 数据。
 :::

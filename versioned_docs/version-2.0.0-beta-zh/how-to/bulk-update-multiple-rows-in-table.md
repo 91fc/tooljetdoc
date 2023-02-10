@@ -1,60 +1,60 @@
 ---
 id: bulk-update-multiple-rows
-title: Bulk update multiple rows in table
+title: 批量更新表中的多行
 ---
 
-# Bulk update multiple rows in table
+# 批量更新表中的多行
 
-Currently, the datasources in ToolJet have operation for **bulk update(GUI mode)** but that only works for changes made in the single row. We will soon be adding a new operation for bulk updating the multiple rows but for now we can bulk update multiple rows by creating a Custom JS query. 
+目前，ToolJet 中的数据源具有**批量更新（GUI 模式）** 操作，但仅适用于单行中所做的更改。我们很快将添加一个新操作来批量更新多行，但现在我们可以通过创建自定义 JS 查询来批量更新多行。
 
-In this guide, We have assumed that you have successfully connected the data source. For this guide, we will be using the PostgreSQL data source as an example database, currently, this workaround can be used only for PostgreSQL and MySQL.
+在本指南中，我们假设您已成功连接数据源。对于本指南，我们将使用 PostgreSQL 数据源作为示例数据库，目前，此解决方法只能用于 PostgreSQL 和 MySQL。
 
-## 1. Create a query to get the data from the database
+## 1. 创建查询从数据库中获取数据
 
-Let's create the query that will be getting the data from the database:
-
-<div style={{textAlign: 'center'}}>
-
-![ToolJet - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/postgres1.png)
-
-</div>
-
-## 2. Display the data on the table
-
-- Drag a **Table** widget on the canvas and click on its handle to open the properties on the left sidebar
-- Edit the **Table data** field value and enter **`{{queries.postgresql1.data}}`**
+让我们创建将从数据库中获取数据的查询：
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/showData.png)
+![ToolJet - 如何 - 批量更新表格中的多行](/img/how-to/bulk-update-multiple/postgres1.png)
 
 </div>
 
-## 3. Make the columns editable
+## 2.显示表上的数据
 
-- Go to the **Columns**, Add or edit columns section and enter the **Column Name** that you want to display on the table and the **Key** name. Key is the name of the column in your database.
-- Enable the toggle for **Make editable** for the columns that you want to be editable.
+- 在画布上拖动一个 **Table** 小部件，然后单击其手柄以打开左侧栏中的属性
+- 编辑**表数据**字段值并输入**`{{queries.postgresql1.data}}`**
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/columns.png)
+![ToolJet - 操作方法 - 批量更新表格中的多行](/img/how-to/bulk-update-multiple/showData.png)
 
 </div>
 
-## 4. Enable bulk update options for table widget
+## 3. 使列可编辑
 
-- Go to the **Options** section and enable the **Show update buttons**. Enabling this will add two buttons - **Save Changes** and **Discard Changes** at the bottom of the table, only when any cell in the table is edited.
-- You can also enable highlight selected row.(**Optional**)
+- 转到 **Columns**，添加或编辑列部分并输入要在表格上显示的 **Column Name** 和 **Key** 名称。键是数据库中列的名称。
+- 为您想要编辑的列启用 **Make editable** 的切换。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/options.png)
+![ToolJet - 操作方法 - 批量更新表格中的多行](/img/how-to/bulk-update-multiple/columns.png)
 
 </div>
 
-## 5. Create a Custom JS query
+## 4. 为表格小部件启用批量更新选项
 
-We will create a new Custom JS query(**runjs1**) that will generate SQL query for updating multiple rows.
+- 转到**选项**部分并启用**显示更新按钮**。启用此功能将在表格底部添加两个按钮 - **保存更改** 和 **放弃更改**，仅当表格中的任何单元格被编辑时。
+- 您还可以启用突出显示所选行。（**可选**）
+
+<div style={{textAlign: 'center'}}>
+
+![ToolJet - 操作方法 - 批量更新表格中的多行](/img/how-to/bulk-update-multiple/options.png)
+
+</div>
+
+## 5. 创建自定义 JS 查询
+
+我们将创建一个新的自定义 JS 查询 (**runjs1**)，它将生成用于更新多行的 SQL 查询。
 
 ```js
 const uniqueIdentifier = "id"
@@ -75,41 +75,41 @@ const sql = cols.map((column) => {
 return sql
 ```
 :::info
-Here the **Unique identifier** is **id**, this is the column name that is used to identify the row in the database.
-Update the **Unique identifier** if you are using a different column name.
+这里的**唯一标识符**是**id**，这是用来标识数据库中行的列名。
+如果您使用不同的列名称，请更新 **唯一标识符**。
 :::
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/runjs1.png)
+![ToolJet - 如何 - 批量更新表格中的多行](/img/how-to/bulk-update-multiple/runjs1.png)
 
 </div>
 
-## 6. Create an Update query
+## 6. 创建更新查询
 
-Let's create a new PostgreSQL query and name it `update`. In **SQL mode**, enter `{{queries.runjs1.data.join(' ')}}` and **Save** it.
+让我们创建一个新的 PostgreSQL 查询并将其命名为 `update` 。在**SQL模式**下，输入`{{queries.runjs1.data.join(' ')}}`并**保存**。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/update.png)
+![ToolJet - 操作方法 - 批量更新表格中的多行](/img/how-to/bulk-update-multiple/update.png)
 
 </div>
 
-## 7. Creating a flow for queries
+## 7. 为查询创建流
 
-- Click on the handle of the **Table** widget to open its properties
-- Go to the **Events**, and add a handler
-- Select **Bulk Update** in Events, **Run Query** in Actions, and then select the **runjs1** query in Query. Now whenever a user will edit the table and hit the **Save Changes** button runjs1 will run.
+- 单击 **Table** 小部件的句柄以打开其属性
+- 转到**事件**，并添加一个处理程序
+- 在Events中选择**Bulk Update**，在Actions中选择**Run Query**，然后在Query中选择**runjs1** query。现在，只要用户编辑表格并点击 **Save Changes** 按钮，runjs1 就会运行。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/event.png)
+![ToolJet - 如何 - 批量更新表格中的多行](/img/how-to/bulk-update-multiple/event.png)
 
 </div>
 
-- Now, go to the **Advanced** tab of **runjs1** and add a handler to run update query for **Query Success** Event. Now whenever the runjs1 query will be run - the update operation will be performed on the database.
+- 现在，转到 **runjs1** 的 **Advanced** 选项卡并添加一个处理程序以运行 **Query Success** 事件的更新查询。现在，无论何时运行 runjs1 查询，都会对数据库执行更新操作。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Bulk update multiple rows in table](/img/how-to/bulk-update-multiple/success.png)
+![ToolJet - 如何 - 批量更新表中的多行](/img/how-to/bulk-update-multiple/success.png)
 
 </div>

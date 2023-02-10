@@ -1,11 +1,11 @@
 ---
 id: use-inspector
-title: Use Inspector
+title: 使用检查器
 ---
 
-In this how-to guide, we will take a look at **Inspector** of the app-builder and see how it can be helpful in building applications.
+在本操作指南中，我们将了解应用程序构建器的 **Inspector** 并了解它如何有助于构建应用程序。
 
-The Inspector can be used to inspect the data of the queries, properties and values of the components that are there on the canvas, ToolJet's global variables and the variables that have been set by the user.
+Inspector 可用于检查画布上组件的查询数据、属性和值、ToolJet 的全局变量以及用户设置的变量。
 
 <div style={{textAlign: 'center'}}>
 
@@ -13,68 +13,68 @@ The Inspector can be used to inspect the data of the queries, properties and val
 
 </div>
 
-## Layout
+## 布局
 
-Let's take a look at the layout of the Inspector panel:
+让我们看一下Inspector面板的布局：
 
-- On the top-right, we have a **Pin** button to pin and unpin the inspector panel. This button can be useful when you want to see the live changes on inspector while triggering a query or performing some event/action on any component.
+- 在右上角，我们有一个 **Pin** 按钮来固定和取消固定检查面板。当您想在检查器上查看实时更改同时触发查询或对任何组件执行某些事件/操作时，此按钮会很有用。
     <div style={{textAlign: 'center'}}>
 
     <img className="screenshot-full" src="/img/how-to/use-inspector/pin.png" alt="How to - Use Inspector" width="500" />
 
     </div>
 
-- At the bottom right, you can click and hold to resize the inspector.
+- 在右下角，您可以单击并按住以调整检查器的大小。
     <div style={{textAlign: 'center'}}>
 
     <img className="screenshot-full" src="/img/how-to/use-inspector/resize.png" alt="How to - Use Inspector" width="500" />
 
     </div>
 
-- On hovering an item on the inspector, the **copy path** and **copy value** buttons will appear on the right of the item. Copying the path and pasting it onto the component property or query parameter will always get the dynamic value but using `Copy value` uption will copy the current value of the item and will be static when pasted in a component property or query parameter.
+- 将项目悬停在检查器上时，**复制路径**和**复制值**按钮将出现在项目的右侧。复制路径并将其粘贴到组件属性或查询参数将始终获得动态值，但使用 `复制值` uption 将复制项目的当前值，并且在粘贴到组件属性或查询参数时将是静态的。
     <div style={{textAlign: 'center'}}>
 
     <img className="screenshot-full" src="/img/how-to/use-inspector/path.png" alt="How to - Use Inspector" width="500" />
 
     </div>
 
-## Sections
+## 部分
 
-The Inspector panel has the following 4 main sections:
+检查器面板有以下 4 个主要部分：
 
-- **[queries](#queries)**
-- **[components](#components)**
-- **[globals](#globals)**
-- **[variables](#variables)**
+- **[查询](#查询)**
+- **[组件](#组件)**
+- **[全局变量](#全局变量)**
+- **[变量](#变量)**
 
-### queries
+### 查询
 
-The queries section can be used to inspect the query details but the data of the query will only be available if query has been run/triggered.
+查询部分可用于检查查询详细信息，但查询数据仅在查询已运行/触发时可用。
 
 :::tip
-You can click on the Preview button of the button on the query manager to check the response(data) of the query without triggering it.
+您可以单击查询管理器上按钮的预览按钮来检查查询的响应（数据）而不触发它。
 :::
 
-#### Example
+#### 例子
 
-- Let's create a new query using a mock REST API endpoint (`https://fakestoreapi.com/products`).
-- Now go to the Inspector and expand the **queries** section, you'll see an entry inside queries with the query name that we created in the previous step i.e. `restapi1` but if you notice the `data` and `rawData` object is empty i.e. 0 entry. The reason is the data won't show up on the inspector unless query is run.
+- 让我们使用模拟 REST API 端点 (`https://fakestoreapi.com/products`) 创建一个新查询。
+- 现在转到 Inspector 并展开 **queries** 部分，您将在查询中看到一个条目，其中包含我们在上一步中创建的查询名称，即 `restapi1`，但如果您注意到 `data` 和 `rawData ` 对象为空，即 0 个条目。原因是除非运行查询，否则数据不会显示在检查器上。
     <div style={{textAlign: 'center'}}>
 
     <img className="screenshot-full" src="/img/how-to/use-inspector/data0.png" alt="How to - Use Inspector" />
 
     </div>
 
-- Let's pin the inspector and then trigger the query from the query manager. You'll see that as soon as the query is triggered the `rawData` and `data` object in the query has 20 entries and the query has more properties like `request`, `response`, and `responseHeaders` data.
+- 让我们固定检查器，然后从查询管理器触发查询。您会看到，一旦查询被触发，查询中的 `rawData` 和 `data` 对象就有 20 个条目，并且查询有更多属性，如 `request`、`response` 和 `responseHeaders` 数据。
     <div style={{textAlign: 'center'}}>
 
     <img className="screenshot-full" src="/img/how-to/use-inspector/data1.png" alt="How to - Use Inspector" />
 
     </div>
 
-### components
+### 组件
 
-components section can be used to inspect the properties and values of the components that are added onto the canvas.
+组件部分可用于检查添加到画布上的组件的属性和值。
 
 <div style={{textAlign: 'center'}}>
 
@@ -82,17 +82,17 @@ components section can be used to inspect the properties and values of the compo
 
 </div>
 
-### globals
+### 全局变量
 
-globals section includes the following sub-sections:
+全局部分包括以下子部分：
 
-- **currentUser:** The currentUser object contains information about the currently logged-in user such as **email**, **firstName**, and **lastName**.
-- **groups:** The groups array contains the name of the groups the currently logged-in user is added to. Note: The `all_users` is default groups for everyone.
-- **theme:** The theme object contains the name of the currently active theme.
-- **urlparam:** The urlparams contains the information about the url parameters of the application.
+- **currentUser：** currentUser 对象包含有关当前登录用户的信息，例如 **email**、**firstName** 和 **lastName**。
+- **groups:** groups 数组包含当前登录用户添加到的组的名称。注意：`all_users` 是每个人的默认组。
+- **theme:** 主题对象包含当前活动主题的名称。
+- **urlparam:** urlparams 包含有关应用程序的url 参数的信息。
 
 :::info
-All the global variables can be accessed anywhere inside the ToolJet applications. Here's an **[example use-case](/docs/how-to/access-currentuser)** of using these variables.
+可以在 ToolJet 应用程序内的任何位置访问所有全局变量。这是使用这些变量的**[用例示例](/docs/how-to/access-currentuser)**。
 :::
 
 <div style={{textAlign: 'center'}}>
@@ -101,12 +101,11 @@ All the global variables can be accessed anywhere inside the ToolJet application
 
 </div>
 
-### variables
+### 变量
 
-variables section include all the variables set by the user in the application. These variables can be set from the event handlers from the components or from the queries. The variables will be in the **key-value** pair and can be accessed throughout the application.
+variables 部分包括用户在应用程序中设置的所有变量。这些变量可以从组件或查询的事件处理程序中设置。变量将在**键值**对中，并且可以在整个应用程序中访问。
 
 :::info
-
-- Setting variables from the [event handler](/docs/actions/set-variable)
-- Setting variables from the [Run JavaScript code](/docs/how-to/run-actions-from-runjs#set-variable)
-  :::
+- 从 [事件处理程序](/docs/actions/set-variable) 设置变量
+- 从 [运行 JavaScript 代码](/docs/how-to/run-actions-from-runjs#set-variable) 设置变量
+:::

@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "syc": "cp -rf ../tooljet/docs/versioned_docs/ . && cp -rf ../tooljet/docs/versioned_sidebars/ .",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",

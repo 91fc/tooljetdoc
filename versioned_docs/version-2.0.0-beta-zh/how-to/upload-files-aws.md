@@ -1,137 +1,137 @@
 ---
 id: upload-files-aws
-title: Upload files on AWS S3 bucket
+title: 在 AWS S3 存储桶上上传文件
 ---
 
-# Upload and download files on AWS S3 bucket
+# 在 AWS S3 存储桶上上传和下载文件
 
-This guide will help you in quickly building a basic UI for uploading or downloading files from AWS S3 buckets.
+本指南将帮助您快速构建用于从 AWS S3 存储桶上传或下载文件的基本 UI。
 
-Before building the UI, check out the **[docs for AWS S3 data source](/docs/data-sources/s3)** to learn about setting up AWS S3 and adding the data source. 
+在构建 UI 之前，请查看 **[AWS S3 数据源文档](/docs/data-sources/s3)** 以了解如何设置 AWS S3 和添加数据源。
 
-Once you have successfully added the AWS data source, build a basic UI using the following widgets:
-- **Dropdown**: For selecting a bucket in S3 storage.
-- **Table**: For listing all the objects inside the selected bucket in dropdown.
-- **Text Input**: For getting a path for the file that is to be uploaded.
-- **File picker**: For uploading the file.
-- **Button**: This will be used to fire the upload query.
-
-<div style={{textAlign: 'center'}}>
-
-![ToolJet - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/ui.png)
-
-</div>
-
-## Queries
-
-We'll create the following queries:
-
-1. **getBuckets**
-2. **listObjects**
-3. **uploadToS3**
-4. **download**
-
-### getBuckets
-
-This query will fetch the list of all the buckets in your S3. Just create a new query, select AWS S3 data source, and choose **List buckets** operation. Name the query **getBuckets** and click **Save**.
+成功添加 AWS 数据源后，使用以下小部件构建基本 UI：
+- **下拉**：用于选择 S3 存储中的存储桶。
+- **表格**：用于在下拉列表中列出所选存储桶内的所有对象。
+- **文本输入**：用于获取要上传的文件的路径。
+- **文件选择器**：用于上传文件。
+- **按钮**：这将用于触发上传查询。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/getBuckets.png)
+![ToolJet - 如何 - 在 AWS S3 存储桶上上传文件](/img/how-to/upload-files-aws/ui.png)
 
 </div>
 
-Now, let's edit the properties of **dropdown** widget.
+## 查询
 
-- **Label**: Set the label as Bucket.
-- **Option values**: Set option values as `{{queries.getBuckets.data.Buckets.map(bucket => bucket['Name'])}}`. We're mapping the data returned by the query as the returned data is array of abjects.
-- **Option label**: Set option values as `{{queries.getBuckets.data.Buckets.map(bucket => bucket['Name'])}}`. This will display the same option label as option values.
+我们将创建以下查询：
 
-You can later add an event handler for running the **listObject** query whenever an option is selected from the dropdown.
+1. **获取桶**
+2. **列表对象**
+3. **上传到S3**
+4. **下载**
+
+### 获取桶
+
+此查询将获取 S3 中所有存储桶的列表。只需创建一个新查询，选择 AWS S3 数据源，然后选择 **List buckets** 操作。将查询命名为 **getBuckets** 并单击 **Save**。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/dropdown.png)
+![ToolJet - 如何 - 在 AWS S3 存储桶上上传文件](/img/how-to/upload-files-aws/getBuckets.png)
 
 </div>
 
-### listObjects
+现在，让我们编辑 **dropdown** 小部件的属性。
 
-This query will list all the objects inside the selected Bucket in dropdown. Select **List objects in a bucket** operation, enter `{{components.dropdown1.value}}` in the Bucket field - this will dynamically get the field value from the selected option in dropdown.
+- **Label**：设置标签为Bucket。
+- **选项值**：将选项值设置为`{{queries.getBuckets.data.Buckets.map(bucket => bucket['Name'])}}`。我们正在映射查询返回的数据，因为返回的数据是对象数组。
+- **选项标签**：将选项值设置为`{{queries.getBuckets.data.Buckets.map(bucket => bucket['Name'])}}`。这将显示与选项值相同的选项标签。
+
+您可以稍后添加一个事件处理程序，以便在从下拉列表中选择一个选项时运行 **listObject** 查询。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/listObjects.png)
+![ToolJet - 如何 - 在 AWS S3 存储桶上上传文件](/img/how-to/upload-files-aws/dropdown.png)
 
 </div>
 
-Edit the properties of **table** widget:
-- **Table data**: `{{queries.listObjects.data['Contents']}}`
-- **Add Columns**:
-  - **Key**: Set the **Column Name** to `Key` and **Key** to `Key`
-  - **Last Modified**: Set the **Column Name** to `Last Modified` and **Key** to `LastModified`
-  - **Size**: Set the **Column Name** to `Size` and **Key** to `Size`
-- Add a **Action button**: Set button text to **Copy signed URL**, Add a handler to this button for On Click event and Action to Copy to clipboard, in the text field enter `{{queries.download.data.url}}` - this will get the download url from the **download** query that we will create next.
+### 列表对象
+
+此查询将在下拉列表中列出所选 Bucket 内的所有对象。选择 **List objects in a bucket** 操作，在 Bucket 字段中输入 `{{components.dropdown1.value}}` - 这将从下拉列表中的选定选项动态获取字段值。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/table.png)
+![ToolJet - 如何 - 在 AWS S3 存储桶上上传文件](/img/how-to/upload-files-aws/listObjects.png)
 
 </div>
 
-### download
-
-Create a new query and select **Signed URL for download** operation. In the Bucket field, enter `{{components.dropdown1.value}}` and in Key enter `{{components.table1.selectedRow.Key}}`.
+编辑 **table** 小部件的属性：
+- **表数据**：`{{queries.listObjects.data['Contents']}}`
+- **添加列**：
+  - **Key**：将**列名**设置为`Key`，将**Key**设置为`Key`
+  - **Last Modified**：将 **Column Name** 设置为 `Last Modified` 并将 **Key** 设置为 `LastModified`
+  - **Size**：将 **Column Name** 设置为 `Size` 并将 **Key** 设置为 `Size`
+- 添加一个**操作按钮**：将按钮文本设置为**复制签名 URL**，向此按钮添加一个处理程序，用于单击事件和操作以复制到剪贴板，在文本字段中输入`{{queries.download .data.url}}` - 这将从我们接下来创建的 **download** 查询中获取下载 url。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/download.png)
+![ToolJet - 如何 - 在 AWS S3 存储桶上上传文件](/img/how-to/upload-files-aws/table.png)
 
 </div>
 
-Edit the **properties** of the table, add a Event handler for running the `download` query for `Row clicked` event. This will generate a signed url for download every time a row is clicked on the table.
+### 下载
 
-### uploadToS3
-
-Create a new query, select the **Upload object** operation. Enter the following values in their respective fields:
-- **Bucket**: `{{components.dropdown1.value}}`
-- **Key**:  {{ components.textinput1.value + '/' +components.filepicker1.file[0].name}}`
-- **Content type**: `{{components.filepicker1.file[0].type}}`
-- **Upload data**: `{{components.filepicker1.file[0].base64Data}}`
-- **Encoding**: `base64`
+创建一个新查询并选择 **Signed URL for download** 操作。在 Bucket 字段中，输入 `{{components.dropdown1.value}}` 并在 Key 中输入 `{{components.table1.selectedRow.Key}}`。
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Upload files on AWS S3 bucket](/img/how-to/upload-files-aws/uploadToS3.png)
+![ToolJet - 如何 - 在 AWS S3 存储桶上上传文件](/img/how-to/upload-files-aws/download.png)
 
 </div>
 
-#### Configure the file picker:
+编辑表的**属性**，添加一个事件处理程序，用于运行 `Row clicked` 事件的 `download` 查询。每次单击表格中的一行时，这将生成一个签名的 url 供下载。
 
-Click on the widget handle to edit the file picker properties: 
+### 上传到S3
 
-- Change the **Accept file types** to `{{"application/pdf"}}` for the picker to accept only pdf files or `{{"image/*"}}` for the picker to accept only image files . In the screenshot below, we have set the accepted file type property to `{{"application/pdf"}}` so it will allow to select only pdf files:
+创建一个新查询，选择**上传对象**操作。在各自的字段中输入以下值：
+- **桶**：`{{components.dropdown1.value}}`
+- **Key**: {{ components.textinput1.value + '/' +components.filepicker1.file[0].name}}`
+- **内容类型**：`{{components.filepicker1.file[0].type}}`
+- **上传数据**：`{{components.filepicker1.file[0].base64Data}}`
+- **编码**：`base64`
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Upload files using GCS](/img/how-to/upload-files-gcs/result-filepicker.png)
+![ToolJet - 如何 - 在 AWS S3 存储桶上上传文件](/img/how-to/upload-files-aws/uploadToS3.png)
 
 </div>
 
-- Change the **Max file count** to `{{1}}` as we are only going to upload 1 file at a time.
+#### 配置文件选择器：
 
-- Select a pdf file and hold it in the file picker.
+单击小部件句柄以编辑文件选择器属性：
+
+- 将 **Accept file types** 更改为 `{{"application/pdf"}}` 以便选择器仅接受 pdf 文件或`{{"image/*"}}` 以便选择器仅接受图像文件.在下面的屏幕截图中，我们已将接受的文件类型属性设置为 `{{"application/pdf"}}` 因此它将只允许选择 pdf 文件：
+
+<div style={{textAlign: 'center'}}>
+
+![ToolJet - 如何 - 使用 GCS 上传文件](/img/how-to/upload-files-gcs/result-filepicker.png)
+
+</div>
+
+- 将**最大文件数**更改为 `{{1}}` ，因为我们一次只上传 1 个文件。
+
+- 选择一个 pdf 文件并将其保存在文件选择器中。
 
 :::info
- File types must be valid **[MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)** type according to input element specification or a valid file extension.
+ 文件类型必须是有效的 **[MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)** 根据输入元素规范或有效的文件扩展名类型.
 
- To accept any/all file type(s), set `Accept file types` to an empty value.
+ 要接受任何/所有文件类型，请将 `接受文件类型` 设置为空值。
 :::
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - How To - Upload files using GCS](/img/how-to/upload-files-gcs/config-filepicker.png)
+![ToolJet - 如何 - 使用 GCS 上传文件](/img/how-to/upload-files-gcs/config-filepicker.png)
 
 </div>
 
-Final steps, go to the **Advanced** tab of the **uploadToS3** query and add a query to run **listObjects** query so that whenever a file is uploaded the tabled is refreshed.
+最后一步，转到 **uploadToS3** 查询的 **Advanced** 选项卡并添加一个查询以运行 **listObjects** 查询，以便每当上传文件时刷新表格。

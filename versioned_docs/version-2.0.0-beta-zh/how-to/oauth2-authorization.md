@@ -1,66 +1,66 @@
 ---
 id: oauth2-authorization
-title: REST API authentication using OAuth 2.0
+title: 使用 OAuth 2.0 的 REST API 身份验证
 ---
 
-# REST API authentication using OAuth 2.0
+# 使用 OAuth 2.0 的 REST API 身份验证
 
-ToolJet’s REST API data source supports OAuth 2.0 as the authentication type. In this guide, we’ll learn how to use **Google OAuth2 API** to delegate authorization and authentication for your ToolJet Application.
+ToolJet 的 REST API 数据源支持 OAuth 2.0 作为身份验证类型。在本指南中，我们将学习如何使用 **Google OAuth2 API** 为您的 ToolJet 应用程序委派授权和身份验证。
 
-Before setting up the REST API data source in ToolJet, we need to configure the **Google Cloud Platform** to gather the API keys required for the authorization access.
+在 ToolJet 中设置 REST API 数据源之前，我们需要配置 **Google Cloud Platform** 以收集授权访问所需的 API 密钥。
 
-## Setting up Google Cloud Platform
+## 设置Google Cloud Platform
 
-Google Cloud Platform provides access to more than 350 APIs and Services that can allow us to access data from our Google account and its services. Let's create an OAuth application that can be given permission to use our Google profile data such as Name and Profile picture.
+Google Cloud Platform 提供对 350 多个 API 和服务的访问，这些 API 和服务可让我们从我们的 Google 帐户及其服务访问数据。让我们创建一个 OAuth 应用程序，它可以被授予使用我们的 Google 个人资料数据（例如姓名和个人资料图片）的权限。
 
-1. Sign in to your [Google Cloud](https://cloud.google.com/) account, and from the console create a New Project.
-2. Navigate to the **APIs and Services**, and then open the **OAuth consent screen** section from the left sidebar.
-3. Enter the Application details and select the appropriate scopes for your application. We will select the profile and the email scopes. 
-4. Once you have created the OAuth consent screen, Create new credentials for the **OAuth client ID** from the **Credentials** section in the left sidebar.
-5. Select the application type, enter the application name, and then add the following URIs under Authorised Redirect URIs:
-    1. `https://app.tooljet.com/oauth2/authorize` (if you’re using ToolJet cloud)
-    2. `http://localhost:8082/oauth2/authorize` (if you’re using ToolJet locally)
-6. Now save and then you’ll get the **Client ID and Client secret** for your application.
+1. 登录您的 [Google Cloud](https://cloud.google.com/) 帐户，然后从控制台创建一个新项目。
+2. 导航至 **API 和服务**，然后从左侧栏打开 **OAuth 同意屏幕** 部分。
+3. 输入申请详情并为您的申请选择合适的范围。我们将选择配置文件和电子邮件范围。
+4. 创建 OAuth 同意屏幕后，从左侧边栏的 **Credentials** 部分为 **OAuth 客户端 ID** 创建新的凭证。
+5. 选择应用类型，输入应用名称，在Authorized Redirect URIs下添加如下URI：
+    1. `https://app.tooljet.com/oauth2/authorize`（如果您使用的是 ToolJet 云）
+    2. `http://localhost:8082/oauth2/authorize`（如果您在本地使用 ToolJet）
+6. 现在保存，然后您将获得应用程序的 **Client ID 和 Client secret**。
 
-<img class="screenshot-full" src="/img/how-to/oauth2-authorization/gcp.png" alt="ToolJet - How To - REST API authentication using OAuth 2.0" height="420"/>
+<img class="screenshot-full" src="/img/how-to/oauth2-authorization/gcp.png" alt="ToolJet - 如何 - 使用 OAuth 2.0 进行 REST API 身份验证" height="420"/>
 
-## Configuring ToolJet Application with Google's OAuth 2.0 API
+## 使用 Google 的 OAuth 2.0 API 配置 ToolJet 应用程序
 
-Let's follow the steps to authorize ToolJet to access your Google profile data:
+让我们按照以下步骤授权 ToolJet 访问您的 Google 个人资料数据：
 
-- Select **add data source** from the left sidebar, and choose **REST API** from the dialog window.
+- 从左侧边栏中选择**添加数据源**，然后从对话框窗口中选择**REST API**。
 
 :::info
-You can rename the data source by clicking on its default name `REST API`
+您可以通过单击其默认名称 `REST API` 来重命名数据源
 :::
 
-- In the **URL** field, enter the base URL `https://www.googleapis.com/oauth2/v1/userinfo`; the base URL specifies the network address of the API service.
-- Select authentication type as `OAuth 2.0`
-- Keep the default values for **Grant Type**, **Add Access Token To**, and **Header Prefix** i.e. `Authorization Code`, `Request Header`, and `Bearer` respectively.
-- Enter **Access Token URL**: `https://oauth2.googleapis.com/token`; this token allows users to verify their identity, and in return, receive a unique access token.
-- Enter the **Client ID** and **Client Secret** that we generated from the [Google Console](http://console.developers.google.com/).
-- In the **Scope** field, enter `https://www.googleapis.com/auth/userinfo.profile`; Scope is a mechanism in OAuth 2.0 to limit an application's access to a user's account. Check the scopes available for [Google OAuth2 API here](https://developers.google.com/identity/protocols/oauth2/scopes#oauth2).
-- Enter **Authorization URL:** `https://accounts.google.com/o/oauth2/v2/auth`; the Authorization URL requests authorization from the user and redirects to retrieve an authorization code from identity server.
-- Create three **Custom Authentication Parameters:**
+- 在 **URL** 字段中，输入基本 URL `https://www.googleapis.com/oauth2/v1/userinfo`；基本 URL 指定 API 服务的网络地址。
+- 选择身份验证类型为 `OAuth 2.0` 
+- 保留 **Grant Type**、**Add Access Token** 和 **Header Prefix** 的默认值，即分别为 `Authorization Code`、`Request Header` 和 `Bearer`。
+- 输入**访问令牌 URL**：`https://oauth2.googleapis.com/token`；此令牌允许用户验证他们的身份，并作为回报，接收一个唯一的访问令牌。
+- 输入我们从 [Google 控制台](http://console.developers.google.com/) 生成的 **Client ID** 和 **Client Secret**。
+- 在**范围**字段中，输入`https://www.googleapis.com/auth/userinfo.profile`；范围是 OAuth 2.0 中的一种机制，用于限制应用程序对用户帐户的访问。在此处查看 [Google OAuth2 API](https://developers.google.com/identity/protocols/oauth2/scopes#oauth2) 的可用范围。
+- 输入**授权网址：**`https://accounts.google.com/o/oauth2/v2/auth`；授权 URL 请求用户授权并重定向以从身份服务器检索授权代码。
+- 创建三个**自定义身份验证参数：**
 
-    | params      | description |
-    | ----------- | ----------- |
-    | response_type | code ( `code` refers to the Authorization Code) |
-    | client_id | **Client ID**  |
-    | redirect_uri | `http://localhost:8082/oauth2/authorize` if using ToolJet locally or enter this `https://app.tooljet.com/oauth2/authorize` if using ToolJet Cloud.  |
+    | 参数          | 说明                                                                                                                                             |
+    | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+    | response_type | code（`code`指的是授权码）                                                                                                                       |
+    | client_id     | **client_id**                                                                                                                                    |
+    | redirect_uri  | `http://localhost:8082/oauth2/authorize` 如果在本地使用 ToolJet 或者输入这个 `https://app.tooljet.com/oauth2/authorize` 如果使用 ToolJet Cloud。 |
     
-- Keep the default selection for **Client Authentication** and **Save** the data source.
+- 保留 **Client Authentication** 和 **Save** 数据源的默认选择。
 
-<img class="screenshot-full" src="/img/how-to/oauth2-authorization/restapi.png" alt="ToolJet - How To - REST API authentication using OAuth 2.0"/>
+<img class="screenshot-full" src="/img/how-to/oauth2-authorization/restapi.png" alt="ToolJet - 如何 - 使用 OAuth 2.0 进行 REST API 身份验证"/>
 
-## Create the query
+## 创建查询
 
-Let’s create a query to make a `GET` request to the URL, it will pop a new window and ask the user to authenticate against the API.
+让我们创建一个查询来向 URL 发出 `GET` 请求，它将弹出一个新窗口并要求用户对 API 进行身份验证。
 
-- Add a new query and select the REST API datasource from the dropdown
-- In the **Method** dropdown select `GET` and in advance tab toggle `run query on page load?`
-- **Save** and **Run** the query.
+- 添加新查询并从下拉列表中选择 REST API 数据源
+- 在**方法**下拉列表中选择 `GET` 并提前选项卡切换 `在页面加载时运行查询？` 
+- **保存**并**运行**查询。
 
-<img class="screenshot-full" src="/img/how-to/oauth2-authorization/oauth.gif" alt="ToolJet - How To - REST API authentication using OAuth 2.0"/>
+<img class="screenshot-full" src="/img/how-to/oauth2-authorization/oauth.gif" alt="ToolJet - 如何 - 使用 OAuth 2.0 进行 REST API 身份验证"/>
 
-A new window will pop for authentication and once auth is successful, you can run the query again to get the user data like Name and Profile Picture.
+将弹出一个新窗口进行身份验证，一旦身份验证成功，您可以再次运行查询以获取用户数据，如姓名和个人资料图片。
