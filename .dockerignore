@@ -1,0 +1,5 @@
+docs/*
+src/*
+node_modules/*
+versioned_docs/*
+versioned_sidebars/*
