@@ -6,7 +6,7 @@ const isProd = process.env.NODE_ENV === 'production';
 module.exports = {
   title: 'ToolJet',
   tagline: '用于构建内部工具和业务应用程序的低代码框架。',
-  url: 'https://docs.tooljet.com',
+  url: 'https://tdoc.xhrjy.cn',
   baseUrl: '/',
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
