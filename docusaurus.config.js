@@ -139,13 +139,13 @@ module.exports = {
           customCss: require.resolve('./src/css/custom.css'),
         },
         sitemap: {},
-        gtag: isProd
-          ? {
-            trackingID: process.env.GA_MID || "development",
-            // Optional fields.
-            anonymizeIP: true, // Should IPs be anonymized?
-          }
-          : undefined,
+      // gtag: isProd
+        //   ? {
+        //     trackingID: process.env.GA_MID || "development",
+        //     // Optional fields.
+        //     anonymizeIP: true, // Should IPs be anonymized?
+        //   }
+        //   : undefined,
       },
     ],
   ],
