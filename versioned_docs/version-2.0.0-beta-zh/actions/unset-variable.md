@@ -1,16 +1,16 @@
 ---
 id: unset-variable
-title: Unset variable
+title: Unset variable 取消设置变量
 ---
 
-This action allows you to removev the variable variable that was created using the set variable action.
+此操作允许您删除使用设置变量操作创建的变量变量。
 
 :::info
-You can also trigger actions from the **JavaScript code**. Check it out [here](/docs/how-to/run-actions-from-runjs).
+您还可以从 **JavaScript 代码** 触发操作。在 [此处](/docs/how-to/run-actions-from-runjs) 查看它。
 :::
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference -Set variable](/img/actions/unsetvar/unsetvar.png)
+![ToolJet - 动作参考 - 设置变量](/img/actions/unsetvar/unsetvar.png)
 
 </div>

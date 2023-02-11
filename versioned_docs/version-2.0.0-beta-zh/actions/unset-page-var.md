@@ -1,16 +1,16 @@
 ---
 id: unset-page-variable
-title: Unset page variable
+title: Unset page variable 取消设置页面变量
 ---
 
-Use this action to clear the variable that was created using the set page variable action.
+使用此操作清除使用设置页面变量操作创建的变量。
 
 :::info
-You can also trigger actions from the **JavaScript code**. Check it out [here](/docs/how-to/run-actions-from-runjs).
+您还可以从 **JavaScript 代码** 触发操作。在 [此处](/docs/how-to/run-actions-from-runjs) 查看它。
 :::
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/actions/page/set-page-var.png" alt="ToolJet - Action reference - Switch page" width="600"/>
+<img className="screenshot-full" src="/img/actions/page/set-page-var.png" alt="ToolJet - 动作参考 - 切换页面" width="600"/>
 
 </div>

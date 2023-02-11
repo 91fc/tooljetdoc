@@ -1,70 +1,70 @@
 ---
 id: textarea
-title: Textarea
+title: 文本区域
 ---
-# Textarea
+# 文本区域
 
-Textarea widgets let users enter and edit just text like [Text Input](/docs/widgets/text-input) widget.
+Textarea 小部件让用户可以像 [Text Input](/docs/widgets/text-input) 小部件一样输入和编辑文本。
 
 :::tip
-Textarea should be preferred over [Text Input](/docs/widgets/text-input) when user input is more than one sentence.
+当用户输入不止一个句子时，Textarea 应该优先于 [Text Input](/docs/widgets/text-input)。
 :::
 
-## How To Use Textarea Widget
+## 如何使用 Textarea 小部件
 
-<iframe height="500" src="https://www.youtube.com/embed/ja66x6DeZxk" title="Textarea Widget" frameborder="0" allowfullscreen width="100%"></iframe>
 
-## Properties
 
-### Default value
+## 特性
 
-This property is used for setting the initial value in the textarea on the initial load. This field expects a `String` value.
+### 默认值
 
-### Placeholder
+此属性用于在初始加载时设置文本区域中的初始值。该字段需要一个 `字符串` 值。
 
-It specifies a hint that describes the expected value. This field expects a `String` value.
+### 占位符
 
-## General
-### Tooltip
+它指定描述预期值的提示。该字段需要一个 `字符串` 值。
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+## 一般的
+### 工具提示
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
+
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Text area" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 文本区域" />
 
 </div>
 
-## Layout
+## 布局
 
-### Show on desktop
+### 在桌面上显示
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-## Styles
+## 风格
 
-### Border Radius
+### 边框半径
 
-Use this property to modify the border radius of the text area widget. The field expects only numerical value from `1` to `100`, default is `0`. 
-### Visibility
+使用此属性修改文本区域小部件的边框半径。该字段只需要从 `1` 到 `100` 的数值，默认为 `0` 。
+###可见性
 
-This is to control the visibility of the widget. If `{{false}}` the widget will not visible after the app is deployed. It can only have boolean values i.e. either `{{true}}` or `{{false}}`. By default, it's set to `{{true}}`.
-### Disable
+这是为了控制小部件的可见性。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。它只能有布尔值，即 `{{true}}` 或 `{{false}}`。默认情况下，它设置为 `{{true}}` 。
+### 禁用
 
-This property only accepts boolean values. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
+此属性只接受布尔值。如果设置为 `{{true}}`，小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。
 
-## Actions
+## 动作
 
-| Action      | Description | Properties |
-| ----------- | ----------- | ------------------ |
-| setText | Set the text. | `text` |
-| clear | Clear the text. |  |
+| 行动     | 说明       | 属性   |
+| -------- | ---------- | ------ |
+| 设置文本 | 设置文本。 | `文字` |
+| 清晰     | 清除文本。 |        |
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

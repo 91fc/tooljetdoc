@@ -1,49 +1,49 @@
 ---
 id: spinner
-title: Spinner
+title: 微调器
 ---
-# Spinner
+# 微调器
 
-Spinner widget can be used to provide a visual indication that an action is in progress by awaiting a change.
-
-<div style={{textAlign: 'center'}}>
-
-<img className="screenshot-full" src="/img/widgets/spinner/spinner.png" alt="ToolJet - Widget Reference - Spinner" />
-
-</div>
-
-## General
-### Tooltip
-
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
-
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+微调器小部件可用于通过等待更改来提供一个动作正在进行中的视觉指示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Spinner" />
+<img className="screenshot-full" src="/img/widgets/spinner/spinner.png" alt="ToolJet - 小部件参考 - Spinner" />
 
 </div>
 
-## Layout
+## 一般的
+### 工具提示
 
-### Show on desktop
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+<div style={{textAlign: 'center'}}>
 
-## Styles
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 微调器" />
 
-### Visibility
+</div>
 
-Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`.
+## 布局
 
-### Color
+### 在桌面上显示
 
-Change the color of the Spinner by entering the `Hex color code` or choosing a color of your choice from the color-picker. 
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-### Size
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-Change the size of the Spinner by selecting options from the dropdown. It has small and large sizes available.
+## 风格
+
+### 可见性
+
+打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。
+
+### 颜色
+
+通过输入 `十六进制颜色代码` 或从颜色选择器中选择您选择的颜色来更改微调器的颜色。
+
+### 尺寸
+
+通过从下拉列表中选择选项来更改微调器的大小。它有小尺寸和大尺寸可供选择。

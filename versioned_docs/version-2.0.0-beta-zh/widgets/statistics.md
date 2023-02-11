@@ -1,93 +1,93 @@
 ---
 id: statistics
-title: Statistics
+title: 统计数据
 ---
 
-# Statistics
+# 统计数据
 
-Statistics can be used to display different statistical information.
-
-<div style={{textAlign: 'center'}}>
-
-<img className="screenshot-full" src="/img/widgets/statistics/stats.png" alt="ToolJet - Widget Reference - Statistics" />
-
-</div>
-
-## Properties
-
-### Primary value label
-
-This property lets you add and remove primary value label.
-
-### Primary value
-
-This property lets you add and remove primary value,the actual amount can be represented here.
-
-### Hide secondary value
-
-This property lets you show/hide the secondary value from the statistics component. By default, this property is disabled. Toggle it on to hide the secondary value, you can also click on the `Fx` button next to it to dynamically set the value to `{{true}}` or `{{false}}`.
-
-### Secondary value label
-
-This property lets you add and remove secondary value label.
-
-### Secondary value
-
-This property lets you add and remove secondary value,the change in value can be represented here.
-
-### Secondary sign display
-
-This property lets you add and secondary sign either positive or negative,can be used to represent positive(increase) or negative(decrease) movement.Default value is positive.
-
-### Loading state
-
-Loading state can be used to show a spinner on the statistics. Loading state is commonly used with `isLoading` property of the queries to show a loading status while a query is being run. Switch the toggle **On** or click on `fx` to programmatically set the value `{{true}}` or `{{false}}`.
-
-## General
-### Tooltip
-
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
-
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+Statistics可以用来显示不同的统计信息。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Statistics" />
+<img className="screenshot-full" src="/img/widgets/statistics/stats.png" alt="ToolJet - 小部件参考 - 统计" />
 
 </div>
 
-## Layout
+## 特性
 
-### Show on desktop
+### 主值标签
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+此属性允许您添加和删除主值标签。
 
-### Show on mobile
+### 主值
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+此属性允许您添加和删除主要值，实际金额可以在此处表示。
 
-## Styles
+### 隐藏次要值
 
-### Primary Label Colour
+此属性允许您显示/隐藏统计组件的次要值。默认情况下，此属性是禁用的。将其打开以隐藏次要值，您也可以单击它旁边的 `Fx` 按钮将值动态设置为 `{{true}}` 或 `{{false}}` 。
 
-You can change the primary label color by entering the Hex color code or choosing a color of your choice from the color picker.
+### 二级值标签
 
-### Primary Text Colour
+此属性允许您添加和删除辅助值标签。
 
-You can change the primary text color of the primary label by entering the Hex color code or choosing a color of your choice from the color picker.
+### 次要值
 
-### Secondary Label Colour
+此属性允许您添加和删除次要值，值的更改可以在此处表示。
 
-You can change the secondary label color of the primary label by entering the Hex color code or choosing a color of your choice from the color picker.
+### 二级标志显示
 
-### Secondary Text Colour
+此属性允许您添加和辅助符号正或负，可用于表示正（增加）或负（减少）运动。默认值为正。
 
-You can change the secondary text color of the primary label by entering the Hex color code or choosing a color of your choice from the color picker.
+### 加载状态
 
-### Visibility
+加载状态可用于显示统计信息的微调器。加载状态通常与查询的 isLoading 属性一起使用，以在运行查询时显示加载状态。切换开关**开**或点击 `fx` 以编程方式设置值 `{{true}}` 或 `{{false}}` 。
 
-Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`.
+## 一般的
+### 工具提示
+
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
+
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
+
+<div style={{textAlign: 'center'}}>
+
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 统计信息" />
+
+</div>
+
+## 布局
+
+### 在桌面上显示
+
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+
+### 在手机上显示
+
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+
+## 风格
+
+### 主标签颜色
+
+您可以通过输入十六进制颜色代码或从颜色选择器中选择您选择的颜色来更改主标签颜色。
+
+### 主要文本颜色
+
+您可以通过输入十六进制颜色代码或从颜色选择器中选择您选择的颜色来更改主标签的主要文本颜色。
+
+### 二级标签颜色
+
+您可以通过输入十六进制颜色代码或从颜色选择器中选择您选择的颜色来更改主标签的辅助标签颜色。
+
+### 辅助文本颜色
+
+您可以通过输入十六进制颜色代码或从颜色选择器中选择您选择的颜色来更改主标签的次要文本颜色。
+
+### 可见性
+
+打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

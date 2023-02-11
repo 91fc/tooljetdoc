@@ -1,87 +1,87 @@
 ---
 id: map
-title: Map
+title: 地图
 ---
-# Map
+# 地图
 
-The map widget can be used to pick or select locations on the Google map with the location's coordinates.
-
-<div style={{textAlign: 'center'}}>
-
-<img className="screenshot-full" src="/img/widgets/map/map.png" alt="ToolJet - Widget Reference - Map" />
-
-</div>
-
-## Exposed variables
-
-Exposed variables can be used to get data from the widget.
-
-| variable      | description |
-| ----------- | ----------- |
-| bounds      | Viewport area of the map |
-| center      | It contains the locations' coordinates at the center of the bounding area |
-| markers     | A marker identifies a location on the map. `markers` contains the list of markers on the map |
-| selectedMarker | Object with the marker selected by the user |
-
-## Events
-
-| events      | description |
-| ----------- | ----------- |
-| On bounds change | Triggered when the bounding area is changed. This event is triggered after `bounds` variable is updated |
-| On create marker | This event is triggered when a new marker is created on the map |
-| On marker click | This event is triggered when any of the markers in the map is clicked |
-
-:::info
-Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
-:::
-
-## Properties
-
-| properties      | description | Expected value |
-| ----------- | ----------- | ------------------ |
-| Initial location | It is the default location's coordinates that the map should focus on. | An object containing the latitude and langitude as key value pairs. ex: `{{ {"lat": 40.7128, "lng": -73.935242} }}` |
-| Default Markers | List of markers that should be shown on the map | An array of objects containing the coordinates. ex: `{{ [{"lat": 40.7128, "lng": -73.935242}] }}` | 
-| Add new markers | This property should be enabled to add new markers to the map on click. | `On` by default, toggle `off` to disable adding new markers on the map. Can be programmatically configured by clicking on `Fx`, accepts values `{{true}}` or `{{false}}` |
-| Search for places | It can be used to show or hide auto-complete search box. | `On` by default, toggle `off` to disable search on the map. Can be programmatically configured by clicking on `Fx`, accepts values `{{true}}` or `{{false}}` |
-
-## General
-### Tooltip
-
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
-
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+地图小部件可用于使用位置坐标在 Google 地图上挑选或选择位置。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Map" />
+<img className="screenshot-full" src="/img/widgets/map/map.png" alt="ToolJet - 小部件参考 - 地图" />
 
 </div>
 
-## Layout
+## 暴露的变量
 
-### Show on desktop
+公开的变量可用于从小部件获取数据。
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+| 变量     | 说明                                                  |
+| -------- | ----------------------------------------------------- |
+| 边界     | 地图的视口区域                                        |
+| 中心     | 它包含边界区域中心的位置坐标                          |
+| 标记     | 标记标识地图上的位置。 `markers` 包含地图上的标记列表 |
+| 选定标记 | 带有用户选择的标记的对象                              |
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+## 活动
 
-## Styles
-
-### Visibility
-
-Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`.
-
-### Disable
-
-This is `off` by default, toggle `on` the switch to lock the widget and make it non-functional. You can also programmatically set the value by clicking on the `Fx` button next to it. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
+| 活动         | 说明                                                   |
+| ------------ | ------------------------------------------------------ |
+| 关于边界变化 | 当边界区域改变时触发。此事件在 `bounds` 变量更新后触发 |
+| 在创建标记   | 在地图上创建新标记时触发此事件                         |
+| 在标记上单击 | 单击地图中的任何标记时都会触发此事件                   |
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
-## Actions
+## 特性
 
-| Action      | Description | Properties |
-| ----------- | ----------- | ------------------ |
-| `setLocation` | Set map's location. | Latitude and Longitude values as parameters. ex: `component.map1.setLocation(40.7128, -73.935242)` |
+| 属性       | 说明                                     | 期望值                                                                                                                           |
+| ---------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| 初始位置   | 这是地图应关注的默认位置坐标。           | 包含纬度和经度作为键值对的对象。例如：`{{ {"lat": 40.7128, "lng": -73.935242} }}`                                                |
+| 默认标记   | 应在地图上显示的标记列表                 | 包含坐标的对象数组。例如：`{{ [{"lat": 40.7128, "lng": -73.935242}] }}`                                                          |
+| 添加新标记 | 应启用此属性以在单击时向地图添加新标记。 | 默认情况下为 `打开` ，切换为 `关闭` 以禁用在地图上添加新标记。可以通过单击 `Fx` 以编程方式配置，接受值 `{{true}}` 或 `{{false}}` |
+| 搜索地点   | 它可用于显示或隐藏自动完成搜索框。       | 默认情况下为 `开启` ，切换为 `关闭` 以禁用地图上的搜索。可以通过单击 `Fx` 以编程方式配置，接受值 `{{true}}` 或 `{{false}}`       |
+
+## 一般的
+### 工具提示
+
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
+
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
+
+<div style={{textAlign: 'center'}}>
+
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 地图" />
+
+</div>
+
+## 布局
+
+### 在桌面上显示
+
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
+
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+
+## 风格
+
+###可见性
+
+打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。
+
+### 禁用
+
+默认情况下这是 `关闭` ，切换 `打开` 开关以锁定小部件并使其无法运行。您还可以通过单击旁边的 `Fx` 按钮以编程方式设置该值。如果设置为 `{{true}}`，小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。
+
+:::info
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
+:::
+
+## 动作
+
+| 行动       | 说明             | 属性                                                                          |
+| ---------- | ---------------- | ----------------------------------------------------------------------------- |
+| `设置位置` | 设置地图的位置。 | 纬度和经度值作为参数。例如：`component.map1.setLocation(40.7128, -73.935242)` |

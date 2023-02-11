@@ -1,63 +1,63 @@
 ---
 id: timeline
-title: Timeline
+title: 时间线
 ---
-# Timeline
+# 时间线
 
-Timeline widget can be used to do a visual representation of a sequence of events
+时间轴小部件可用于对一系列事件进行可视化表示
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/timeline/timeline.png" alt="ToolJet - Widget Reference - Timeline" />
+<img className="screenshot-full" src="/img/widgets/timeline/timeline.png" alt="ToolJet - 小部件参考 - 时间轴" />
 
 </div>
 
-## Properties
+## 特性
 
-### Timeline data
+### 时间线数据
 
-**Data requirements:** The data needs to be an array of objects and each object should have `title`, `subTitle`, `iconBackgroundColor` and `date` keys.
+**数据要求：** 数据需要是一个对象数组，每个对象都应该有 `title`、`subTitle`、`iconBackgroundColor` 和 `date` 键。
 
-**Example:**
+**例子：**
 ```json
-[ 
-    { "title": "Product Launched", "subTitle": "First version of our product released to public", "date": "20/10/2021", "iconBackgroundColor": "#4d72fa"},
-    { "title": "First Signup", "subTitle": "Congratulations! We got our first signup", "date": "22/10/2021", "iconBackgroundColor": "#4d72fa"}, 
-    { "title": "First Payment", "subTitle": "Hurray! We got our first payment", "date": "01/11/2021", "iconBackgroundColor": "#4d72fa"} 
+[
+    { "title": "Product Launched", "subTitle": "我们产品的第一个版本公开发布", "date": "20/10/2021", "iconBackgroundColor": "#4d72fa"},
+    { "title": "First Signup", "subTitle": "恭喜！我们完成了第一次注册", "date": "22/10/2021", "iconBackgroundColor": "#4d72fa"},
+    { "title": "第一笔付款", "subTitle": "欢呼！我们收到了第一笔付款", "date": "01/11/2021", "iconBackgroundColor": "#4d72fa"}
 ]
 ```
 
 
-### Hide date
+### 隐藏日期
 
-Hide date can be used to hide the date time or Left Hand Side of the timeline widget
+隐藏日期可用于隐藏时间线小部件的日期时间或左侧
 
-## General
-### Tooltip
+## 一般的
+### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Timeline" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 时间轴" />
 
 </div>
 
-## Layout
+## 布局
 
-| Layout| description| Expected value|
-| ----- | ---------  | ------------- |
-| Show on desktop | Toggle on or off to display desktop view. | You can programmatically determining the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}` |
-| Show on mobile  | Toggle on or off to display mobile view.  | You can programmatically determining the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}` |
+| 布局         | 说明                       | 期望值                                                                      |
+| ------------ | -------------------------- | --------------------------------------------------------------------------- |
+| 在桌面上显示 | 打开或关闭以显示桌面视图。 | 您可以通过单击 `Fx` 以设置值 `{{true}}` 或 `{{false}}` 来以编程方式确定该值 |
+| 在手机上显示 | 打开或关闭以显示移动视图。 | 您可以通过单击 `Fx` 以设置值 `{{true}}` 或 `{{false}}` 来以编程方式确定该值 |
 
-## Styles
+## 风格
 
-| Style      | Description |
-| ----------- | ----------- | 
-| Visibility | Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not visible after the app is deployed. By default, it's set to `{{true}}`. |
+| 款式   | 说明                                                                                                                                                                       |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 能见度 | 打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。 |
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

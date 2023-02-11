@@ -1,85 +1,85 @@
 ---
 id: star-rating
-title: Star rating
+title: 星级
 ---
-# Star rating
+# 星级
 
-Star rating widget can be used to display as well as input ratings. The widget supports half stars, and the number of stars can be set too.
+星级评级小部件可用于显示和输入评级。小部件支持半星，星数也可以设置。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/star/star-rating.png" alt="ToolJet - Widget Reference - Star rating" />
+<img className="screenshot-full" src="/img/widgets/star/star-rating.png" alt="ToolJet - 小部件参考 - 星级" />
 
 </div>
 
-## Events
+## 活动
 
-### On Change
+### 变化
 
-This event is triggered when a star is clicked.
+单击星星时会触发此事件。
 
 :::info
-Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
-## Properties
+## 特性
 
-### Label
+### 标签
 
-The text to be used as the label for the star rating. This field expects a `String` value.
+用作星级标签的文本。该字段需要一个 `字符串` 值。
 
-### Number of stars
+### 星星数
 
-Initial number of stars in the list on initial load. `default: 5`. This field expects an integer value.
+初始加载时列表中的初始星星数。 `默认值：5`。该字段需要一个整数值。
 
-### Default no of selected stars
+### 默认选择的星星数
 
-This property specifies the default count of stars that are selected on the initial load. `default: 5` (integer). This field expects an integer value.
+此属性指定在初始加载时选择的默认星星数。 `默认值：5`（整数）。该字段需要一个整数值。
 
-### Enable half star
+### 启用半星
 
-Toggle `on` to allow selection of half stars. `default: false` (bool). Click on `Fx` to programmatically define the value `{{true}}` or `{{false}}`.
+切换 `开` 以允许选择半星。 `默认值：false`（布尔值）。单击 `Fx` 以编程方式定义值 `{{true}}` 或 `{{false}}` 。
 
-### Tooltips
+### 工具提示
 
-This is used for displaying informative tooltips on each star, and it is mapped to the index of the star. `default: []` (array of strings ). Ex: `{{["bad", "okay", "good", "best"]}}`
+这用于在每颗星上显示信息工具提示，并映射到星的索引。 `默认值：[]`（字符串数组）。例如：`{{[ `坏` 、 `好` 、 `好` 、 `最好` ]}}`
 
-## General
-### Tooltip
+## 一般的
+### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Star rating" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 星级" />
 
 </div>
 
-## Layout
+## 布局
 
-### Show on desktop
+### 在桌面上显示
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-## Styles
+## 风格
 
-### Star Color
+### 星星颜色
 
-Display color of the star. `default: #ffb400` (color hex). Change color by providing `Hex color code` or choosing one from the picker.
+显示星星的颜色。 `默认值：#ffb400`（十六进制颜色）。通过提供 `十六进制颜色代码` 或从选择器中选择一个来更改颜色。
 
-### Label color
+### 标签颜色
 
-Change the color of label in widget by providing `Hex color code` or choosing one from the picker.
+通过提供 `十六进制颜色代码` 或从选择器中选择一个来更改小部件中标签的颜色。
 
-### Visibility
+### 可见性
 
-Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`.
+打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。
 
-### Disable
+### 禁用
 
-This is `off` by default, toggle `on` the switch to lock the widget and make it non-functional. You can also programmatically set the value by clicking on the `Fx` button next to it. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
+默认情况下这是 `关闭` ，切换 `打开` 开关以锁定小部件并使其无法运行。您还可以通过单击旁边的 `Fx` 按钮以编程方式设置该值。如果设置为 `{{true}}`，小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。

@@ -1,77 +1,77 @@
 ---
 id: text
-title: Text
+title: 文本
 ---
-# Text
+# 文本
 
-Text widget can be used to display text.
+文本小部件可用于显示文本。
 
 :::info
-Users cannot enter and edit text.
-::: 
+用户无法输入和编辑文本。
+:::
 
-## How To Use Text Widget
+## 如何使用文本小部件
 
-<iframe height="500" src="https://www.youtube.com/embed/mcjYKw2VeAI" title="Text Widget" frameborder="0" allowfullscreen width="100%"></iframe>
 
-## Properties
 
-### Text
+## 特性
 
-This property sets the content/text inside the Text widget. Refer your query data with dynamic variables `{{queries.datasource.data.text}}` or populate it with sample values `Text goes here !`.
+### 文本
 
-### Show loading state
+此属性设置文本小部件内的内容/文本。使用动态变量 `{{queries.datasource.data.text}}` 引用您的查询数据，或使用示例值 `Text goes here !` 填充它。
 
-Toggle `on` or `off` to show or hide the loading state. You can also click on the `Fx` next to it to set the value `{{true}}` and `{{false}}` dynamically. Shows a loading status if the value is `true`. This property is often used with the `isLoading` property of queries so that the table shows a spinner while the query is being run. Default value is `false`.
+### 显示加载状态
 
-## General
-### Tooltip
+切换 `on` 或 `off` 以显示或隐藏加载状态。您也可以点击它旁边的 `Fx` 来动态设置值 `{{true}}` 和 `{{false}}`。如果值为 `true` ，则显示加载状态。此属性通常与查询的 `isLoading` 属性一起使用，以便表格在查询运行时显示微调器。默认值为 `假` 。
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+## 一般的
+### 工具提示
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
+
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Text" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 文本" />
 
 </div>
 
-## Layout
+## 布局
 
-### Show on desktop
+### 在桌面上显示
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-## Styles
+## 风格
 
-| Style      | Description |
-| ----------- | ----------- | 
-| Font Weight | You can change the font weight of the text in following ways: **normal (default), bold, lighter, bolder** |
-| Text Decoration | You can change the text decoration in following ways : **none(default), overline, line-through, underline, overline underline** |
-| Text Transformation | You can transform the text in following ways: **none (default), uppercase, lowercase, capitalize** |
-| Font Style | You can change the font style in following ways: **normal(default), italic, oblique** |
-| Line Height | You can change the line height by providing number as input (example - 1.5) |
-| Text Indent | You can change the text indent by providing the number as input (example - 10) |
-| Letter Spacing | You can change the letter spacing by providing the number as input  (example - 2) |
-| Word Spacing  | You can change the letter spacing by providing the number as input  (example - 2) |
-| Font Variant | You can change the font variant of the text in the following ways: **normal (default), small-caps, initial, inherit** |
-| Text Size | By default, the text size is set to 14. You can enter any value from 1-100 to set custom text size. |
-| Background Color | You can change the background color of the text component by entering the Hex color code or choosing a color of your choice from the color picker. |
-| Text Color |  You can change the color of the text by entering the Hex color code or choosing a color of your choice from the color picker. |
-| Align Text | You can align the text inside the widget in following ways: left, right, center, justified |
+| 款式     | 说明                                                                                     |
+| -------- | ---------------------------------------------------------------------------------------- |
+| 字重     | 您可以通过以下方式更改文本的字体粗细：**正常（默认）、粗体、较浅、较粗**                 |
+| 文字装饰 | 您可以通过以下方式更改文本装饰：**无（默认）、上划线、划线、下划线、上划线下划线**       |
+| 文本转换 | 您可以通过以下方式转换文本：**无（默认）、大写、小写、大写**                             |
+| 字体样式 | 您可以通过以下方式更改字体样式：**正常（默认）、斜体、倾斜**                             |
+| 行高     | 您可以通过提供数字作为输入来更改行高（示例 - 1.5）                                       |
+| 文字缩进 | 您可以通过提供数字作为输入来更改文本缩进（示例 - 10）                                    |
+| 字母间距 | 您可以通过提供数字作为输入来更改字母间距（示例 - 2）                                     |
+| 字间距   | 您可以通过提供数字作为输入来更改字母间距（示例 - 2）                                     |
+| 字体变体 | 您可以通过以下方式更改文本的字体变体：**普通（默认）、小型大写字母、首字母、继承**       |
+| 文字大小 | 默认情况下，文本大小设置为 14。您可以输入 1-100 之间的任何值来设置自定义文本大小。       |
+| 背景颜色 | 您可以通过输入十六进制颜色代码或从颜色选择器中选择您选择的颜色来更改文本组件的背景颜色。 |
+| 文字颜色 | 您可以通过输入十六进制颜色代码或从颜色选择器中选择您选择的颜色来更改文本的颜色。         |
+| 对齐文本 | 您可以通过以下方式对齐小部件内的文本：左对齐、右对齐、居中、对齐                         |
 
 
-### Visibility
+### 可见性
 
-This is to control the visibility of the widget. If `{{false}}` the widget will not visible after the app is deployed. It can only have boolean values i.e. either `{{true}}` or `{{false}}`. By default, it's set to `{{true}}`.
-### Disable
+这是为了控制小部件的可见性。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。它只能有布尔值，即 `{{true}}` 或 `{{false}}`。默认情况下，它设置为 `{{true}}` 。
+### 禁用
 
-This property only accepts boolean values. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
+此属性只接受布尔值。如果设置为 `{{true}}`，小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

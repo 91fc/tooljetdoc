@@ -1,64 +1,64 @@
 ---
 id: icon
-title: Icon 
+title: 图标
 ---
 
-An Icon widget can be used to add icons(sourced from icon library). It supports events like on hover and on click.
+图标小部件可用于添加图标（来自图标库）。它支持悬停和单击等事件。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/icon/icon.png" alt="ToolJet - Widget - Icon" />
+<img className="screenshot-full" src="/img/widgets/icon/icon.png" alt="ToolJet - 小部件 - 图标" />
 
 </div>
 
-## Properties
+## 特性
 
-| Properties  | description | Expected value |
-| ----------- | ----------- | -------------- |
-| Icon | Use this to choose an icon form the list of available icons | You can also use the search bar in it to look for the icons | 
+| 属性 | 说明                               | 期望值                             |
+| ---- | ---------------------------------- | ---------------------------------- |
+| 图标 | 使用它从可用图标列表中选择一个图标 | 您还可以使用其中的搜索栏来查找图标 |
 
-## Events
+## 活动
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/icon/events.png" alt="ToolJet - Widget - Icon" />
+<img className="screenshot-full" src="/img/widgets/icon/events.png" alt="ToolJet - 小部件 - 图标" />
 
 </div>
 
-To add an event, click on the icon widget's configuration handle to open the widget properties on the components drawer on the right. Go to the **Events** section and click on **+ Add handler**.
+要添加事件，请单击图标小部件的配置句柄以打开右侧组件抽屉中的小部件属性。转到 **Events** 部分并单击 **+ 添加处理程序**。
 
-The Icon widget supports the following events:
+图标小部件支持以下事件：
 
-| Event  | Description |
-| ----------- | ----------- |
-| On hover      | This event is triggered when the cursor is hovered over the icon|
-| On click      | This event is triggered when the icon is clicked |
+| 活动 | 说明                           |
+| ---- | ------------------------------ |
+| 悬停 | 当光标悬停在图标上时触发此事件 |
+| 点击 | 单击图标时触发此事件           |
 
-Just like any other event on ToolJet, you can set multiple handlers for any of the above-mentioned events.
+就像 ToolJet 上的任何其他事件一样，您可以为上述任何事件设置多个处理程序。
 
 :::info
-Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
-## General
+## 一般的
 
-<b>Tooltip:</b> Set a tooltip text to specify the information when the user moves the mouse pointer over the widget.
+<b>工具提示：</b>设置工具提示文本以指定用户将鼠标指针移到小部件上时的信息。
 
-## Layout
+## 布局
 
-| Layout  | description | Expected value |
-| ----------- | ----------- | ------------ |
-| Show on desktop | Toggle on or off to show/hide the widget on desktop screens. | You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}` |
-| Show on mobile | Toggle on or off to show/hide the widget on mobile screens. | You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`   |
+| 布局         | 说明                                      | 期望值                                                                      |
+| ------------ | ----------------------------------------- | --------------------------------------------------------------------------- |
+| 在桌面上显示 | 打开或关闭以在桌面屏幕上显示/隐藏小部件。 | 您可以通过单击 `Fx` 以设置值 `{{true}}` 或 `{{false}}` 来以编程方式确定该值 |
+| 在手机上显示 | 打开或关闭以在移动屏幕上显示/隐藏小部件。 | 您可以通过单击 `Fx` 以设置值 `{{true}}` 或 `{{false}}` 来以编程方式确定该值 |
 
-## Styles
+## 风格
 
-| Style      | Description | Expected value |
-| ----------- | ----------- | ------------- |
-| Icon color |  You can change the color of the icon widget by entering the Hex color code or choosing a color of your choice from the color picker. |
-| Visibility | This is to control the visibility of the widget. | If `{{false}}` the widget will not visible after the app is deployed. | It can only have boolean values i.e. either `{{true}}` or `{{false}}`. By default, it's set to `{{true}}`. |
-| Box shadow | This property adds a shadow to the widget. | You can use different values for box shadow property like offsets, blur, spread, and the color code. |
+| 款式     | 说明                                                                                   | 期望值                                                           |
+| -------- | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| 图标颜色 | 您可以通过输入十六进制颜色代码或从颜色选择器中选择您选择的颜色来更改图标小部件的颜色。 |
+| 能见度   | 这是为了控制小部件的可见性。                                                           | 如果为 `{{false}}`，则在部署应用程序后小部件将不可见。           | 它只能有布尔值，即 `{{true}}` 或 `{{false}}`。默认情况下，它设置为 `{{true}}` 。 |
+| 箱影     | 此属性向小部件添加阴影。                                                               | 您可以为框阴影属性使用不同的值，例如偏移、模糊、扩散和颜色代码。 |
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

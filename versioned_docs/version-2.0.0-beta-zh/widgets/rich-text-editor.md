@@ -1,56 +1,56 @@
 ---
 id: rich-text-editor
-title: Rich Text Editor
+title: 富文本编辑器
 ---
-# Rich Text Editor
+# 富文本编辑器
 
-Rich Text Editor can be used to enter and edit the text in HTML format.
-It should be preferred for blog posts, forum posts or notes sections. The text is to be used as the label for the radio button.
-
-<div style={{textAlign: 'center'}}>
-
-<img className="screenshot-full" src="/img/widgets/richtexteditor/richtexteditor.png" alt="ToolJet - Widget Reference - Rich Text Editor" />
-
-</div>
-
-## Properties
-
-### Placeholder
-
-It specifies a hint that describes the expected value.
-
-### Default Value
-
-The default value that the widget will hold when the app is loaded.
-
-## General
-### Tooltip
-
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
-
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+富文本编辑器可用于输入和编辑 HTML 格式的文本。
+它应该是博客文章、论坛帖子或注释部分的首选。文本将用作单选按钮的标签。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference -Rich Text Editor" />
+<img className="screenshot-full" src="/img/widgets/richtexteditor/richtexteditor.png" alt="ToolJet - 小部件参考 - 富文本编辑器" />
 
 </div>
 
-## Layout
+## 特性
 
-### Show on desktop
+### 占位符
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+它指定描述预期值的提示。
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+### 默认值
 
-## Styles
+加载应用程序时小部件将保留的默认值。
 
-### Visibility
+## 一般的
+### 工具提示
 
-Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-### Disable
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
-This is `off` by default, toggle `on` the switch to lock the widget and make it non-functional. You can also programmatically set the value by clicking on the `Fx` button next to it. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
+<div style={{textAlign: 'center'}}>
+
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 富文本编辑器" />
+
+</div>
+
+## 布局
+
+### 在桌面上显示
+
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
+
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+
+## 风格
+
+### 可见性
+
+打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。
+
+### 禁用
+
+默认情况下这是 `关闭` ，切换 `打开` 开关以锁定小部件并使其无法运行。您还可以通过单击旁边的 `Fx` 按钮以编程方式设置该值。如果设置为 `{{true}}`，小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。

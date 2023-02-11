@@ -1,73 +1,73 @@
 ---
 id: overview
-title: Overview
+title: 概述
 ---
 
-# Components : Overview
+# 组件：概述
 
-Components are used to build the UI of the applications. They can be dragged onto the canvas from the Component Library and can be modified from the Properties Panel without needing to write any code. **[Event Handlers](/docs/actions/event-handler)** in Components allow end users to trigger queries and other application events to perform the **[Actions](/docs/category/actions-reference)**.
+组件用于构建应用程序的 UI。可以将它们从组件库拖到画布上，并且可以从属性面板进行修改，而无需编写任何代码。 **组件中的[事件处理程序](/docs/actions/event-handler)**允许最终用户触发查询和其他应用程序事件以执行**[操作](/docs/category/actions-reference)** .
 
-## Adding components
+## 添加组件
 
-Components can be dragged and dropped from the Component Library(from the right side on app builder) on to the canvas. Components can be moved by simply click and hold, and can be resized from edges or borders.
+可以将组件从组件库（从应用程序构建器的右侧）拖放到画布上。只需单击并按住即可移动组件，并且可以从边缘或边框调整大小。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/overview/dragv2.gif" alt="Components: Overview" />
+<img className="screenshot-full" src="/img/widgets/overview/dragv2.gif" alt="组件：概览" />
 
 </div>
 
-### Select multiple components
+### 选择多个组件
 
-For moving the **multiple components** at once, simply **shift+click**, to select multiple components. Once grouped, the components can be moved on the canvas while maintaining their relative positions.
+要一次移动**多个组件**，只需**shift+单击**，即可选择多个组件。分组后，组件可以在画布上移动，同时保持它们的相对位置。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/overview/selectv2.gif" alt="Components: Overview" />
+<img className="screenshot-full" src="/img/widgets/overview/selectv2.gif" alt="组件：概览" />
 
 </div>
 
-You can also create a selection triangle and move multiple components together by `click and drag`
+您还可以创建一个选择三角形并通过 `单击并拖动` 将多个组件一起移动
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/overview/dragselv2.gif" alt="Components: Overview" />
+<img className="screenshot-full" src="/img/widgets/overview/dragselv2.gif" alt="组件：概览" />
 
 </div>
 
 :::tip
-You can also use many other **[Keyboard Shortcuts](/docs/tutorial/keyboard-shortcuts)** in ToolJet to copy, cut, paste components to the canvas.
+您还可以使用 ToolJet 中的许多其他**[键盘快捷键](/docs/tutorial/keyboard-shortcuts)** 将组件复制、剪切、粘贴到画布。
 :::
 
-## Component properties
+## 组件属性
 
-Each Component can be modified and styled from the Properties Panel such as the **data** field, a toggle for **disabling** the component, or stylings like a **background color**. Properties can be modified directly or programmatically by using **[Bindings](#bindings)**, which enables you to write JavaScript code.
+每个组件都可以从属性面板中修改和设置样式，例如 **数据** 字段、用于 **禁用** 组件的切换开关，或像 **背景颜色** 这样的样式。可以使用 **[Bindings](#bindings)** 直接或以编程方式修改属性，这使您能够编写 JavaScript 代码。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/overview/props.png" alt="Components: Overview" />
+<img className="screenshot-full" src="/img/widgets/overview/props.png" alt="组件：概览" />
 
 </div>
 
-## Component Event Handlers
+## 组件事件处理器
 
-Event Handlers can be found in the Component's **Property Panel** or in the **Advanced** section of the Query. Event handlers can be used to trigger the queries, perform **[Component Specific Actions - CSA](/docs/actions/control-component)** or for setting a variable.
+可以在组件的 **属性面板** 或查询的 **高级** 部分中找到事件处理程序。事件处理程序可用于触发查询、执行 **[组件特定操作 - CSA](/docs/actions/control-component)** 或用于设置变量。
 
-:::info Actions
-Check all the available Actions **[here](/docs/category/actions-reference)**.
+:::info
+检查所有可用的操作**[此处](/docs/category/actions-reference)**。
 :::
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/overview/events.png" alt="Components: Overview" />
+<img className="screenshot-full" src="/img/widgets/overview/events.png" alt="组件：概览" />
 
 </div>
 
-## Bindings
+## 绑定
 
-Bindings allow you to get dynamic data into the components. Anything inside of **`{{}}`** is evaluated as a JavaScript expression in ToolJet.
+绑定允许您将动态数据获取到组件中。 **`{{}}`** 中的任何内容在 ToolJet 中都被评估为 JavaScript 表达式。
 
-Any arbitrary JavaScript code can be written inside **`{{}}`**:
+**`{{}}`** 中可以写任意的 JavaScript 代码：
 ```js
 {{(function () {
         <your_javascript_code_here>
@@ -80,6 +80,6 @@ or
 ```
 
 :::tip
-Check out the How-to guides like **[changing color of text in table column](/docs/how-to/access-cellvalue-rowdata)**, **[Enable/Disable a component using JavaScript](/docs/how-to/access-currentuser)**, and **[more](/docs/category/how-to)**.
+查看操作指南，例如 **[更改表格列中文本的颜色](/docs/how-to/access-cellvalue-rowdata)**、 **[使用 JavaScript 启用/禁用组件](/docs/how-to/access-currentuser)** 和 **[更多](/docs/category/how-to)**。
 :::
 

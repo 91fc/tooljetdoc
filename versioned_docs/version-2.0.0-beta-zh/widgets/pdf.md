@@ -5,52 +5,52 @@ title: PDF
 
 # PDF
 
-PDF widget can be used to embed the PDF file either by URL or as a Base64 encoded.
+PDF 小部件可用于通过 URL 或 Base64 编码嵌入 PDF 文件。
 
-## Properties
+## 特性
 
-### File URL
+### 文件地址
 
-The URL of the PDF file on the web. `data:application/pdf;base64,` format is supported and the input needs to be prefixed with `data:application/pdf;base64,`
+Web 上 PDF 文件的 URL。支持`data:application/pdf;base64,`格式，输入需要加上`data:application/pdf;base64,`前缀
 
-### Scale page to width
+### 将页面缩放到宽度
 
-It can be toggled to adjust the PDF content to fit the width or height of the component
+可以切换以调整 PDF 内容以适应组件的宽度或高度
 
-### Show page controls
+### 显示页面控件
 
-By default, page number, previous & next button is displayed while hovering the PDF file. It can be toggled on or off.
+默认情况下，悬停 PDF 文件时会显示页码、上一页和下一页按钮。它可以打开或关闭。
 
-### Show the download
+### 显示下载
 
-The `Download` button on the PDF component allows you to download the pdf file. By default, Show the download button is enabled. Toggle it off to remove the `Download` button from PDF component, you can also click on the `Fx` button to set the values `{{true}}` or `{{false}}` dynamically.
+PDF 组件上的 `下载` 按钮允许您下载 pdf 文件。默认情况下，显示下载按钮处于启用状态。将其关闭以从 PDF 组件中删除 `下载` 按钮，您也可以单击 `Fx` 按钮以动态设置值 `{{true}}` 或 `{{false}}` 。
 
-## General
-### Tooltip
+## 一般的
+### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - PDF" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - PDF" />
 
 </div>
 
-## Layout
+## 布局
 
-| Layout          | description                               | Expected value                                                                                                |
-| --------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| Show on desktop | Toggle on or off to display desktop view. | You can programmatically determining the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}` |
-| Show on mobile  | Toggle on or off to display mobile view.  | You can programmatically determining the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}` |
+| 布局         | 说明                       | 期望值                                                                      |
+| ------------ | -------------------------- | --------------------------------------------------------------------------- |
+| 在桌面上显示 | 打开或关闭以显示桌面视图。 | 您可以通过单击 `Fx` 以设置值 `{{true}}` 或 `{{false}}` 来以编程方式确定该值 |
+| 在手机上显示 | 打开或关闭以显示移动视图。 | 您可以通过单击 `Fx` 以设置值 `{{true}}` 或 `{{false}}` 来以编程方式确定该值 |
 
-## Styles
+## 风格
 
-| Style      | Description                                                                                                                                                                                                                                              |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Visibility | Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not visible after the app is deployed. By default, it's set to `{{true}}`. |
+| 款式   | 说明                                                                                                                                                                       |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 能见度 | 打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。 |
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

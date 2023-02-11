@@ -1,9 +1,9 @@
 ---
 id: canvas
-title: Canvas
+title: 画布
 ---
 
-Canvas is the center area of the ToolJet app builder where the application is built. You arrange the **components** by dragging them from the Components library(right-sidebar).
+画布是构建应用程序的 ToolJet 应用程序构建器的中心区域。您可以通过从组件库（右侧栏）中拖动它们来排列 **组件**。
 
 <div style={{textAlign: 'center'}}>
 
@@ -11,9 +11,9 @@ Canvas is the center area of the ToolJet app builder where the application is bu
 
 </div>
 
-### Arrange Components
+### 排列组件
 
-All the components are fully interactive in editor mode - to prevent interaction you can **click and hold** the **[Component Handle](docs/app-builder/components-library)** to change component's position.
+所有组件在编辑器模式下都是完全交互的——为了防止交互，您可以**单击并按住****[组件句柄](docs/app-builder/components-library)** 来更改组件的位置。
 
 <div style={{textAlign: 'center'}}>
 
@@ -21,11 +21,11 @@ All the components are fully interactive in editor mode - to prevent interaction
 
 </div>
 
-### Resize Components
+### 调整组件大小
 
-Components on the canvas can be resized from the edges.
+画布上的组件可以从边缘调整大小。
 
-You can precisely set the position of selected components using keyboard arrow keys after clicking the component handle.
+单击组件句柄后，您可以使用键盘箭头键精确设置所选组件的位置。
 
 <div style={{textAlign: 'center'}}>
 
@@ -33,15 +33,15 @@ You can precisely set the position of selected components using keyboard arrow k
 
 </div>
 
-### Group Components
+### 组组件
 
-ToolJet comes with flexible components to group other components together, such as **Container** and **Form**. When you drag and drop components in containers/forms they create a group of nested components. All components can be nested in this way.
+ToolJet 带有灵活的组件，可以将其他组件组合在一起，例如 **Container** 和 **Form**。当您将组件拖放到容器/表单中时，它们会创建一组嵌套组件。所有组件都可以以这种方式嵌套。
 
-### Hide or Disable Components
+### 隐藏或禁用组件
 
-Hide or Disable a component by setting its **Visibility** or **Disabled** property to `true`. Click on the component handle to open **config inspector** on right side. These values can also evaluate to true based on a truthy value. For example, you can use the property of one component to toggle the Visibility property of another component dynamically, you just need to write a conditional statement. 
+通过将其 **Visibility** 或 **Disabled** 属性设置为 `true` 来隐藏或禁用组件。单击组件句柄以在右侧打开 **config inspector**。这些值也可以根据真值评估为真。例如，您可以使用一个组件的属性来动态切换另一个组件的 Visibility 属性，您只需要编写一个条件语句。
 
-For example: We want to disable a button when a checkbox is checked so we can simple use `{{components.checkbox1.value}}` in **Disable** property of the button. `{{components.checkbox1.value}}` evaluates to `true` when the checkbox is checked, and false when unchecked.
+例如：我们想在选中复选框时禁用按钮，因此我们可以简单地在按钮的 **Disable** 属性中使用 `{{components.checkbox1.value}}`。当复选框被选中时，`{{components.checkbox1.value}}` 的计算结果为 `true`，未选中时为 false。
 
 <div style={{textAlign: 'center'}}>
 
@@ -49,7 +49,7 @@ For example: We want to disable a button when a checkbox is checked so we can si
 
 </div>
 
-### Clone Components
+### 克隆组件
 
-You can clone existing components on the canvas by **cmd/ctrl + d**. Check other **[Keyboard Shortcuts](/docs/tutorial/keyboard-shortcuts)**
+您可以通过 **cmd/ctrl + d** 克隆画布上的现有组件。检查其他 **[键盘快捷键](/docs/tutorial/keyboard-shortcuts)**
 

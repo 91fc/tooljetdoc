@@ -1,27 +1,27 @@
 ---
 id: svg-image
-title: Svg Image
+title: Svg 图像
 ---
-# SVG Image
+# SVG 图像
 
-It is used to render vector images. We can display images, icons, texts using this widget. SVGs are vector images and therefore are usually much smaller in file-size than bitmap-based images.
+它用于渲染矢量图像。我们可以使用这个小部件显示图像、图标、文本。 SVG 是矢量图像，因此文件大小通常比基于位图的图像小得多。
 
-Developers prefer having SVG **(Scalable Vector Graphics)** files as they are scalable and will render pixel-perfect at any resolution whereas JPEGs, PNGs and GIFs will not. 
+开发人员更喜欢 SVG **（可缩放矢量图形）** 文件，因为它们是可缩放的，并且可以在任何分辨率下呈现像素完美，而 JPEG、PNG 和 GIF 则不会。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/svg-image/svg-image.png" alt="ToolJet - Widget Reference - SVG" />
+<img className="screenshot-full" src="/img/widgets/svg-image/svg-image.png" alt="ToolJet - 小部件参考 - SVG" />
 
 </div>
 
-## Properties
+## 特性
 
-### SVG Data
+### SVG 数据
 
-Enter the SVG data of the image to display it on the widget. 
+输入图像的 SVG 数据以将其显示在小部件上。
 
 :::tip
-Refer to the resources where SVG files are downloaded for free. You copy-paste the below data in this field to see a new icon being rendered.
+请参阅免费下载 SVG 文件的资源。您在此字段中复制粘贴以下数据以查看正在呈现的新图标。
 :::
 
 ```
@@ -29,31 +29,31 @@ Refer to the resources where SVG files are downloaded for free. You copy-paste t
 ```
 
 
-## General
+## 一般的
 
-### Tooltip
+### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - SVG" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - SVG" />
 
 </div>
 
-## Layout
+## 布局
 
-### Show on desktop
+### 在桌面上显示
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-## Styles
+## 风格
 
-### Visibility
+### 可见性
 
-Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`.
+打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。

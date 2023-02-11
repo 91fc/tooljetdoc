@@ -1,89 +1,89 @@
 ---
 id: multiselect
-title: Multiselect
+title: 多选框
 ---
-# Multiselect
+# 多选框
 
-Multiselect widget can be used to collect multiple user inputs from a list of options.
+多选小部件可用于从选项列表中收集多个用户输入。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/multiselect/multi.gif" alt="ToolJet - Widget Reference - Multiselect" />
+<img className="screenshot-full" src="/img/widgets/multiselect/multi.gif" alt="ToolJet - 小部件参考 - 多选" />
 
 </div>
 
-## Events
+## 活动
 
-### On select
+### 在选择
 
-On select event is triggered when an option is selected.
+当一个选项被选中时，On select 事件被触发。
 
 :::info
-Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
-## Properties
+## 特性
 
-### Label
+### 标签
 
-The text is to be used as the label for the multiselect widget.
+该文本将用作多选小部件的标签。
 
-### Default value
+### 默认值
 
-The value of the default option. This should always be an array.
-### Option values
+默认选项的值。这应该始终是一个数组。
+### 选项值
 
-Values for different items/options in the list of the multiselect.
+多选列表中不同项目/选项的值。
 
-### Option labels
+### 选项标签
 
-Labels for different items/options in the list of the multiselect.
+多选列表中不同项目/选项的标签。
 
-### General
-#### Tooltip
+### 一般的
+#### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Multiselect" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 多选" />
 
 </div>
 
-## Layout
+## 布局
 
-### Show on desktop
+### 在桌面上显示
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-## Styles
+## 风格
 
-### Border radius
+### 边框半径
 
-Add a border radius to the multiselect using this property. It accepts any numerical value from `0` to `100`.
+使用此属性向多选添加边框半径。它接受从 `0` 到 `100` 的任何数值。
 
-### Visibility
+###可见性
 
-Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`.
+打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。
 
-### Disable
+### 禁用
 
-This is `off` by default, toggle `on` the switch to lock the widget and make it non-functional. You can also programmatically set the value by clicking on the `Fx` button next to it. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
+默认情况下这是 `关闭` ，切换 `打开` 开关以锁定小部件并使其无法运行。您还可以通过单击旁边的 `Fx` 按钮以编程方式设置该值。如果设置为 `{{true}}`，小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。
 
-## Actions
+## 动作
 
-| Action      | Description | Properties |
-| ----------- | ----------- | ------------------ |
-| `selectOption` | Select options. | pass options as parameter. ex: `components.multiselect1.selectOption(1)` |
-| `deselectOption` | Deselect options.| pass options as parameter. ex: `components.multiselect1.deselectOption(1)` |
-| `clearSelections` | Clear all selection. |  ex: `components.multiselect1.clearSelections()` |
+| 行动              | 说明                                                                                | 属性                                                                |
+| ----------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `selectOption`    | 选择选项。                                                                          | 将选项作为参数传递。例如：`components.multiselect1.selectOption(1)` |
+| `deselectOption`  | 取消选择选项。将选项作为参数传递。例如：`components.multiselect1.deselectOption(1)` |
+| `clearSelections` | 清除所有选择。                                                                      | 例如：`components.multiselect1.clearSelections()`                   |
 
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

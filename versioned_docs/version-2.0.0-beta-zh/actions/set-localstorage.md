@@ -1,15 +1,15 @@
 ---
 id: set-localstorage
-title: Set localStorage
+title: Set local storage 设置本地存储
 ---
 
-# Set localStorage
+# 设置本地存储
 
-This action allows you to specify a `key` and its corresponding `value` to be stored in localStorage.
+此操作允许您指定要存储在 localStorage 中的 `键` 及其对应的 `值` 。
 
-## Example: App that stores a name in localStorage and displays it on reload
+## 示例：将名称存储在 localStorage 中并在重新加载时显示的应用程序
 
-1. Add an input field, button and a text as shown
+1.如图所示添加一个输入框、按钮和一个文本
 
 <div style={{textAlign: 'center'}}>
 
@@ -17,7 +17,7 @@ This action allows you to specify a `key` and its corresponding `value` to be st
 
 </div>
 
-2. Select the button and add a `Set localStorage` action with `key` set to `name` and value pointing at the value of the text field
+2. 选择按钮并添加一个 `Set localStorage` 操作，其中 `key` 设置为 `name` 并且 value 指向文本字段的值
 
 <div style={{textAlign: 'center'}}>
 
@@ -25,7 +25,7 @@ This action allows you to specify a `key` and its corresponding `value` to be st
 
 </div>
 
-3. Select the text label we've added and set its value to the name item from localStorage
+3.选择我们添加的文本标签，并将其值设置为localStorage中的名称项
 
 <div style={{textAlign: 'center'}}>
 
@@ -34,9 +34,9 @@ This action allows you to specify a `key` and its corresponding `value` to be st
 </div>
 
 
-4. Now save the application, this is important as we're about to reload the page.
+4. 现在保存应用程序，这很重要，因为我们即将重新加载页面。
 
-5. Type in anything you wish on the input box and click on the button
+5. 在输入框中输入任何内容，然后单击按钮
 
 <div style={{textAlign: 'center'}}>
 
@@ -45,11 +45,10 @@ This action allows you to specify a `key` and its corresponding `value` to be st
 </div>
 
 
-6. Reload the page, you'll see that the value stored in local storage is persisted and it is displayed on screen!
+6. 重新加载页面，你会看到存储在本地存储中的值被持久化并显示在屏幕上！
 
 <div style={{textAlign: 'center'}}>
 
 ![ToolJet - Action reference -Set local storage sample app](/img/actions/localstorage/6.png)
 
 </div>
-

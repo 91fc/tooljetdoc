@@ -1,107 +1,107 @@
 ---
 id: image
-title: Image
+title: 图像
 ---
-# Image
+# 图像
 
-Image widget is used to display images in your app.
-
-<div style={{textAlign: 'center'}}>
-
-<img className="screenshot-full" src="/img/widgets/image/image.png" alt="ToolJet - Widget Reference - Image" />
-
-</div>
-
-## Events
+图像小部件用于在您的应用程序中显示图像。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/image/events.png" alt="ToolJet - Widget Reference - Image" />
+<img className="screenshot-full" src="/img/widgets/image/image.png" alt="ToolJet - 小部件参考 - 图像" />
 
 </div>
 
-### On click
+## 活动
 
-On click event is triggered when an image is clicked.
+<div style={{textAlign: 'center'}}>
+
+<img className="screenshot-full" src="/img/widgets/image/events.png" alt="ToolJet - 小部件参考 - 图像" />
+
+</div>
+
+### 点击
+
+单击图像时会触发单击事件。
 
 :::info
-Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
-## Properties
+## 特性
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/image/props.png" alt="ToolJet - Widget Reference - Image" />
+<img className="screenshot-full" src="/img/widgets/image/props.png" alt="ToolJet - 小部件参考 - 图像" />
 
 </div>
 
-### URL
-Enter the URL of the image to display it on the widget.
+### 网址
+输入图像的 URL 以将其显示在小部件上。
 
-### Loading state
-Loading state can be used to show a spinner as the image content. Loading state is commonly used with `isLoading` property of the queries to show a loading status while a query is being run. Switch the toggle **On** or click on `fx` to programmatically set the value `{{true}}` or `{{false}}`.
+### 加载状态
+加载状态可用于将微调器显示为图像内容。加载状态通常与查询的 isLoading 属性一起使用，以在运行查询时显示加载状态。切换开关**开**或点击 `fx` 以编程方式设置值 `{{true}}` 或 `{{false}}` 。
 
-### Alternative text
-Used for alt text of images.
+### 替代文本
+用于图像的替代文本。
 
-### Zoom buttons
-Toggle this to enable zoom options inside image.
+### 缩放按钮
+切换此项以启用图像内的缩放选项。
 
-### Rotate buttons
-Toggle this on to enable rotate button in the image.
+### 旋转按钮
+开启此项以启用图像中的旋转按钮。
 
-## General
-### Tooltip
+## 一般的
+### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Image" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 图像" />
 
 </div>
 
-## Layout
+## 布局
 
-### Show on desktop
+### 在桌面上显示
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}`.
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}` ，以编程方式确定该值。
 
-### Show on mobile
+### 在手机上显示
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-## Styles
+## 风格
 
-### Border type
-Choose a border type for the image from available options:
-- **None**
-- **Rounded**
-- **Circle**
-- **Thumbnail**
+### 边框类型
+从可用选项中为图像选择边框类型：
+- **没有任何**
+- **圆形**
+- **圆圈**
+- **缩略图**
 
-### Image fit
-Choose a image fit - similar to object fit for the image from available options:
-- **fill**
-- **cover**
-- **contain**
-- **scale-down**
+### 图像适合
+从可用选项中选择适合图像的图像 - 类似于适合图像的对象：
+- **充满**
+- **覆盖**
+- **包含**
+- **缩小**
 
-### Background color
-Add a background color to widget by providing the `HEX color code` or choosing the color of your choice from the color-picker.
+### 背景颜色
+通过提供 `HEX 颜色代码` 或从颜色选择器中选择您选择的颜色，为小部件添加背景颜色。
 
-### Padding
-Adds padding between the image and widget border. It accepts any numerical value from `0` to `100`.
+### 填充
+在图像和小部件边框之间添加填充。它接受从 `0` 到 `100` 的任何数值。
 
-### Visibility
-Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`.
+### 可见性
+打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。
 
-### Disable
-This is `off` by default, toggle `on` the switch to lock the widget and make it non-functional. You can also programmatically set the value by clicking on the `Fx` button next to it. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
+### 禁用
+默认情况下这是 `关闭` ，切换 `打开` 开关以锁定小部件并使其无法运行。您还可以通过单击旁边的 `Fx` 按钮以编程方式设置该值。如果设置为 `{{true}}`，小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

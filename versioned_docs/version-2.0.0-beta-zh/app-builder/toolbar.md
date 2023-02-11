@@ -1,133 +1,133 @@
 ---
 id: toolbar
-title: Toolbar
+title: 工具栏
 ---
 
-Toolbar is present at the top of the app-builder, and is used to configure the app settings.
+工具栏位于应用程序构建器的顶部，用于配置应用程序设置。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/toolbar.png" alt="App Builder: Toolbar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/toolbar.png" alt="App Builder: 工具栏"/>
 
 </div>
 
-### App name
+### 应用名称
 
-App name can be edited from the left side of the toolbar next to the ToolJet logo.
+可以从 ToolJet 徽标旁边的工具栏左侧编辑应用程序名称。
 
-When a new app is created, by default its name is set to **Untitled app**
+创建新应用时，默认情况下其名称设置为 **Untitled app**
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/name.png" alt="App Builder: Toolbar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/name.png" alt="App Builder: 工具栏"/>
 
 </div>
 
-### Global Settings
+### 全局设置
 
-To configure the app's global settings, click on the kebab menu(three vertical dots) on the left of the app name. Global settings include:
+要配置应用程序的全局设置，请单击应用程序名称左侧的烤肉串菜单（三个垂直点）。全局设置包括：
 
-- **Hide heaeder for launched apps**: Toggle this on to the hide the tooljet's header when the applications are launched
-- **Maintenance mode**: Toggle this on to put the application in maintenance mode. When in **maintenance mode**, on launching the app, the user will get an error message that **the app is under maintenance**.
-- **Max width of canvas**: Modify the width of the canvas in **px** or **%**. The default width is 1292 px.
-- **Max height of canvas**: Modify the width of the canvas in **px** or **%**. The default height is 2400 px and currently it is the maximum height limit.
-- **Background color of canvas**: Enter the hex color code or choose a color from the picker to change the background color of the canvas. You can also click on the **Fx** to programmatically set the value.
+- **隐藏已启动应用程序的标题**：启用此选项可在应用程序启动时隐藏 tooljet 的标题
+- **维护模式**：开启此选项可将应用程序置于维护模式。当处于**维护模式**时，在启动应用程序时，用户将收到一条错误消息，指出**应用程序正在维护**。
+- **画布最大宽度**：以**px**或 **%**为单位修改画布的宽度。默认宽度为 1292 像素。
+- **画布最大高度**：以**px**或 **%**为单位修改画布的宽度。默认高度为 2400 像素，目前是最大高度限制。
+- **画布背景色**：输入十六进制颜色代码或从选择器中选择一种颜色来更改画布的背景色。您还可以单击 **Fx** 以编程方式设置值。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/globalset.png" alt="App Builder: Toolbar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/globalset.png" alt="App Builder: 工具栏"/>
 
 </div>
 
-### Desktop or Mobile layout
+### 桌面或移动布局
 
-Switch the canvas mode in Mobile or Desktop layout from the toolbar.
+从工具栏切换移动或桌面布局中的画布模式。
 
-#### Adding existing component to mobile layout
+#### 将现有组件添加到移动布局
 
-Click on the component handle to open component config inspector on the right side. Scroll down to the **Layout** section and enable Mobile Layout. The width of the widget will be adjusted to fit the Mobile Layout.
+单击组件句柄以打开右侧的组件配置检查器。向下滚动到 **Layout** 部分并启用 Mobile Layout。小部件的宽度将被调整以适应移动布局。
 
-#### Adding a new component to mobile layout
+#### 向移动布局添加新组件
 
-Switch the layout to mobile by clicking the button on the toolbar. Drag and drop a component to the canvas. This widget will not be shown on desktop layout unless **Show on desktop** is enabled from the component config inspector.
+通过单击工具栏上的按钮将布局切换到移动设备。将组件拖放到画布上。除非从组件配置检查器启用**在桌面上显示**，否则此小部件不会显示在桌面布局上。
 
 :::info
-Width of the component will be automatically adjusted to fit the screen while viewing the application in app viewer.
+在应用程序查看器中查看应用程序时，组件的宽度将自动调整以适应屏幕。
 :::
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/view.png" alt="App Builder: Toolbar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/view.png" alt="App Builder: 工具栏"/>
 
 </div>
 
-### Undo or Redo
+### 撤消或重做
 
-Use the undo or redo buttons from the toolbar to undo or redo any change on the canvas.
+使用工具栏中的撤消或重做按钮撤消或重做画布上的任何更改。
 
-You can also **[Keyboard Shortcuts](/docs/tutorial/keyboard-shortcuts)** to perform such actions.
+您还可以**[键盘快捷键](/docs/tutorial/keyboard-shortcuts)** 来执行此类操作。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/undo.png" alt="App Builder: Toolbar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/undo.png" alt="App Builder: 工具栏"/>
 
 </div>
 
-### Version Manager
+### 版本管理器
 
-Create or Remove Versions of the applications from the Version Manager. You can also edit the version name from the edit button.
+从版本管理器创建或删除应用程序的版本。您还可以从编辑按钮编辑版本名称。
 
-When many developers are working on an app, **Versioning** allows them to save their own version of the app. This also prevents developers from overwriting the other developer's work.
+当许多开发人员在开发应用程序时，**版本控制**允许他们保存自己的应用程序版本。这也可以防止开发人员覆盖其他开发人员的工作。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/version.png" alt="App Builder: Toolbar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/version.png" alt="App Builder: 工具栏"/>
 
 </div>
 
-### Comments
+### 评论
 
-Comment anywhere on the canvas and collaborate with other users in the workspace. Click on the comments button to enable it and then drop comment anywhere on the canvas.
+在画布上的任意位置发表评论并与工作区中的其他用户协作。单击评论按钮以启用它，然后将评论放在画布上的任意位置。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/comments.png" alt="App Builder: Toolbar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/comments.png" alt="App Builder: 工具栏"/>
 
 </div>
 
-### Share
+### 分享
 
-Share your applications with a unique URL generated automatically or edit the URL slug to personalize it.
+使用自动生成的唯一 URL 共享您的应用程序或编辑 URL slug 以对其进行个性化设置。
 
-- When **Make the application public** is off and URL is shared then the users will have to login to ToolJet to use the application. Toggle on the option then anyone on the internet will be able to access the application without logging in to ToolJet.
-- ToolJet generates the **Embedded link** which can be used to embed application on the webpages.
+- 当 **公开应用** 关闭并共享 URL 时，用户将必须登录 ToolJet 才能使用该应用程序。打开该选项，互联网上的任何人都可以在不登录 ToolJet 的情况下访问该应用程序。
+- ToolJet 生成可用于在网页上嵌入应用程序的**嵌入式链接**。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/share.png" alt="App Builder: Toolbar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/share.png" alt="App Builder: 工具栏"/>
 
 </div>
 
-### Preview
+### 预览
 
-Clicking on **Preview** button will open up the currently opened version of the app in the new tab. This is really handy when the app developer wants to immediately check the app preview in production.
+单击 **预览** 按钮将在新选项卡中打开当前打开的应用程序版本。当应用程序开发人员想要立即检查生产中的应用程序预览时，这非常方便。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/preview.png" alt="App Builder: Toolbar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/preview.png" alt="App Builder: 工具栏"/>
 
 </div>
 
-### Release
+### 发布
 
-Release the app to publish the current version of the app and push the changes into the production.
+发布应用程序以发布应用程序的当前版本并将更改推送到生产环境中。
 
 :::caution
-ToolJet will block editing of the Released version of an app and will display a prompt to create a new version to make the changes. This is to prevent accidentally pushing an unfinished app to the live version.
+ToolJet 将阻止编辑已发布版本的应用程序，并会提示创建新版本以进行更改。这是为了防止意外将未完成的应用程序推送到实时版本。
 :::
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/release.png" alt="App Builder: Toolbar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/toolbar/release.png" alt="App Builder: 工具栏"/>
 
 </div>

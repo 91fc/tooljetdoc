@@ -1,172 +1,172 @@
 ---
 id: file-picker
-title: Filepicker
+title: 文件选择器
 ---
-# Filepicker
+# 文件选择器
 
-Filepicker widget allows the user to drag and drop files or upload files by browsing the filesystem and selecting one or more files in a directory.
+Filepicker 小部件允许用户通过浏览文件系统并选择目录中的一个或多个文件来拖放文件或上传文件。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/filepicker/picker.png" alt="ToolJet - Widget Reference - File Picker" />
+<img className="screenshot-full" src="/img/widgets/filepicker/picker.png" alt="ToolJet - 小部件参考 - 文件选择器" />
 
 </div>
 
 :::info
- File types must be a valid [MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) type according to input element specification or a valid file extension.
+ 根据输入元素规范，文件类型必须是有效的 [MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) 类型或有效的文件扩展名。
 
- To accept any/all file type(s), set `Accept file types` to an empty value.
+ 要接受任何/所有文件类型，请将 `接受文件类型` 设置为空值。
 :::
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/filepicker/file-type.gif" alt="ToolJet - Widget Reference - File Picker" />
+<img className="screenshot-full" src="/img/widgets/filepicker/file-type.gif" alt="ToolJet - 小部件参考 - 文件选择器" />
 
 </div>
 
 :::tip
-[MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) type determination is not reliable across platforms. CSV files, for example, are reported as text/plain under macOS but as application/vnd.ms-excel under Windows.
+[MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) 跨平台类型确定不可靠。例如，CSV 文件在 macOS 下报告为 text/plain，但在 Windows 下报告为 application/vnd.ms-excel。
 :::
 
-## Events
+## 活动
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/filepicker/events.png" alt="ToolJet - Widget Reference - File Picker" />
+<img className="screenshot-full" src="/img/widgets/filepicker/events.png" alt="ToolJet - 小部件参考 - 文件选择器" />
 
 </div>
 
-### On file selected
+### 在选择的文件上
 
 On file selected event is triggered when one or more files are selected by the selector dialogue box.
 
-### On file loaded
+### 在文件加载时
 
-On file loaded event is triggered when a file is loaded in the browser.
+在浏览器中加载文件时触发文件加载事件。
 
-### On file deselected
+### 在文件上取消选择
 
-On file selected event can be triggered when one or more files are removed from the picker.
+当一个或多个文件从选取器中删除时，可以触发文件选择事件。
 
 :::info
-Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
-## Properties
+## 特性
 
-### Instruction Text
+### 说明文字
 
-Instruction text can be set to give information on the file picker.
+可以设置说明文本以提供有关文件选择器的信息。
 
-### Use Drop zone
+### 使用拖放区
 
-Creates a drag & drop zone. Files can be dragged and dropped to the "drag & drop" zone.
+创建一个拖放区。可以将文件拖放到 `拖放` 区域。
 
-### Use File Picker
+### 使用文件选择器
 
-On clicking it invokes the default OS file prompt.
+单击它会调用默认的操作系统文件提示。
 
-### Pick multiple files 
+### 选择多个文件
 
-Allows drag and drop (or selection from the file dialog) of multiple files. `Pick multiple files` is disabled by default.
+允许拖放（或从文件对话框中选择）多个文件。默认情况下禁用 `选择多个文件` 。
 
-### Max file count
+### 最大文件数
 
-The maximum accepted number of files The default value is `2`.
+最大接受文件数默认值为 `2` 。
 
-### Accept file types
+### 接受文件类型
 
-By providing types, you can make the dropzone accept specific file types and reject the others.
+通过提供类型，您可以使放置区接受特定文件类型并拒绝其他文件类型。
 
-### Max size limit
+### 最大尺寸限制
 
-Maximum file size (in bytes).
+最大文件大小（以字节为单位）。
 
-### Min size limit
+### 最小大小限制
 
-Minimum file size (in bytes).
+最小文件大小（以字节为单位）。
 
 :::tip
-Files can be accepted or rejected based on the file types, maximum file count, maximum file size (in bytes) and minimum file size (in bytes).
-If `Pick multiple files` is set to false and additional files are dropped, all files besides the first will be rejected. 
-Any file that does not have a size in the range of `Max size limit` and `Min size limit` will be rejected.
+可以根据文件类型、最大文件数、最大文件大小（以字节为单位）和最小文件大小（以字节为单位）接受或拒绝文件。
+如果 `Pick multiple files` 设置为 false 并删除其他文件，则除第一个文件外的所有文件都将被拒绝。
+任何大小不在 `最大大小限制` 和 `最小大小限制` 范围内的文件都将被拒绝。
 :::
 
-## Options
+## 选项
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/filepicker/options.png" alt="ToolJet - Widget Reference - File Picker" />
+<img className="screenshot-full" src="/img/widgets/filepicker/options.png" alt="ToolJet - 小部件参考 - 文件选择器" />
 
 </div>
 
-### Parse content
+### 解析内容
 
-Parse the selected files, supports **CSV**, **xls**, and **xlsx** files.
+解析选中的文件，支持**CSV**、**xls**、**xlsx**文件。
 
-### File type
+### 文件类型
 
-If **Parse content** is enabled, options to auto-detect files and parse content or parse selected file types.
+如果启用了**解析内容**，则自动检测文件和解析内容或解析选定文件类型的选项。
 
 :::info
-- If **Parse content** option is toggled off, **File Type** option will not be available.
-- If the **Parse content** option is toggled on, it only parses the next file that is selected, not the already selected one.
+- 如果 **Parse content** 选项被关闭，**File Type** 选项将不可用。
+- 如果 **Parse content** 选项打开，它只解析下一个选择的文件，而不是已经选择的文件。
 :::
 
-### General
-#### Tooltip
+### 一般的
+#### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
-
-<div style={{textAlign: 'center'}}>
-
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - File Picker" />
-
-</div>
-
-## Layout
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/filepicker/layout.png" alt="ToolJet - Widget Reference - File Picker" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 文件选择器" />
 
 </div>
 
-### Show on desktop
-
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
-
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-
-## Styles
+## 布局
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/filepicker/styles.png" alt="ToolJet - Widget Reference - File Picker" />
+<img className="screenshot-full" src="/img/widgets/filepicker/layout.png" alt="ToolJet - 小部件参考 - 文件选择器" />
 
 </div>
 
-### Visibility
+### 在桌面上显示
 
-This is to control the visibility of the widget. If `{{false}}` the widget will not visible after the app is deployed. It can only have boolean values i.e. either `{{true}}` or `{{false}}`. By default, it's set to `{{true}}`.
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-### Disable
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-This property only accepts boolean values. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
+## 风格
 
-### Border Radius
+<div style={{textAlign: 'center'}}>
 
-Use this property to modify the border radius of the filepicker widget. The field expects only numerical value from `1` to `100`, default is `0`.
+<img className="screenshot-full" src="/img/widgets/filepicker/styles.png" alt="ToolJet - 小部件参考 - 文件选择器" />
+
+</div>
+
+### 可见性
+
+这是为了控制小部件的可见性。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。它只能有布尔值，即 `{{true}}` 或 `{{false}}`。默认情况下，它设置为 `{{true}}` 。
+
+### 禁用
+
+此属性只接受布尔值。如果设置为 `{{true}}`，小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。
+
+### 边框半径
+
+使用此属性修改文件选择器小部件的边框半径。该字段只需要从 `1` 到 `100` 的数值，默认为 `0` 。
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::
 
-## Actions
+## 动作
 
-| Action  | Description | Properties |
-| ----------- | ----------- | ------------ |
-| `clearFiles()` | It will clear the selected files | None |
+| 行动           | 说明             | 属性 |
+| -------------- | ---------------- | ---- |
+| `clearFiles()` | 它将清除所选文件 | 无   |

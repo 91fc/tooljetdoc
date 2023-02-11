@@ -1,199 +1,199 @@
 ---
 id: calendar
-title: Calendar
+title: 日历
 ---
-# Calendar
+# 日历
 
-Calendar widget comes with the following features:  
-- **Day, month and week level views**
-- **Events**
-- **Resource scheduling**
+日历小部件具有以下功能：
+- **日、月和周级别的视图**
+- **活动**
+- **资源调度**
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/calendar/calendar.png" alt="ToolJet - Widget Reference - Calendar" />
+<img className="screenshot-full" src="/img/widgets/calendar/calendar.png" alt="ToolJet - 小部件参考 - 日历" />
 
 </div>
 
-## Properties
+## 特性
 
-### Date format
-Determines the format in which any date passed to the calendar via any of the properties will be parsed. It also determines the format in which any date made available by the calendar via exposed variables will be displayed. It uses the date format conventions of [moment.js](https://momentjs.com/). The default Date format is set to `MM-DD-YYYY HH:mm:ss A Z`.
-### Default date
-Determines the date on which the calendar's view will be centered on. By default, the default date is set to the current date using moment.js i.e. `{{moment().format("MM-DD-YYYY HH:mm:ss A Z")}}`. If the calendar is on `month` view, it will show the month on which this date exists. If the calendar is on `week` view, it will show the week on which this date exists. This property needs to be formatted using the `Date format` property which is configurable on the inspector.
+### 日期格式
+确定将解析通过任何属性传递给日历的任何日期的格式。它还确定日历通过公开变量提供的任何日期的显示格式。它使用 [moment.js](https://momentjs.com/) 的日期格式约定。默认日期格式设置为 `MM-DD-YYYY HH:mm:ss A Z` 。
+### 默认日期
+确定日历视图居中的日期。默认情况下，默认日期使用 moment.js 设置为当前日期，即`{{moment().format("MM-DD-YYYY HH:mm:ss A Z")}}`。如果日历在 `月` 视图中，它将显示该日期所在的月份。如果日历在 `周` 视图中，它将显示该日期所在的周。此属性需要使用可在检查器上配置的 `日期格式` 属性进行格式化。
 
-### Events
-`Events` property should contain an array of objects, each of which describes the events that the calendar needs to display.
+### 活动
+`Events` 属性应该包含一个对象数组，每个对象都描述了日历需要显示的事件。
   
-Assuming that you set the date format to `MM-DD-YYYY HH:mm:ss A Z`, setting the `Events` property to the following code snippet will display an event titled `Sample Event` at the first hour of this day, as displayed in the image of calendar at the beginning of this page.
+假设您将日期格式设置为 `MM-DD-YYYY HH:mm:ss A Z` ，将 `Events` 属性设置为以下代码片段将在这一天的第一个小时显示一个名为 `Sample Event` 的事件，如本页开头的日历图像所示。
 
 ```javascript
 {{[
   {
-	  title: 'Sample event',
-      start: `${moment().startOf('day').format('MM-DD-YYYY HH:mm:ss A Z')}`,
-      end: `${moment().endOf('day').format('MM-DD-YYYY HH:mm:ss A Z')}`,
-      allDay: false,
-      tooltip: 'Sample event',
-      color: 'lightgreen',
+title: '示例事件',
+      开始：`${moment().startOf('day').format('MM-DD-YYYY HH:mm:ss A Z')}`,
+      结束：`${moment().endOf('day').format('MM-DD-YYYY HH:mm:ss A Z')}`,
+      全天：假，
+      工具提示： `示例事件` ，
+      颜色：'浅绿色'，
   }
 ]}}
 ```
 
-### Event object properties
+### 事件对象属性
 
-| Name | Description |
-|------|-------------|
-| title | Title of the event |
-| start | The date(and time) on which this event begins. Needs to be formatted in the `Date format` you've supplied |
-| end | The date(and time) on which this event ends. Needs to be formatted in the `Date format` you've supplied |
-| allDay | Optional. Qualifies the event as an 'All day event', which will pin it to date headers on `day` and `week` level views |
-| tooltip | Tooltip which will be display when the user hovers over the event |
-| color | Background color of the event, any css supported color name or hex code can be used |
-| textColor | Color of the event title, any css supported color name or hex code can be used |
-| textOrientation | Optional. If it is set to `vertical`, the title of the event will be oriented vertically. |
-| resourceId | Applicable only if you're using resource scheduling. This is the id of the resource to which this event correspond to. |
+| 名称     | 说明                                                                             |
+| -------- | -------------------------------------------------------------------------------- |
+| 标题     | 活动名称                                                                         |
+| 开始     | 此事件开始的日期（和时间）。需要按照您提供的 `日期格式` 进行格式化               |
+| 结束     | 此事件结束的日期（和时间）。需要按照您提供的 `日期格式` 进行格式化               |
+| 全天     | 选修的。将事件限定为 `全天事件` ，这会将其固定到 `天` 和 `周` 级别视图的日期标题 |
+| 工具提示 | 当用户将鼠标悬停在事件上时将显示的工具提示                                       |
+| 颜色     | 事件的背景颜色，可以使用任何 css 支持的颜色名称或十六进制代码                    |
+| 文字颜色 | 事件标题的颜色，可以使用任何 css 支持的颜色名称或十六进制代码                    |
+| 文本方向 | 选修的。如果设置为 `vertical` ，则事件的标题将垂直放置。                         |
+| 资源编号 | 仅在您使用资源计划时适用。这是这个事件对应的资源的id。                           |
 
-You may supply any other additional property to the event(s). These additional properties will available to you when the calendar widget
-exposes any of the events via its exposed variables.
+您可以为事件提供任何其他附加属性。这些附加属性将在日历小部件时提供给您
+通过其公开的变量公开任何事件。
 
-### Resources
+### 资源
 
-Specifying resources will make the calendar categorize `week` view and `day` view for each of the resources specified.  
+指定资源将使日历对每个指定资源的 `周` 视图和 `日` 视图进行分类。
 
-  For example, to categorize week/day view into for three rooms, we specify `resources` this way:
+  例如，要将周/日视图分类为三个房间，我们可以这样指定 `资源` ：
 
 ```javascript
 {{[
-    {resourceId: 1, title: 'Room A'},
-    {resourceId: 2, title: 'Room B'},
-    {resourceId: 3, title: 'Room C'},
+    {resourceId: 1, title: '房间 A'},
+    {resourceId: 2, title: '房间 B'},
+    {resourceId: 3, title: 'C 房间'},
   ]}}
 ```
 
-If we specify the `resourceId` of any of the events as `1`, then that event will be assigned to `Room A`, generating the following calendar, assuming that we've set the view to `day` and are viewing the day on which this event exists.
+如果我们将任何事件的 `resourceId` 指定为 `1` ，则该事件将分配给 `房间 A` ，并生成以下日历，假设我们已将视图设置为 `天` 并正在查看此事件存在的日期。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/calendar/calendar-resource.png" alt="ToolJet - Widget Reference - Calendar" />
+<img className="screenshot-full" src="/img/widgets/calendar/calendar-resource.png" alt="ToolJet - 小部件参考 - 日历" />
 
 </div>
 
-### Default view
+### 默认视图
 
-Determines whether the calendar would display a `day`, a `week` or a `month`. Setting this property to anything other than these values will make the calendar default to `month` view.
+确定日历是否显示 `日` 、 `周` 或 `月` 。将此属性设置为这些值以外的任何值将使日历默认为 `月` 视图。
 
-The view that is currently selected will be exposed as the variable `currentView`.
+当前选择的视图将作为变量 `currentView` 公开。
 
-### Start time on week and day view
+### 周和日视图的开始时间
 
-This determines the time at which week view and day view cells begins. Keep in mind that this field accepts a date, but still only the time and timezone(if provided) are taken from this date. The date should be provided in the date format chosen by you in the first property field.
+这决定了周视图和日视图单元格开始的时间。请记住，此字段接受日期，但仍仅从该日期获取时间和时区（如果提供）。日期应以您在第一个属性字段中选择的日期格式提供。
 
-### End time on week and day view
+### 周和日视图的结束时间
 
-This determines the time at which week view and day view cells ends. Keep in mind that this field accepts a date, but still only the time and timezone(if provided) are taken from this date. The date should be provided in the date format chosen by you in the first property field.
+这决定了周视图和日视图单元结束的时间。请记住，此字段接受日期，但仍仅从该日期获取时间和时区（如果提供）。日期应以您在第一个属性字段中选择的日期格式提供。
 
-### Show toolbar
+### 显示工具栏
 
-Determines whether the calendar toolbar should be displayed or not. Click on `Fx` button to programmatically determine the field value to `{{true}}` or `{{false}}`.
+确定是否应显示日历工具栏。单击 `Fx` 按钮以编程方式将字段值确定为 `{{true}}` 或 `{{false}}` 。
 
-### Show view switcher
+### 显示视图切换器
 
-Determines whether the calendar's buttons that allow user to switch between `month`, `week` and `day` level views will be displayed. Click on `Fx` button to programmatically determine the field value to `{{true}}` or `{{false}}`.
+确定是否显示允许用户在 `月` 、 `周` 和 `日` 级别视图之间切换的日历按钮。单击 `Fx` 按钮以编程方式将字段值确定为 `{{true}}` 或 `{{false}}` 。
 
-### Highlight today
+### 今日亮点
 
-Determines whether the today's card on the calendar should be highlighted or not. Click on `Fx` button to programmatically determine the field value to `{{true}}` or `{{false}}`.
+确定日历上的今天卡片是否应突出显示。单击 `Fx` 按钮以编程方式将字段值确定为 `{{true}}` 或 `{{false}}` 。
 
-### Show popover when the event is clicked
+### 单击事件时显示弹出框
 
-Determines whether to display a popover whenever an event is clicked. Click on `Fx` button to programmatically determine the field value to `{{true}}` or `{{false}}`.
+确定是否在单击事件时显示弹出框。单击 `Fx` 按钮以编程方式将字段值确定为 `{{true}}` 或 `{{false}}` 。
 
-## Events
+## 活动
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/calendar/events.png" alt="ToolJet - Widget Reference - Calendar" />
+<img className="screenshot-full" src="/img/widgets/calendar/events.png" alt="ToolJet - 小部件参考 - 日历" />
 
 </div>
 
-### On Event selected
+### 选择事件
 
-This event is fired when the user clicks on a calendar event. 
+当用户单击日历事件时会触发此事件。
 
-Last selected event is exposed as `selectedEvent`.
+最后选择的事件公开为 `selectedEvent` 。
 
-### on Slot selected
+### 在插槽上选择
 
-This event is fired when the user either clicks on an calendar slot(empty cell or empty space of a cell with event) or when they click and drag to select multiple slots.  
+当用户单击日历槽（空单元格或具有事件的单元格的空白空间）或单击并拖动以选择多个槽时，将触发此事件。
   
-Last selected slot(s) are exposed as `selectedSlots`.
+最后选择的插槽显示为 `selectedSlots` 。
 
-### On Date Navigate
+### 按日期导航
 
-This event is fired when the user clicks on `Today`, `Next` or `Back` buttons on the calendar. 
+当用户点击日历上的 `今天` 、 `下一步` 或 `后退` 按钮时会触发此事件。
 
-The corresponding date to which the user navigated, will be exposed as `currentDate`.
+用户导航到的相应日期将显示为 `currentDate` 。
 
-### On View Change
+### 视图更改
 
-This event is fired when a different view is selected by the user. 
+当用户选择不同的视图时会触发此事件。
 
-The current view is exposed as `currentView`.
+当前视图显示为 `currentView` 。
 
 :::info
-Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
-### General
-#### Tooltip
+### 一般的
+#### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget. Under the <b>General</b> accordion,you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
-
-<div style={{textAlign: 'center'}}>
-
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Calendar" />
-
-</div>
-
-## Layout
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/calendar/layout.png" alt="ToolJet - Widget Reference - Calendar" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 日历" />
 
 </div>
 
-### Show on desktop
-
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
-
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-
-## Styles
+## 布局
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/calendar/styles.png" alt="ToolJet - Widget Reference - Calendar" />
+<img className="screenshot-full" src="/img/widgets/calendar/layout.png" alt="ToolJet - 小部件参考 - 日历" />
 
 </div>
 
-### Visibility
+### 在桌面上显示
 
-Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`.
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-### Cell size in views classified by resource
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-When `resources` are specified, the calendar could take up quite a lot of horizontal space, making the horizontal scroll bar of calendar having to be relied upon all the time.  
+## 风格
 
-If we set this property to `compact`, the cell sizes will be smaller in `week` and `day` views.
+<div style={{textAlign: 'center'}}>
 
-### Header date format on week view
+<img className="screenshot-full" src="/img/widgets/calendar/styles.png" alt="ToolJet - 小部件参考 - 日历" />
 
-This format determines how the column header for each day in week view will be displayed. As with every other date format field in ToolJet, this follows the **momentjs** standard of date formatting. By default, its set to `DD MMM`.
+</div>
+
+###可见性
+
+打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。
+
+### 按资源分类的视图中的单元格大小
+
+指定`resources`时，日历可能会占用相当大的水平空间，导致日历的水平滚动条必须一直依赖。
+
+如果我们将此属性设置为 `compact` ，则 `week` 和 `day` 视图中的单元格大小会更小。
+
+### 周视图的标题日期格式
+
+此格式确定如何显示周视图中每一天的列标题。与 ToolJet 中的所有其他日期格式字段一样，这遵循日期格式的 **momentjs** 标准。默认情况下，它设置为 `DD MMM` 。
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::
 

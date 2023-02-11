@@ -1,97 +1,97 @@
 ---
 id: number-input
-title: Number Input
+title: 数字输入
 ---
-# Number Input
+# 数字输入
 
-Number Input widget lets users enter and change numbers.
+数字输入小部件允许用户输入和更改数字。
 
-## How To Use Number Input Widget
+## 如何使用数字输入小部件
 
-<iframe height="500" src="https://www.youtube.com/embed/Xf9Sx2fNzng" title="Number InputWidget" frameborder="0" allowfullscreen width="100%"></iframe>
+
 
 :::tip
-Numbers can be changed by using the arrow keys.
+可以使用箭头键更改数字。
 :::
 
-## Properties
+## 特性
 
-### Default value
+### 默认值
 
-A predefined value that can be fetched from the number input widget if no changes are made in widget.
+如果小部件未进行任何更改，则可以从数字输入小部件中获取预定义值。
 
-### Minimum value
+### 最小值
 
-It specifies the minimum value the number input can go to. This field accepts any numerical value.
+它指定数字输入可以达到的最小值。该字段接受任何数值。
 
-### Maximum value
+### 最大值
 
-It specifies the maximum value the number input can go to. This field accepts any numerical value.
+它指定数字输入可以达到的最大值。该字段接受任何数值。
 
-### Placeholder
-It specifies a hint that describes the expected value. This field accepts any numerical value.
+### 占位符
+它指定描述预期值的提示。该字段接受任何数值。
 
-## Events
+## 活动
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/number-input/event.png" alt="Events-Number Input" />
+<img className="screenshot-full" src="/img/widgets/number-input/event.png" alt="事件-数字输入" />
 
 </div>
 
-### On change
-This event fires whenever the value of the number input widget is changed.
+### 改变
+只要数字输入小部件的值发生更改，就会触发此事件。
 
 :::info
-Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
-## General
-### Tooltip
+## 一般的
+### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget. Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="Events-Number Input" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="事件-数字输入" />
 
 </div>
 
-## Layout
+## 布局
 
-### Show on desktop
+### 在桌面上显示
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-## Styles
+## 风格
 
-### Visibility
+### 可见性
 
-Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`.
+打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。
 
-### Disable
+### 禁用
 
-This is `off` by default, toggle `on` the switch to lock the widget and make it non-functional. You can also programmatically set the value by clicking on the `Fx` button next to it. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
+默认情况下这是 `关闭` ，切换 `打开` 开关以锁定小部件并使其无法运行。您还可以通过单击旁边的 `Fx` 按钮以编程方式设置该值。如果设置为 `{{true}}`，小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。
 
-### Border radius
+### 边界半径
 
-Add a border radius to the number input widget using this property. It accepts any numerical value from `0` to `100`.
+使用此属性向数字输入小部件添加边框半径。它接受从 `0` 到 `100` 的任何数值。
 
-### Border color
+### 边框颜色
 
-Change the border color number-input component by entering the Hex color code or choosing a color of your choice from the color picker.
+通过输入十六进制颜色代码或从颜色选择器中选择您选择的颜色来更改边框颜色编号输入组件。
 
-### Background color
+### 背景颜色
 
-Change the background color of the number-input component by entering the Hex color code or choosing a color of your choice from the color picker.
+通过输入十六进制颜色代码或从颜色选择器中选择您选择的颜色来更改数字输入组件的背景颜色。
 
-### Text color
+### 文字颜色
 
-Change the color of the number in number-input component by entering the Hex color code or choosing a color of your choice from the color picker. 
+通过输入十六进制颜色代码或从颜色选择器中选择您选择的颜色来更改数字输入组件中数字的颜色。
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

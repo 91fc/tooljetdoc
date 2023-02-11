@@ -1,108 +1,108 @@
 ---
 id: datepicker
-title: Datepicker
+title: 日期选择器
 ---
-# Datepicker
+# 日期选择器
 
-The Datepicker widget allows users to select a single value for date and time from a pre-determined set.
+Datepicker 小部件允许用户从预先确定的集合中选择日期和时间的单个值。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/datepicker/date-picker.png" alt="ToolJet - Widget Reference - Date picker" />
+<img className="screenshot-full" src="/img/widgets/datepicker/date-picker.png" alt="ToolJet - 小部件参考 - 日期选择器" />
 
 </div>
 
-## How To Use Datepicker Widget
+## 如何使用日期选择器小部件
 
-<iframe height="500" src="https://www.youtube.com/embed/ioJyd2WE2qI" title="Datepicker Widget" frameborder="0" allowfullscreen width="100%"></iframe>
 
-## Events
 
-To add an event to a date-picker component, click on the widget handle to open the widget properties on the right sidebar. Go to the **Events** section and click on **+ Add handler**.
+## 活动
 
-### On select
+要将事件添加到日期选择器组件，请单击小部件句柄以打开右侧栏中的小部件属性。转到 **Events** 部分并单击 **+ 添加处理程序**。
 
-On select event is triggered when an date is selected.
+### 在选择
+
+选择日期时会触发 On select 事件。
 
 :::info
-Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
-## Properties
+## 特性
 
-### Default value
+### 默认值
 
-This value acts as placeholder for the date picker widget, if any value is not provided then the default value will be used from the picker. The default value needs to be a `String` with respect to the `format` field. Ex: If format is set to `MM/YYYY` then provide default value as `04/2022`.
+该值充当日期选择器小部件的占位符，如果未提供任何值，则将使用选择器中的默认值。对于 `格式` 字段，默认值需要是一个 `字符串` 。例如：如果格式设置为 `MM/YYYY` ，则提供默认值 `04/2022` 。
 
-### Format
+### 格式
 
-The format of the date selected by the date picker. Default date format is **DD/MM/YYYY**. Date format should be followed as ISO 8601 as mentioned in the [moment documentation](https://momentjs.com/docs/). This field requires a `String` input. Ex: `DD/MM`, `MM/YYYY`, `YY/MM`, `DD/MM/YYYY` etc.
+日期选择器选择的日期格式。默认日期格式为 **DD/MM/YYYY**。日期格式应遵循 [moment 文档](https://momentjs.com/docs/) 中提到的 ISO 8601。此字段需要 `字符串` 输入。例如：`DD/MM`、`MM/YYYY`、`YY/MM`、`DD/MM/YYYY` 等。
 
-### Enable time selection?
+###启用时间选择？
 
-Toggle on or off to enable the time selection. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以启用时间选择。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-### Enable date selection?
+### 启用日期选择？
 
-Toggle on or off to enable the date selection. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以启用日期选择。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-### Disabled dates
+### 禁用日期
 
-We can give disabled dates property which will make specific dates disabled and cannot be selected. The default value needs to be an array of`Strings`.
+我们可以给 disabled dates 属性，这将使特定的日期被禁用并且不能被选择。默认值需要是一个字符串数组。
 
-Example for disabling the 9th of January:
+禁用 1 月 9 日的示例：
 ```js
 {{['09-01']}}
 ```
 
-Now user won't be able to select the mentioned date since it will be disabled. 
+现在用户将无法选择提到的日期，因为它将被禁用。
 
-## Validation
+## 验证
 
-### Custom Validation
+### 自定义验证
 
-Add a validation for the date input in the widget using the ternary operator.
+使用三元运算符为小部件中的日期输入添加验证。
 
-Example of validation for selecting dates that are after the current date:
+选择当前日期之后的日期的验证示例：
 ```js
-{{moment(components.datepicker1.value, 'DD/MM/YYYY').isAfter(moment()) ? true : 'Date should be after today'}}
+{{moment(components.datepicker1.value, 'DD/MM/YYYY').isAfter(moment()) ？ true : '日期应该在今天之后'}}
 ```
-### General
-#### Tooltip
+### 一般的
+#### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Date picker" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 日期选择器" />
 
 </div>
 
-## Layout
+## 布局
 
-### Show on desktop
+### 在桌面上显示
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-## Styles
+## 风格
 
-### Visibility
+### 可见性
 
-This is to control the visibility of the widget. If `{{false}}` the widget will not visible after the app is deployed. It can only have boolean values i.e. either `{{true}}` or `{{false}}`. By default, it's set to `{{true}}`.
+这是为了控制小部件的可见性。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。它只能有布尔值，即 `{{true}}` 或 `{{false}}`。默认情况下，它设置为 `{{true}}` 。
 
-### Disable
+### 禁用
 
-This property only accepts boolean values. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
+此属性只接受布尔值。如果设置为 `{{true}}`，小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。
 
-### Border Radius
+### 边界半径
 
-Use this property to modify the border radius of the date-picker. The field expects only numerical value from `1` to `100`, default is `0`. 
+使用此属性修改日期选择器的边框半径。该字段只需要从 `1` 到 `100` 的数值，默认为 `0` 。
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

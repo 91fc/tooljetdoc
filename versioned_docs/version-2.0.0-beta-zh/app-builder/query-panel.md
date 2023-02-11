@@ -1,99 +1,99 @@
 ---
 id: query-panel
-title: Query Panel
+title: 查询面板
 ---
 
-The Query Panel is present at the bottom of the app-builder, this is where you create queries to interact with connected datasources. You can perform API requests, query **[databases](/docs/data-sources/overview)**, or **[transform](/docs/tutorial/transformations)** or manipulate data with **[JavaScript](/docs/data-sources/run-js)** & **[Python](/docs/data-sources/run-py)**.
+查询面板位于应用程序构建器的底部，您可以在此处创建查询以与连接的数据源进行交互。您可以执行 API 请求、查询 **[databases](/docs/data-sources/overview)** 或 **[transform](/docs/tutorial/transformations)** 或使用 **[JavaScript] 操作数据(/docs/data-sources/run-js)** & **[Python](/docs/data-sources/run-py)**。
 
-The Query Panel has two sections:
-- **[Query Manager](#query-manager)** on the right that includes a list of all the created queries
-- **[Query Editor](#query-editor)** is used to configure the selected query
+查询面板有两个部分：
+- **[查询管理器](#查询管理器)** 在右侧，包括所有已创建查询的列表
+- **[查询编辑器](#查询编辑器)** 用于配置选择的查询
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/querypanel.png" alt="App Builder: Component library- right sidebar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/querypanel.png" alt="App Builder：组件库-右侧栏"/>
 
 </div>
 
-## Query Manager
+## 查询管理器
 
-Query Manager will list all the queries that has been created in the application. Query Manager is used to:
+查询管理器将列出已在应用程序中创建的所有查询。查询管理器用于：
 
-### Search 
+### 搜索
 
-On the top of the query manager is search box that can be used to search for a specific query.
+查询管理器的顶部是可用于搜索特定查询的搜索框。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/search.png" alt="App Builder: Component library- right sidebar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/search.png" alt="App Builder：组件库-右侧边栏"/>
 
 </div>
 
-### Add
+### 添加
 
-Add button is used to add more queries in the application. When Add button is clicked, the Query Editor will show you a list of options for creating a query from: **Rest API**, connected **[datasources](/docs/data-sources/overview)**, **[ToolJet Database](/docs/tooljet-database)**, **[JavaScript Code](/docs/data-sources/run-js)**, **[Python Code](/docs/data-sources/run-py)** or Add a new datasource.
+添加按钮用于在应用程序中添加更多查询。单击 `添加` 按钮时，查询编辑器将向您显示用于创建查询的选项列表：**Rest API**、连接的**[数据源](/docs/data-sources/overview)**、** [ToolJet 数据库](/docs/tooljet-database)**, **[JavaScript 代码](/docs/data-sources/run-js)**, **[Python 代码](/docs/data-sources/ run-py)** 或添加新的数据源。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/add.png" alt="App Builder: Component library- right sidebar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/add.png" alt="App Builder：组件库-右侧边栏"/>
 
 </div>
 
-### Delete
+### 删除
 
-Delete button will delete the selected query, the button will only show up when you hover over the query name.
+删除按钮将删除选定的查询，该按钮只会在您将鼠标悬停在查询名称上时显示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/delete.png" alt="App Builder: Component library- right sidebar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/delete.png" alt="App Builder：组件库-右侧栏"/>
 
 </div>
 
-### Edit
+### 编辑
 
-Edit button is used edit the name of the selected query, the button will only show up when you hover over the query name.
+编辑按钮用于编辑所选查询的名称，该按钮只会在您将鼠标悬停在查询名称上时显示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/edit.png" alt="App Builder: Component library- right sidebar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/edit.png" alt="App Builder：组件库-右侧边栏"/>
 
 </div>
 
-## Query Editor
+## 查询编辑器
 
-Query editor used to configure the query parameters, preview or transform the data return by the query.
+查询编辑器用于配置查询参数，预览或转换查询返回的数据。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/editor.png" alt="App Builder: Component library- right sidebar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/editor.png" alt="App Builder：组件库-右侧边栏"/>
 
 </div>
 
-### Topbar
+### 顶栏
 
-On the top of the query panel there are a few options:
+在查询面板的顶部有几个选项：
 
-#### Query Name editor
+#### 查询名称编辑器
 
-Edit the name of the query by clicking on the edit button next to the default query name.
+通过单击默认查询名称旁边的编辑按钮来编辑查询名称。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/nameedit.png" alt="App Builder: Component library- right sidebar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/nameedit.png" alt="App Builder：组件库-右侧栏"/>
 
 </div>
 
-#### Preview
+#### 预览
 
-Preview gives you a quick look at the data returned by the query without triggering the query in the app.
+预览可让您快速查看查询返回的数据，而无需在应用程序中触发查询。
 
-The Preview of data is returned in two different formats:
+数据预览以两种不同的格式返回：
 
-**Raw**
+**生的**
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/raw.png" alt="App Builder: Component library- right sidebar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/raw.png" alt="App Builder：组件库-右侧栏"/>
 
 </div>
 
@@ -101,77 +101,77 @@ The Preview of data is returned in two different formats:
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/json.png" alt="App Builder: Component library- right sidebar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/json.png" alt="App Builder：组件库-右侧边栏"/>
 
 </div>
 
-#### Save
+#### 节省
 
-Save is used to save the changes whenever a change is made in query.
+保存用于在查询中进行更改时保存更改。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/save.png" alt="App Builder: Component library- right sidebar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/save.png" alt="App Builder：组件库-右侧边栏"/>
 
 </div>
 
-#### Run
+#### 运行
 
-Run is used to trigger the query, running the query will interact with the application unlike `Preview`.
+运行 用于触发查询，运行查询将与应用程序进行交互，这与 `Preview` 不同。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/run.png" alt="App Builder: Component library- right sidebar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/run.png" alt="App Builder：组件库-右侧栏"/>
 
 </div>
 
-### Query Parameters
+### 查询参数
 
-Query Parameters are the values required for the query to return a response from the server. Parameters include **endpoints**, **methods**, or **operations**. Query Parameters are different for each datasource.
+查询参数是查询从服务器返回响应所需的值。参数包括 **endpoints**、**methods** 或 **operations**。每个数据源的查询参数都不同。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/params.png" alt="App Builder: Component library- right sidebar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/params.png" alt="App Builder：组件库-右侧栏"/>
 
 </div>
 
-### Transformation
+### 转型
 
-Transformations can be enabled on queries to transform the query results. ToolJet allows you to transform the query results using two programming languages JavaScript & Python. Check the detailed documentation on **[Transformations](/docs/tutorial/transformations)**.
+可以对查询启用转换以转换查询结果。 ToolJet 允许您使用两种编程语言 JavaScript 和 Python 转换查询结果。查看有关 **[Transformations](/docs/tutorial/transformations)** 的详细文档。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/transform.png" alt="App Builder: Component library- right sidebar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/transform.png" alt="App Builder：组件库-右侧边栏"/>
 
 </div>
 
-### Advanced options
+### 高级选项
 
-#### Run this query on application load?
+#### 在应用程序加载时运行此查询？
 
-Enabling this option will fire the query every time the app is loaded.
+启用此选项将在每次加载应用程序时触发查询。
 
-#### Request confirmation before running the query?
+#### 在运行查询之前请求确认？
 
-Enabling this option show a confirmation modal to confirm `Yes` or `No` if you want to fire that query.
+如果您想触发该查询，启用此选项会显示确认模式以确认 `是` 或 `否` 。
 
-#### Run this query on application load?
+#### 在应用程序加载时运行此查询？
 
-Enabling this option show a success toast notification when the query is successfully triggered.
+启用此选项会在成功触发查询时显示成功 Toast 通知。
 
-#### Event Handlers
+#### 事件处理程序
 
-Event Handler are used to add some action when a particular event happens. You can add event handlers to the query for the following events:
+事件处理程序用于在特定事件发生时添加一些操作。您可以将事件处理程序添加到以下事件的查询中：
 
-- **Query Success**
-- **Query Failure**
+- **查询成功**
+- **查询失败**
 
 :::info
-Learn more about [Event Handlers and Actions](/docs/widgets/overview#component-event-handlers).
+详细了解 [事件处理程序和操作](/docs/widgets/overview#component-event-handlers)。
 :::
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/advanced.png" alt="App Builder: Component library- right sidebar"/>
+<img className="screenshot-full" src="/img/v2-beta/app-builder/querypanel/advanced.png" alt="App Builder：组件库-右侧栏"/>
 
 </div>

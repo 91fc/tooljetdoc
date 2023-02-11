@@ -1,60 +1,60 @@
 ---
 id: tags
-title: Tags
+title: 标签
 ---
-# Tags
+# 标签
 
-Tags widget can be used to show array of data as tags.
+标签小部件可用于将数据数组显示为标签。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/tags/tags.png" alt="ToolJet - Widget Reference - Tags" />
+<img className="screenshot-full" src="/img/widgets/tags/tags.png" alt="ToolJet - 小部件参考 - 标签" />
 
 </div>
 
-## Properties
+## 特性
 
-### Tags
+###标签
 
-It can be used to set array of tags. It must be an array of objects like this:
+它可用于设置标签数组。它必须是这样的对象数组：
 
 ```js
-{{ 
-    [ 
-		{ title: 'success', color: '#2fb344', textColor: '#fff' }, 
-		{ title: 'info', color: '#206bc4', textColor: '#fff'  }, 
-		{ title: 'warning', color: '#f59f00', textColor: '#fff'  }, 
-		{ title: 'danger', color: '#d63939', textColor: '#fff' } 
-    ] 
+{{
+    [
+{ title: '成功', color: '#2fb344', textColor: '#fff' },
+{ title: 'info', color: '#206bc4', textColor: '#fff' },
+{ title: 'warning', color: '#f59f00', textColor: '#fff' },
+{ title: 'danger', color: '#d63939', textColor: '#fff' }
+    ]
 }}
 ```
 
-Each object should contain a title, color code of a particular tag, and also a text color.
+每个对象都应包含标题、特定标签的颜色代码以及文本颜色。
 
-## General
-### Tooltip
+## 一般的
+### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Tags" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 标签" />
 
 </div>
 
-## Layout
+## 布局
 
-### Show on desktop
+### 在桌面上显示
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-## Styles
+## 风格
 
-### Visibility
+### 可见性
 
-Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`.
+打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。

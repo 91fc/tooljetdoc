@@ -1,81 +1,81 @@
 ---
 id: date-range-picker
-title: Date-range picker
+title: 日期范围选择器
 ---
-# Date-range picker
+# 日期范围选择器
 
-The date-range picker widget allows users to select a range of dates.
+日期范围选择器小部件允许用户选择日期范围。
 
-## How To Use Date Range Picker Widget
+## 如何使用日期范围选择器小部件
 
-<iframe height="500" src="https://www.youtube.com/embed/iBJQeh1kerE" title="Date range picker Widget" frameborder="0" allowfullscreen width="100%"></iframe>
 
-## Properties
 
-### Default start date
+## 特性
 
-Set the start date to be selected by default in the widget
+### 默认开始日期
 
-### Default end date
+设置小部件中默认选择的开始日期
 
-Set the start date to be selected by default in the widget
+### 默认结束日期
 
-### Format
+设置小部件中默认选择的开始日期
 
-The format of the date selected by the date picker. Default date format is **DD/MM/YYYY**. Date format should be followed as ISO 8601 as mentioned in the [moment documentation](https://momentjs.com/docs/).
+### 格式
 
-### General
-#### Tooltip
+日期选择器选择的日期格式。默认日期格式为 **DD/MM/YYYY**。日期格式应遵循 [moment 文档](https://momentjs.com/docs/) 中提到的 ISO 8601。
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+### 一般的
+#### 工具提示
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
+
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Date range picker" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 日期范围选择器" />
 
 </div>
 
-## Events
+## 活动
 
-Date range picker supports the following events:
+日期范围选择器支持以下事件：
 
-### On select
+### 在选择
 
-The On select event is triggered when the a start date and end date is selected on the picker. Just like any other event on ToolJet, you can set multiple handlers for on select event.
+当在选择器上选择了启动日期和结束日期时，触发选择事件。就像 ToolJet 上的任何其他事件一样，您可以为选择事件设置多个处理程序。
 
 :::info
-Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/date-range/event.png" alt="ToolJet - Widget Reference - Date range picker" />
+<img className="screenshot-full" src="/img/widgets/date-range/event.png" alt="ToolJet - 小部件参考 - 日期范围选择器" />
 
 </div>
 
-## Layout
+## 布局
 
-### Show on desktop
+### 在桌面上显示
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-## Styles
+## 风格
 
-### Border Radius
+### 边界半径
 
-Use this property to modify the border radius of the date range picker. The field expects only numerical value from `1` to `100`, default is `0`. 
-### Visibility
+使用此属性修改日期范围选择器的边框半径。该字段只需要从 `1` 到 `100` 的数值，默认为 `0` 。
+### 可见性
 
-This is to control the visibility of the widget. If `{{false}}` the widget will not visible after the app is deployed. It can only have boolean values i.e. either `{{true}}` or `{{false}}`. By default, it's set to `{{true}}`.
-### Disable
+这是为了控制小部件的可见性。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。它只能有布尔值，即 `{{true}}` 或 `{{false}}`。默认情况下，它设置为 `{{true}}` 。
+### 禁用
 
-This property only accepts boolean values. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
+此属性只接受布尔值。如果设置为 `{{true}}`，小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

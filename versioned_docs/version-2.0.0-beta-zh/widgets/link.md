@@ -1,68 +1,68 @@
 ---
 id: link
-title: Link
+title: 链接
 ---
 
-# Link
+# 链接
 
-Link widget allows you to add a hyperlink and navigate to the external URL.
+链接小部件允许您添加超链接并导航到外部 URL。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/link/link.png" alt="ToolJet - Widget - Link" />
+<img className="screenshot-full" src="/img/widgets/link/link.png" alt="ToolJet - 小部件 - 链接" />
 
 </div>
 
-## Properties
+## 特性
 
-| Properties  | description | Expected value |
-| ----------- | ----------- | -------------- |
-| Link Target | This property sets the URL where the user needs to be taken on clicking the link | example: `https://dev.to/tooljet` or `{{queries.xyz.data.url}}` | 
-| Link Text | This property sets the text for the link widget  | example: `Click here` or `Open webpage` | 
-| Target Type | This property specifies the link to be opened in the same tab or new tab on clickinh the link | Options: `New Tab` & `Same Tab` |
+| 属性     | 说明                                                       | 期望值                                                       |
+| -------- | ---------------------------------------------------------- | ------------------------------------------------------------ |
+| 链接目标 | 此属性设置用户在单击链接时需要转到的 URL                   | 示例：`https://dev.to/tooljet` 或 `{{queries.xyz.data.url}}` |
+| 链接文字 | 此属性设置链接小部件                                       | 的文本示例： `单击此处` 或 `打开网页`                        |
+| 目标类型 | 此属性指定在单击链接时要在同一选项卡或新选项卡中打开的链接 | 选项：`New Tab` & `Same Tab`                                 |
 
-## Events
-To add an event to a link, click on the widget handle to open the widget properties on the right sidebar. Go to the **Events** section and click on **Add handler**.
+## 活动
+要将事件添加到链接，请单击小部件句柄以打开右侧栏中的小部件属性。转到 **Events** 部分并单击 **Add handler**。
 
-### On Click
-**On Click** event is triggered when the link is clicked. Just like any other event on ToolJet, you can set multiple handlers for on click event.
+### 点击
+**单击时** 事件在单击链接时触发。就像 ToolJet 上的任何其他事件一样，您可以为单击事件设置多个处理程序。
 
-### On hover
-**On Hover** event is triggered when the link is hovered. Just like any other event on ToolJet, you can set multiple handlers for on click event.
+### 悬停
+**On Hover** 当链接悬停时触发事件。就像 ToolJet 上的任何其他事件一样，您可以为单击事件设置多个处理程序。
 
 :::info
-Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
-## General
-### Tooltip
+## 一般的
+### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **General** 手风琴下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
-## Layout
+## 布局
 
-| Layout  | description | Expected value |
-| ----------- | ----------- | ------------ |
-| Show on desktop | Toggle on or off to show/hide the widget on desktop view. | You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}` |
-| Show on mobile | Toggle on or off to show/hide the widget on mobile view. | You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`   |
+| 布局         | 说明                                      | 期望值                                                                      |
+| ------------ | ----------------------------------------- | --------------------------------------------------------------------------- |
+| 在桌面上显示 | 打开或关闭以在桌面视图中显示/隐藏小部件。 | 您可以通过单击 `Fx` 以设置值 `{{true}}` 或 `{{false}}` 来以编程方式确定该值 |
+| 在手机上显示 | 打开或关闭以在移动视图上显示/隐藏小部件。 | 您可以通过单击 `Fx` 以设置值 `{{true}}` 或 `{{false}}` 来以编程方式确定该值 |
 
-## Styles
+## 风格
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/link/styles.png" alt="ToolJet - Widget - Link" />
+<img className="screenshot-full" src="/img/widgets/link/styles.png" alt="ToolJet - 小部件 - 链接" />
 
 </div>
 
-| Style      | Description |
-| ----------- | ----------- | 
-| Text Color |  You can change the background color of the text by entering the Hex color code or choosing a color of your choice from the color picker. |
-| Text Size | By default, the text size is set to 14. You can enter any value from 1-100 to set custom text size. |
-| Underline | You can change the underline of the text in the following ways: **on-hover (default), never, always** |
-| Visibility | Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not visible after the app is deployed. By default, it's set to `{{true}}`. |
+| 款式     | 说明                                                                                                                                                                       |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 文字颜色 | 您可以通过输入十六进制颜色代码或从颜色选择器中选择您选择的颜色来更改文本的背景颜色。                                                                                       |
+| 文字大小 | 默认情况下，文本大小设置为 14。您可以输入 1-100 之间的任何值来设置自定义文本大小。                                                                                         |
+| 下划线   | 您可以通过以下方式更改文本的下划线：**on-hover（默认）、never、always**                                                                                                    |
+| 能见度   | 打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。 |
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

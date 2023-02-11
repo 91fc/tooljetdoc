@@ -1,71 +1,71 @@
 ---
 id: qr-scanner
-title: QR Scanner
+title: 二维码扫描器
 ---
-# QR Scanner
-Scan QR codes using device camera and hold the data they carry.
+# 二维码扫描器
+使用设备相机扫描二维码并保存它们携带的数据。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/qr-scanner/qr-scanner.jpeg" alt="ToolJet - Widget Reference - QR Scanner" />
+<img className="screenshot-full" src="/img/widgets/qr-scanner/qr-scanner.jpeg" alt="ToolJet - 小部件参考 - QR 扫描仪" />
 
 </div>
 
-:::note Known Issue
-You might have to stick to the Safari browser in IOS as camera access is restricted for third-party browsers.
+:::caution 已知问题
+您可能不得不坚持使用 IOS 中的 Safari 浏览器，因为第三方浏览器的相机访问受到限制。
 :::
 
-## Exposed variables
+## 暴露的变量
 ### lastDetectedValue
 
-This variable holds the data contained in the last QR code scanned by the widget. To fetch the data use `{{components.qrscanner1.lastDetectedValue}}`.
+此变量保存小部件最后扫描的 QR 码中包含的数据。要获取数据，请使用 `{{components.qrscanner1.lastDetectedValue}}` 。
 
-## Events
-### onDetect
+## 活动
+### onDetected
 
-This event is fired whenever the widget successfully scans a QR code.
+只要小部件成功扫描 QR 码，就会触发此事件。
 
 :::info
-Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
-:::caution Debugging tip
+:::caution 调试提示
 
-Browser camera APIs restrict this widget to only work in either `localhost` or `https`.
+浏览器摄像头 API 将此小部件限制为只能在 `localhost` 或 `https` 中工作。
 
-So if you're testing it out, be sure to either use `localhost` or `https`.
+因此，如果您要对其进行测试，请务必使用 `localhost` 或 `https`。
 :::
 
-## General
-### Tooltip
+## 一般的
+### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the 
-mouse pointer over the widget.
+工具提示通常用于在用户将鼠标悬停在
+将鼠标指针悬停在小部件上。
 
-Under the <b>General</b> accordion, you can set the value in the string format. 
-Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。
+现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - QR Scanner" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - QR 扫描仪" />
 
 </div>
 
-## Layout
+## 布局
 
-### Show on desktop
+### 在桌面上显示
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-## Styles
+## 风格
 
-### Visibility
+### 可见性
 
-Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`.
+打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。
 
-### Disable
+### 禁用
 
-This is `off` by default, toggle `on` the switch to lock the widget and make it non-functional. You can also programmatically set the value by clicking on the `Fx` button next to it. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
+默认情况下这是 `关闭` ，切换 `打开` 开关以锁定小部件并使其无法运行。您还可以通过单击旁边的 `Fx` 按钮以编程方式设置该值。如果设置为 `{{true}}`，小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。

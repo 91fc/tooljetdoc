@@ -1,28 +1,28 @@
 ---
 id: steps
-title: Steps
+title: 步骤
 ---
-# Steps
+# 步骤
 
-Steps are used to guide users through complex processes, making them easier and more intuitive.
-
-<div style={{textAlign: 'center'}}>
-
-<img className="screenshot-full" src="/img/widgets/steps/steps.png" alt="ToolJet - Widget Reference - Steps" />
-
-</div>
-
-## Properties
+步骤用于引导用户完成复杂的过程，使他们更容易、更直观。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/steps/props.png" alt="ToolJet - Widget Reference - Steps" />
+<img className="screenshot-full" src="/img/widgets/steps/steps.png" alt="ToolJet - 小部件参考 - 步骤" />
 
 </div>
 
-### Steps
+## 特性
 
-This property lets you add and the steps. Every object represents a step.
+<div style={{textAlign: 'center'}}>
+
+<img className="screenshot-full" src="/img/widgets/steps/props.png" alt="ToolJet - 小部件参考 - 步骤" />
+
+</div>
+
+### 脚步
+
+此属性允许您添加和步骤。每个对象代表一个步骤。
 
 ```json
 {{
@@ -36,57 +36,57 @@ This property lets you add and the steps. Every object represents a step.
 }}
 ```
 
-### Current step
+### 当前步骤
 
-This property lets you select the current step you want to be highlighted.
+此属性允许您选择要突出显示的当前步骤。
 
-### Steps selectable
+### 可选择的步骤
 
-This property when disabled will disable selection of steps.
+禁用此属性将禁用步骤选择。
 
-## Events
-### On select
-This event is fired whenever the user selects any step.
+## 活动
+### 在选择
+每当用户选择任何步骤时都会触发此事件。
 
-## General
-### Tooltip
+## 一般的
+### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Steps" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 步骤" />
 
 </div>
 
-## Layout
-### Show on desktop
+## 布局
+### 在桌面上显示
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-## Styles
+## 风格
 
-### Theme
+### 主题
 
-You can change the theme of widget by selecting available themes from dropdown.
+您可以通过从下拉列表中选择可用主题来更改小部件的主题。
 
-### Colour
+### 颜色
 
-You can change the  color of the widget by entering the Hex color code or choosing a color of your choice from the color picker.
+您可以通过输入十六进制颜色代码或从颜色选择器中选择您选择的颜色来更改小部件的颜色。
 
-### Text Colour
+### 文字颜色
 
-You can change the  text color of the widget by entering the Hex color code or choosing a color of your choice from the color picker.
+您可以通过输入十六进制颜色代码或从颜色选择器中选择您选择的颜色来更改小部件的文本颜色。
 
-### Visibility
+### 可见性
 
-Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`.
+打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

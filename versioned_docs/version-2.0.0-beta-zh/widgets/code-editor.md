@@ -1,38 +1,38 @@
 ---
 id: code-editor
-title: Code Editor
+title: 代码编辑器
 ---
-# Code Editor
+# 代码编辑器
 
-Code Editor widget is a versatile text editor for editing code and supports several languages. 
+代码编辑器小部件是一种用于编辑代码的多功能文本编辑器，并支持多种语言。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/code-editor/editor.png" alt="ToolJet - Widget Reference - Code editor" />
+<img className="screenshot-full" src="/img/widgets/code-editor/editor.png" alt="ToolJet - 小部件参考 - 代码编辑器" />
 
 </div>
 
-## Properties
+## 特性
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/code-editor/prop.png" alt="ToolJet - Widget Reference - Code editor" />
+<img className="screenshot-full" src="/img/widgets/code-editor/prop.png" alt="ToolJet - 小部件参考 - 代码编辑器" />
 
 </div>
 
-| properties      | description | Expected value |
-| ----------- | ----------- | ----------------- |
-| Placeholder |  It specifies a hint that describes the expected value.| This field requires a `String` value |
-| Mode |  It is used to specify the language to be used for the code-editor.| See `info` below for the list of all supported languages |
-| Show Line Number |  This property is used to show or hide line numbers to the left of the editor.| This fields expects a boolean value `{{true}}` or `{{false}}` |
+| 属性     | 说明                                   | 期望值                                         |
+| -------- | -------------------------------------- | ---------------------------------------------- |
+| 占位符   | 它指定了一个描述预期值的提示。         | 此字段需要一个 `String` 值                     |
+| 模式     | 它用于指定代码编辑器使用的语言。       | 有关所有支持语言的列表，请参阅下面的 `信息`    |
+| 显示行号 | 此属性用于显示或隐藏编辑器左侧的行号。 | 此字段需要一个布尔值 `{{true}}` 或 `{{false}}` |
 
 :::info
 <details>
-<summary>Supporting all commonly used languages.</summary>
+<summary>支持所有常用语言。</summary>
       <ul>
       <li>APL</li>
       <li>ASN.1</li>
@@ -168,42 +168,42 @@ Any property having `Fx` button next to its field can be **programmatically conf
 </details>
 :::
 
-### General
-#### Tooltip
+### 一般的
+#### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
-
-<div style={{textAlign: 'center'}}>
-
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Code editor" />
-
-</div>
-
-## Layout
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/code-editor/layout.png" alt="ToolJet - Widget Reference - Code editor" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 代码编辑器" />
 
 </div>
 
-| Layout  | description |
-| ----------- | ----------- |
-| Show on desktop | Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on Fx to set the value `{{true}}` or `{{false}}`. |
-| Show on mobile | Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on Fx to set the value `{{true}}` or `{{false}}`. |
-
-## Styles
+## 布局
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/code-editor/styles.png" alt="ToolJet - Widget Reference - Code editor" />
+<img className="screenshot-full" src="/img/widgets/code-editor/layout.png" alt="ToolJet - 小部件参考 - 代码编辑器" />
 
 </div>
 
-| Styles  | description | 
-| ----------- | ----------- |
-| Visibility | Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`. |
-| Disable | This is `off` by default, toggle `on` the switch to lock the widget and make it non-functional. You can also programmatically set the value by clicking on the `Fx` button next to it. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`. |
-| Border radius | Use this property to modify the border radius of the editor. The field expects only numerical value from `1` to `100`, default is `0`. |
+| 布局         | 说明                                                                                                        |
+| ------------ | ----------------------------------------------------------------------------------------------------------- |
+| 在桌面上显示 | 打开或关闭以在桌面视图中显示小部件。您可以通过单击 Fx 设置值 `{{true}}` 或 `{{false}}` 以编程方式确定该值。 |
+| 在手机上显示 | 打开或关闭以在移动视图中显示小部件。您可以通过单击 Fx 设置值 `{{true}}` 或 `{{false}}` 以编程方式确定该值。 |
+
+## 风格
+
+<div style={{textAlign: 'center'}}>
+
+<img className="screenshot-full" src="/img/widgets/code-editor/styles.png" alt="ToolJet - 小部件参考 - 代码编辑器" />
+
+</div>
+
+| 款式     | 说明                                                                                                                                                                                                                 |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 能见度   | 打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。                                           |
+| 禁用     | 默认情况下这是 `关闭` ，切换 `打开` 开关以锁定小部件并使其无法运行。您还可以通过单击旁边的 `Fx` 按钮以编程方式设置该值。如果设置为 `{{true}}`，小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。 |
+| 边界半径 | 使用此属性修改编辑器的边框半径。该字段只需要从 `1` 到 `100` 的数值，默认为 `0` 。                                                                                                                                    |

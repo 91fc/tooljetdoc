@@ -5,21 +5,21 @@ title: HTML
 
 # HTML
 
-HTML widget can be used to create your own HTML-CSS layout.
+HTML 小部件可用于创建您自己的 HTML-CSS 布局。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/html/html.png" alt="HTML component" />
+<img className="screenshot-full" src="/img/widgets/html/html.png" alt="HTML 组件" />
 
 </div>
 
-## Properties
+## 特性
 
-### Raw HTML
+### 原始 HTML
 
-The Raw HTML needs to be an HTML. In order to provide styles, one can add inline css to the respective HTML tags
+原始 HTML 需要是 HTML。为了提供样式，可以将内联 css 添加到相应的 HTML 标签中
 
-**Example:**
+**例子：**
 
 ```json
 <!DOCTYPE html>
@@ -32,41 +32,40 @@ The Raw HTML needs to be an HTML. In order to provide styles, one can add inline
     </main>
 </body>
 </html>
-
 ```
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/html/raw.png" alt="HTML component" />
+<img className="screenshot-full" src="/img/widgets/html/raw.png" alt="HTML 组件" />
 
 </div>
 
-### General
-#### Tooltip
+### 一般的
+#### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="HTML component" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="HTML 组件" />
 
 </div>
 
-## Layout
+## 布局
 
-| Layout          | description                               | Expected value                                                                                                |
-| --------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| Show on desktop | Toggle on or off to display desktop view. | You can programmatically determining the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}` |
-| Show on mobile  | Toggle on or off to display mobile view.  | You can programmatically determining the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}` |
+| 布局         | 说明                       | 期望值                                                                      |
+| ------------ | -------------------------- | --------------------------------------------------------------------------- |
+| 在桌面上显示 | 打开或关闭以显示桌面视图。 | 您可以通过单击 `Fx` 以设置值 `{{true}}` 或 `{{false}}` 来以编程方式确定该值 |
+| 在手机上显示 | 打开或关闭以显示移动视图。 | 您可以通过单击 `Fx` 以设置值 `{{true}}` 或 `{{false}}` 来以编程方式确定该值 |
 
-## Styles
+## 风格
 
-| Style      | Description                                                                                                                                                                                                                                              |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Visibility | Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not visible after the app is deployed. By default, it's set to `{{true}}`. |
+| 款式   | 说明                                                                                                                                                                       |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 能见度 | 打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。 |
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

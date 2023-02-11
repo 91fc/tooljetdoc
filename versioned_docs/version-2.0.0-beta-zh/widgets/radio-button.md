@@ -1,101 +1,101 @@
 ---
 id: radio-button
-title: Radio Button
+title: 单选按钮
 ---
-# Radio Button
+# 单选按钮
 
-Radio button widget can be used to select one option from a group of options.
+单选按钮小部件可用于从一组选项中选择一个选项。
 
-## How To Use Radio button Widget
+## 如何使用单选按钮小部件
 
-<iframe height="500" src="https://www.youtube.com/embed/lfy7nq6NqAw" title="Radio button Widget" frameborder="0" allowfullscreen width="100%"></iframe>
+
 
 :::tip
 Radio buttons are preferred when the list of options is less than six, and all the options can be displayed at once.
 :::
 
 :::info
-For more than six options, consider using **[Dropdown](/docs/widgets/dropdown)** widget.
+对于六个以上的选项，请考虑使用 **[Dropdown](/docs/widgets/dropdown)** 小部件。
 :::
 
-## Event
+## 事件
 
-### On select
+### 在选择
 
-This event is triggered when an option is clicked.
+单击选项时会触发此事件。
 
 :::info
-Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
-## Properties
+## 特性
 
-### Label
+### 标签
 
-The text is to be used as the label for the radio button. This field expects a `String` value.
+文本将用作单选按钮的标签。该字段需要一个 `字符串` 值。
 
-### Default value
+### 默认值
 
-The value of the default option.
+默认选项的值。
 
-### Option values
+### 选项值
 
-List of values for different items/options. Refer your query data with dynamic variables `{{queries.datasource.data.map(item => item.value)}}` or populate it with sample values `{{[true, false]}}`
+不同项目/选项的值列表。使用动态变量 `{{queries.datasource.data.map(item => item.value)}}` 引用您的查询数据，或使用示例值 `{{[true, false]}}` 填充它
 
-### Option labels
+### 选项标签
 
-List of labels for different items/options. Refer your query data with dynamic variables `{{queries.datasource.data.map(item => item.label)}}` or populate it with sample values `{{["yes", "no"]}}`
+不同项目/选项的标签列表。使用动态变量 `{{queries.datasource.data.map(item => item.label)}}` 引用您的查询数据或使用示例值`{{["yes", "no"]}}` 填充它
 
-## General
-### Tooltip
+## 一般的
+### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
-
-<div style={{textAlign: 'center'}}>
-
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Radio button" />
-
-</div>
-
-## Layout
-
-### Show on desktop
-
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
-
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-
-## Styles
-
-### Text color
-
-Change the color of the text in the widget by providing the `Hex color code` or by choosing the color of your choice from the color picker.
-
-### Active color
-
-Change the color of active radio button by providing the `Hex color code` or by choosing the color of your choice from the color picker.
-
-### Visibility
-
-Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`.
-
-### Disable
-
-This is `off` by default, toggle `on` the switch to lock the widget and make it non-functional. You can also programmatically set the value by clicking on the `Fx` button next to it. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
-
-## Example
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/radio-button/radio-ex.gif" alt="ToolJet - Widget Reference - Radio button" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 单选按钮" />
 
 </div>
 
-## Actions
+## 布局
 
-| Action      | Description | Properties |
-| ----------- | ----------- | ------------------ |
-| selectOption | Select an option from the radio buttons. | `option` eg: `component.radiobutton1.selectOption('one')` |
+### 在桌面上显示
+
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
+
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+
+## 风格
+
+### 文字颜色
+
+通过提供 `十六进制颜色代码` 或从颜色选择器中选择您喜欢的颜色来更改小部件中文本的颜色。
+
+### 活动颜色
+
+通过提供 `十六进制颜色代码` 或从颜色选择器中选择您选择的颜色来更改活动单选按钮的颜色。
+
+### 可见性
+
+打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。
+
+### 禁用
+
+默认情况下这是 `关闭` ，切换 `打开` 开关以锁定小部件并使其无法运行。您还可以通过单击旁边的 `Fx` 按钮以编程方式设置该值。如果设置为 `{{true}}`，小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。
+
+## 例子
+
+<div style={{textAlign: 'center'}}>
+
+<img className="screenshot-full" src="/img/widgets/radio-button/radio-ex.gif" alt="ToolJet - 小部件参考 - 单选按钮" />
+
+</div>
+
+## 动作
+
+| 行动     | 说明                       | 属性                                                        |
+| -------- | -------------------------- | ----------------------------------------------------------- |
+| 选择选项 | 从单选按钮中选择一个选项。 | `option` 例如：`component.radiobutton1.selectOption('one')` |

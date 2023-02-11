@@ -1,78 +1,78 @@
 ---
 id: circular-progress-bar
-title: Circular Progress Bar
+title: 圆形进度条
 ---
-# Circular Progress Bar
+# 圆形进度条
 
-Circular progress bar widget can be used to show progress in a progress circle.
+圆形进度条小部件可用于在进度圈中显示进度。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/circular-progressbar/cpb.png" alt="ToolJet - Widget Reference - Circular progress bar" />
+<img className="screenshot-full" src="/img/widgets/circular-progressbar/cpb.png" alt="ToolJet - 小部件参考 - 圆形进度条" />
 
 </div>
 
-## Properties
+## 特性
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/circular-progressbar/prop.png" alt="ToolJet - Widget Reference - Circular progress bar" />
+<img className="screenshot-full" src="/img/widgets/circular-progressbar/prop.png" alt="ToolJet - 小部件参考 - 圆形进度条" />
 
 </div>
 
-| properties  | description | Expected Value |
-| ----------- | ----------- | --------------- |
-| Text | We can set a text inside the progress circle.| It expects a `String`, you can also use js to dynamically update the text as the progress changes. |
-| Progress | It can be used to set the progress of the widget. | Progress should be an integer between 0 and 100.|
+| 属性 | 说明                         | 期望值                                                       |
+| ---- | ---------------------------- | ------------------------------------------------------------ |
+| 文字 | 我们可以在进度圈内设置文字。 | 它需要一个`String`，你也可以使用js随着进度变化动态更新文本。 |
+| 进度 | 它可用于设置小部件的进度。   | 进度应该是 0 到 100 之间的整数。                             |
 
-### General
-#### Tooltip
+### 一般的
+#### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Circular progress bar" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 圆形进度条" />
 
 </div>
 
-## Layout
+## 布局
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/circular-progressbar/layout.png" alt="ToolJet - Widget Reference - Circular progress bar" />
+<img className="screenshot-full" src="/img/widgets/circular-progressbar/layout.png" alt="ToolJet - 小部件参考 - 圆形进度条" />
 
 </div>
 
-| Layout  | description |
-| ----------- | ----------- |
-| Show on desktop | Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on Fx to set the value `{{true}}` or `{{false}}`. |
-| Show on mobile | Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on Fx to set the value `{{true}}` or `{{false}}`. |
+| 布局         | 说明                                                                                                        |
+| ------------ | ----------------------------------------------------------------------------------------------------------- |
+| 在桌面上显示 | 打开或关闭以在桌面视图中显示小部件。您可以通过单击 Fx 设置值 `{{true}}` 或 `{{false}}` 以编程方式确定该值。 |
+| 在手机上显示 | 打开或关闭以在移动视图中显示小部件。您可以通过单击 Fx 设置值 `{{true}}` 或 `{{false}}` 以编程方式确定该值。 |
 
-## Styles
+## 风格
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/circular-progressbar/styles.png" alt="ToolJet - Widget Reference - Circular progress bar" />
+<img className="screenshot-full" src="/img/widgets/circular-progressbar/styles.png" alt="ToolJet - 小部件参考 - 圆形进度条" />
 
 </div>
 
-| properties      | description | Expected Value |
-| ----------- | ----------- | ------------------- |
-| Color | To define stroke color.| `HEX color code` or choose color from color-picker. |
-| Text color | To define color of the text inside circular progress bar.| `HEX color code` or choose color from color-picker. |
-| Text size | To define the size of the text | Value must between 0-100. |
-| Stroke width | To define the width of stroke | Value must between 0-100.|
-| Counter Clockwise | Whether to rotate progress bar in counterclockwise direction. | It accepts `{{true}}` and `{{false}}`, Default value is `false`.|
-| Circle ratio | To define ratio of the full circle diameter the progressbar should use. | It accepts numerical value and the default is `1`. |
-| Visibility | Toggle on or off to control the visibility of the widget. | You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`. |
+| 属性     | 说明                                 | 期望值                                                                                                                                     |
+| -------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| 颜色     | 定义描边颜色。                       | `HEX 颜色代码` 或从颜色选择器中选择颜色。                                                                                                  |
+| 文字颜色 | 定义圆形进度条内文本的颜色。         | `HEX 颜色代码` 或从颜色选择器中选择颜色。                                                                                                  |
+| 文字大小 | 定义文本的大小                       | 值必须在 0-100 之间。                                                                                                                      |
+| 笔划宽度 | 定义笔画的宽度                       | 值必须在 0-100 之间。                                                                                                                      |
+| 逆时针   | 是否逆时针旋转进度条。               | 它接受`{{true}}`和`{{false}}`，默认值为`false`。                                                                                           |
+| 圆比     | 要定义进度条应使用的全圆直径的比率。 | 它接受数值，默认值为 `1` 。                                                                                                                |
+| 能见度   | 打开或关闭以控制小部件的可见性。     | 您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。 |
 
 :::info
-Circular progress bar widget uses [react-circular-progress](https://github.com/kevinsqi/react-circular-progressbar) package. Check the repo for further more details about properties and styles.
+圆形进度条小部件使用 [react-circular-progress](https://github.com/kevinsqi/react-circular-progressbar) 包。查看存储库以获取有关属性和样式的更多详细信息。
 :::

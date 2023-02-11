@@ -1,80 +1,80 @@
 ---
 id: timer
-title: Timer
+title: 定时器
 ---
-# Timer
+# 定时器
 
-Timer widget lets users to count timer both upward and downward
+计时器小部件允许用户向上和向下计数计时器
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/timer/timer.png" alt="ToolJet - Widget Reference - Timer" />
+<img className="screenshot-full" src="/img/widgets/timer/timer.png" alt="ToolJet - 小部件参考 - 计时器" />
 
 </div>
 
-## Properties
+## 特性
 
-### Default value
+### 默认值
 
-It specifies the initial value of timer. Format is: `HH.mm.ss.SS`.
+它指定定时器的初始值。格式为：`HH.mm.ss.SS`。
 
-### Timer type
+### 定时器类型
 
-It specifies If its a upward or downward counter. Select `Count Up` or `Count Down` from the dropdown or you can click on `Fx` to programmatically define the values `countUp` or `countDown`.
+它指定它是向上计数器还是向下计数器。从下拉列表中选择 `向上计数` 或 `向下计数` ，或者您可以单击 `Fx` 以编程方式定义值 `countUp` 或 `countDown` 。
 
-## Events
+## 活动
 
-### On start
-This event is fired when user clicks on start button.
+### 开始时
+当用户单击开始按钮时会触发此事件。
 
-### On resume
-This event is fired when user clicks on resume button.
+### 关于简历
+当用户单击恢复按钮时会触发此事件。
 
-### On pause
-This event is fired when user clicks on pause button.
+### 暂停
+当用户单击暂停按钮时会触发此事件。
 
-### On count down finish
-This event is fired when the count down timer reaches zero.
+### 倒计时结束
+当倒计时计时器达到零时会触发此事件。
 
-### On reset
-This event is fired when user clicks on reset button.
+### 重置时
+当用户单击重置按钮时会触发此事件。
 
 :::info
-Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
-## General
-### Tooltip
+## 一般的
+### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Timer" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 计时器" />
 
 </div>
 
-## Layout
+## 布局
 
-### Show on desktop
+### 在桌面上显示
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}`.
-### Show on mobile
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}` ，以编程方式确定该值。
+### 在手机上显示
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-## Styles
+## 风格
 
-### Visibility
+### 可见性
 
-This is to control the visibility of the widget. If `{{false}}` the widget will not visible after the app is deployed. It can only have boolean values i.e. either `{{true}}` or `{{false}}`. By default, it's set to `{{true}}`.
+这是为了控制小部件的可见性。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。它只能有布尔值，即 `{{true}}` 或 `{{false}}`。默认情况下，它设置为 `{{true}}` 。
 
-### Disable
+### 禁用
 
-This property only accepts boolean values. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
+此属性只接受布尔值。如果设置为 `{{true}}`，小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

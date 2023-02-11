@@ -1,76 +1,76 @@
 ---
 id: form
-title: Form
+title: 表单
 ---
 
-# Form
+# 表单
 
-Form component can be used to get input from the user and store it in the connected datasource. Form component serves as a parent widget that can store different widgets like texts, input box, dropdown to allow selection, and a button for triggering the event.
-
-<div style={{textAlign:'center'}}>
-
-<img className="screenshot-full" src="/img/widgets/form/formwidget.png" alt="Form" />
-
-</div>
-
-## Properties
-
-| Properties  | description | Expected value |
-| ----------- | ----------- | -------------- |
-| Button To Submit Form | The dropdown can be used to select the button that will be used as the submit button for the form | Any button that will be added as a child component inside the form component can be selected from the dropdown |
-| Loading state | Loading state can be used to show a spinner as the form content. Loading state is commonly used with isLoading property of the queries to show a loading status while a query is being run. | Switch the toggle **On** or click on `fx` to programmatically set the value `{{true}}` or `{{false}}`  |
+表单组件可用于获取用户输入并将其存储在连接的数据源中。表单组件作为一个父部件，可以存储不同的部件，如文本、输入框、允许选择的下拉列表和用于触发事件的按钮。
 
 <div style={{textAlign:'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/form/prop.png" alt="Form" />
+<img className="screenshot-full" src="/img/widgets/form/formwidget.png" alt="表格" />
 
 </div>
 
-### Events
+## 特性
 
-To add an event to a button group, click on the widget handle to open the widget properties on the right sidebar. Go to the **Events** section and click on **Add handler**.
+| 属性         | 说明                                                                                                            | 期望值                                                                   |
+| ------------ | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| 按钮提交表单 | 下拉列表可用于选择将用作表单提交按钮的按钮                                                                      | 任何将作为子组件添加到表单组件中的按钮都可以从下拉列表中选择             |
+| 加载状态     | 加载状态可用于将微调器显示为表单内容。加载状态通常与查询的 isLoading 属性一起使用，以在运行查询时显示加载状态。 | 将切换开关**打开**或单击 `fx` 以编程方式设置值 `{{true}}` 或 `{{false}}` |
 
-#### On submit
+<div style={{textAlign:'center'}}>
 
-**On submit** event is triggered when the button on the form component is clicked. Just like any other event on ToolJet, you can set multiple handlers for on submit event.
+<img className="screenshot-full" src="/img/widgets/form/prop.png" alt="表格" />
 
-#### On invalid
+</div>
 
-**On invalid** event is triggered when the input on the form is invalid.
+### 活动
+
+要将事件添加到按钮组，请单击小部件句柄以打开右侧栏中的小部件属性。转到 **Events** 部分并单击 **Add handler**。
+
+#### 提交时
+
+**On submit** 事件在单击表单组件上的按钮时触发。就像 ToolJet 上的任何其他事件一样，您可以为提交事件设置多个处理程序。
+
+#### 无效
+
+**On invalid** 当表单上的输入无效时触发事件。
 
 :::info
-Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
-### General
-#### Tooltip
+### 一般的
+#### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget. Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
-### Layout
+### 布局
 
-| Layout  | description | Expected value |
-| ----------- | ----------- | ------------ |
-| Show on desktop | Toggle on or off to display desktop view. | You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}` |
-| Show on mobile | Toggle on or off to display mobile view. | You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}` |
+| 布局         | 说明                       | 期望值                                                                      |
+| ------------ | -------------------------- | --------------------------------------------------------------------------- |
+| 在桌面上显示 | 打开或关闭以显示桌面视图。 | 您可以通过单击 `Fx` 以设置值 `{{true}}` 或 `{{false}}` 来以编程方式确定该值 |
+| 在手机上显示 | 打开或关闭以显示移动视图。 | 您可以通过单击 `Fx` 以设置值 `{{true}}` 或 `{{false}}` 来以编程方式确定该值 |
 
-## Styles
+## 风格
 
 <div style={{textAlign:'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/form/styles.png" alt="Form" />
+<img className="screenshot-full" src="/img/widgets/form/styles.png" alt="表格" />
 
 </div>
 
-| Style      | Description |
-| ----------- | ----------- | 
-| Background color |  You can change the background color of the form by entering the Hex color code or choosing a color of your choice from the color picker. |
-| Border radius | Use this property to modify the border radius of the form component. |
-| Border color |  You can change the color of the border of the form by entering the Hex color code or choosing a color of your choice from the color picker. |
-| Visibility | Toggle on or off to control the visibility of the form. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not visible after the app is deployed. By default, it's set to `{{true}}`. |
-| Disable | Toggle on to lock the widget. You can programmatically change its value by clicking on the `Fx` button next to it, if set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`. |
-| Box shadow | This property adds a shadow to the widget. | You can use different values for box shadow property like offsets, blur, spread, and the color code. |
+| 款式     | 说明                                                                                                                                                                     |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 背景颜色 | 您可以通过输入十六进制颜色代码或从颜色选择器中选择您选择的颜色来更改表单的背景颜色。                                                                                     |
+| 边界半径 | 使用此属性修改表单组件的边框半径。                                                                                                                                       |
+| 边框颜色 | 您可以通过输入十六进制颜色代码或从颜色选择器中选择您选择的颜色来更改表单边框的颜色。                                                                                     |
+| 能见度   | 打开或关闭以控制表单的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。 |
+| 禁用     | 打开以锁定小部件。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值，如果设置为 `{{true}}` ，该小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。      |
+| 箱影     | 此属性向小部件添加阴影。                                                                                                                                                 | 您可以为框阴影属性使用不同的值，例如偏移、模糊、扩散和颜色代码。 |
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

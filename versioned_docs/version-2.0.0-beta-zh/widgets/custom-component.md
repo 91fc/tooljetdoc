@@ -1,25 +1,25 @@
 ---
 id: custom-component
-title: Custom Component
+title: 自定义组件
 ---
 
-# Custom Component
+# 自定义组件
 
-Custom Component can be used to do create your own React component when the needed functionality isn't available in other components.
+当所需的功能在其他组件中不可用时，自定义组件可用于创建您自己的 React 组件。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/custom-component/custom-component.png" alt="ToolJet - Widget Reference - Custom Component" />
+<img className="screenshot-full" src="/img/widgets/custom-component/custom-component.png" alt="ToolJet - 小部件参考 - 自定义组件" />
 
 </div>
 
-## Properties
+## 特性
 
-### Data
+### 数据
 
-The data needs to be an objects which needs to be passed as `data` props to the custom component
+数据需要是需要作为 `数据` 道具传递给自定义组件的对象
 
-**Example:**
+**例子：**
 
 ```json
 {{{
@@ -29,17 +29,17 @@ The data needs to be an objects which needs to be passed as `data` props to the 
 }}}
 ```
 
-### Code
+### 代码
 
-This field is used to add a React code for your custom component. The packages for the custom component can be imported from [Skypack](https://www.skypack.dev/). For example, to import `React` package into the custom component it can be imported as `import React from 'https://cdn.skypack.dev/react'`.
+此字段用于为您的自定义组件添加 React 代码。自定义组件的包可以从 [Skypack](https://www.skypack.dev/) 导入。例如，要将 `React` 包导入自定义组件，可以将其导入为 `import React from 'https://cdn.skypack.dev/react'`。
 
-Tooljet provides 3 props to interact with the app: `data`, `updateData` and `runQuery`.
+Tooljet 提供了 3 个属性来与应用程序交互：`data`、`updateData` 和 `runQuery`。
 
-- `data` is a shared object between custom component and Tooljet app.
-- `updateData` is a function which accepts a single object used to update the data passed to the custom component.
-- `runQuery` is a function which accepts a query name as a string used to run the query from the custom component.
+- `data` 是自定义组件和 Tooljet 应用程序之间的共享对象。
+- `updateData` 是一个函数，它接受用于更新传递给自定义组件的数据的单个对象。
+- `runQuery` 是一个接受查询名称作为字符串的函数，用于从自定义组件运行查询。
 
-**Example:**
+**例子：**
 
 ```js
 import React from "https://cdn.skypack.dev/react";
@@ -71,35 +71,35 @@ ReactDOM.render(<ConnectedComponent />, document.body);
 ```
 
 :::info
-`Tooljet.connectComponent` acts as a HOC and it is required to get access to the data passed into the custom component and run the query
+`Tooljet.connectComponent` 充当 HOC，需要访问传递到自定义组件中的数据并运行查询
 :::
 
-### General
-#### Tooltip
+### 一般的
+#### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Custom Component" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 自定义组件" />
 
 </div>
 
-## Layout
+## 布局
 
-| Layout          | description                               | Expected value                                                                                                |
-| --------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| Show on desktop | Toggle on or off to display desktop view. | You can programmatically determining the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}` |
-| Show on mobile  | Toggle on or off to display mobile view.  | You can programmatically determining the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}` |
+| 布局         | 说明                       | 期望值                                                                      |
+| ------------ | -------------------------- | --------------------------------------------------------------------------- |
+| 在桌面上显示 | 打开或关闭以显示桌面视图。 | 您可以通过单击 `Fx` 以设置值 `{{true}}` 或 `{{false}}` 来以编程方式确定该值 |
+| 在手机上显示 | 打开或关闭以显示移动视图。 | 您可以通过单击 `Fx` 以设置值 `{{true}}` 或 `{{false}}` 来以编程方式确定该值 |
 
-## Styles
+## 风格
 
-| Style      | Description                                                                                                                                                                                                                                              |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Visibility | Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not visible after the app is deployed. By default, it's set to `{{true}}`. |
+| 款式   | 说明                                                                                                                                                                       |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 能见度 | 打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。 |
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

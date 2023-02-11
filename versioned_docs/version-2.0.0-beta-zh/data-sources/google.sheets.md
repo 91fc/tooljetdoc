@@ -9,7 +9,7 @@ ToolJet can connect to Google Sheet using OAuth 2.0, which helps us to limit an 
 
 ## How to integrate Google Sheets
 
-<iframe height="500" src="https://www.youtube.com/embed/3PO41waW2CQ" title="ToolJet Googlsheet Integration" frameborder="0" allowfullscreen width="100%"></iframe>
+
 
 ## Self-Hosted Configuration
 
@@ -46,11 +46,11 @@ Using Google sheets data source you can perform several operations from your app
 
 This operation returns the table data from the spreadsheet in the form of json object. 
 
-| Fields      | description |
-| ----------- | ----------- |
+| Fields         | description                                                                                                                                                                                                                                                                                                      |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Spreadsheet ID | It is mandatory to enter the spreadsheet-id. The spreadsheet-id can be found in the URL of the spreadsheet. Example URL: https://docs.google.com/spreadsheets/d/1W2S4re7zNaPk9vqv6_CqOpPdm_mDEqmLmzjVe7Nb9WM/edit#gid=0 - in this URL, the `1W2S4re7zNaPk9vqv6_CqOpPdm_mDEqmLmzjVe7Nb9WM` is the spreadsheet-id. |
-| Range | This is optional. You can specify the range of cells in this field. If left empty, it will select the range `A1:Z500`. |
-| Sheet | This is optional. You can specify `sheet name` if it has more than 1 sheets, else it will automatically choose the first sheet. |
+| Range          | This is optional. You can specify the range of cells in this field. If left empty, it will select the range `A1:Z500`.                                                                                                                                                                                           |
+| Sheet          | This is optional. You can specify `sheet name` if it has more than 1 sheets, else it will automatically choose the first sheet.                                                                                                                                                                                  |
 
 
 
@@ -61,11 +61,11 @@ This operation returns the table data from the spreadsheet in the form of json o
 
 You can add more rows to the table using the append operation.
 
-| Fields      | description |
-| ----------- | ----------- |
+| Fields         | description                                                                                                                                                                                                                                                                                                      |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Spreadsheet ID | It is mandatory to enter the spreadsheet-id. The spreadsheet-id can be found in the URL of the spreadsheet. Example URL: https://docs.google.com/spreadsheets/d/1W2S4re7zNaPk9vqv6_CqOpPdm_mDEqmLmzjVe7Nb9WM/edit#gid=0 - in this URL, the `1W2S4re7zNaPk9vqv6_CqOpPdm_mDEqmLmzjVe7Nb9WM` is the spreadsheet-id. |
-| Sheet | This is optional. You can specify `sheet name` if it has more than 1 sheets, else it will automatically choose the first sheet. |
-| Rows  | Enter the row data in the json array form. Each object in an array will represent a single row. Example: `[ {"name":"John", "email":"John@tooljet.com"},{...},{...} ]` In each object, the `key` represents the **column name** and the `value` represents the **cell data**.   |
+| Sheet          | This is optional. You can specify `sheet name` if it has more than 1 sheets, else it will automatically choose the first sheet.                                                                                                                                                                                  |
+| Rows           | Enter the row data in the json array form. Each object in an array will represent a single row. Example: `[ {"name":"John", "email":"John@tooljet.com"},{...},{...} ]` In each object, the `key` represents the **column name** and the `value` represents the **cell data**.                                    |
 
 
 <img className="screenshot-full" src="/img/datasource-reference/google-sheets/append-data-op.png" alt="google sheets append" />
@@ -75,13 +75,13 @@ You can add more rows to the table using the append operation.
 
 You can update the existing data in sheet using this operation.
 
-| Fields      | description |
-| ----------- | ----------- |
+| Fields         | description                                                                                                                                                                                                                                                                                                      |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Spreadsheet ID | It is mandatory to enter the spreadsheet-id. The spreadsheet-id can be found in the URL of the spreadsheet. Example URL: https://docs.google.com/spreadsheets/d/1W2S4re7zNaPk9vqv6_CqOpPdm_mDEqmLmzjVe7Nb9WM/edit#gid=0 - in this URL, the `1W2S4re7zNaPk9vqv6_CqOpPdm_mDEqmLmzjVe7Nb9WM` is the spreadsheet-id. |
-| Where | Enter the column name such as `id` for choosing a row. |
-| Operator | Choose the `===` operator to check the equality. |
-| Value | Enter the any `id` number/name that you want to update. |
-| Rows  | Enter the row data. Example: `{{({id: components.textinput4.value, company: components.textinput1.value, position: components.textinput2.value, url: components.textinput3.value, 'date-applied': components.datepicker1.value, status: components.dropdown1.value})}}`  |
+| Where          | Enter the column name such as `id` for choosing a row.                                                                                                                                                                                                                                                           |
+| Operator       | Choose the `===` operator to check the equality.                                                                                                                                                                                                                                                                 |
+| Value          | Enter the any `id` number/name that you want to update.                                                                                                                                                                                                                                                          |
+| Rows           | Enter the row data. Example: `{{({id: components.textinput4.value, company: components.textinput1.value, position: components.textinput2.value, url: components.textinput3.value, 'date-applied': components.datepicker1.value, status: components.dropdown1.value})}}`                                          |
 
 
 <img className="screenshot-full" src="/img/datasource-reference/google-sheets/update-data-op.png" alt="google sheets update" />
@@ -91,11 +91,11 @@ You can update the existing data in sheet using this operation.
 
 Use this operation delete a specific row from the sheet.
 
-| Fields      | description |
-| ----------- | ----------- |
-| Spreadsheet ID | It is mandatory to enter the spreadsheet-id. The spreadsheet-id can be found in the URL of the spreadsheet. Example URL: https://docs.google.com/spreadsheets/d/1W2S4re7zNaPk9vqv6_CqOpPdm_mDEqmLmzjVe7Nb9WM/edit#gid=0 - in this URL, the `1W2S4re7zNaPk9vqv6_CqOpPdm_mDEqmLmzjVe7Nb9WM` is the spreadsheet-id. |
-| GID | You'll find the GID in the end of the URL of spreadsheet. In the example mentioned above, the GID is 0 |
-| Delete row number |  Just enter the row number that you want to delete.  |
+| Fields            | description                                                                                                                                                                                                                                                                                                      |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Spreadsheet ID    | It is mandatory to enter the spreadsheet-id. The spreadsheet-id can be found in the URL of the spreadsheet. Example URL: https://docs.google.com/spreadsheets/d/1W2S4re7zNaPk9vqv6_CqOpPdm_mDEqmLmzjVe7Nb9WM/edit#gid=0 - in this URL, the `1W2S4re7zNaPk9vqv6_CqOpPdm_mDEqmLmzjVe7Nb9WM` is the spreadsheet-id. |
+| GID               | You'll find the GID in the end of the URL of spreadsheet. In the example mentioned above, the GID is 0                                                                                                                                                                                                           |
+| Delete row number | Just enter the row number that you want to delete.                                                                                                                                                                                                                                                               |
 
 
 

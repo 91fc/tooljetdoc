@@ -1,76 +1,76 @@
 ---
 id: range-slider
-title: Range Slider
+title: 范围滑块
 ---
-# Range Slider
+# 范围滑块
 
-Range sliders are widely used across different UIs. One of the main purposes is to filter, explore all the related content and available in the control and settings options.
+范围滑块广泛用于不同的 UI。主要目的之一是过滤、探索所有相关内容以及控件和设置选项中可用的内容。
 
 :::tip
-Range Sliders have "Two handles" option which allows user to select within a range.
+范围滑块具有 `双手柄` 选项，允许用户在一个范围内进行选择。
 :::
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/range-slider/range_slider.png" alt="ToolJet - Widget Reference - Range Slider" />
+<img className="screenshot-full" src="/img/widgets/range-slider/range_slider.png" alt="ToolJet - 小部件参考 - 范围滑块" />
 
 </div>
 
-## Properties
+## 特性
 
-### Minimum value
+### 最小值
 
-Set the minimum value for the slider. This field accepts any numerical value.
+设置滑块的最小值。该字段接受任何数值。
 
-### Maximum value
+### 最大值
 
-Set the maximum value for the slider. This field accepts any numerical value.
+设置滑块的最大值。该字段接受任何数值。
 
-### Value
+### 价值
 
-Set the default value when the widget loads. This can be used to pre-fill the value based on your data and requirements.
+加载小部件时设置默认值。这可用于根据您的数据和要求预填充值。
 
-### Two handles
+### 两个句柄
 
-The slider will now have 2 dragging handles. It is used to define a range of values versus a single given value.
+滑块现在将有 2 个拖动手柄。它用于定义一系列值与单个给定值。
 
-## General
-### Tooltip
+## 一般的
+### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Range Slider" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 范围滑块" />
 
 </div>
 
-## Layout
+## 布局
 
-### Show on desktop
+### 在桌面上显示
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-## Styles
+## 风格
 
-### Line color
+### 线条颜色
 
-Enter the hexcode to set the default color for slider's track. 
-### Handle color
+输入十六进制代码以设置滑块轨道的默认颜色。
+### 手柄颜色
 
-Enter the hexcode to set the color for slider's handler. 
-### Track color
+输入十六进制代码以设置滑块处理程序的颜色。
+### 轨道颜色
 
-Enter the hexcode to set the color for slider's active portion on the track. 
-### Visibility
+输入十六进制代码以设置轨道上滑块活动部分的颜色。
+### 可见性
 
-Set the visivlity of the slider programmatically. The default value is `{{true}}`.
+以编程方式设置滑块的可见性。默认值为 `{{true}}` 。
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

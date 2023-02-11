@@ -1,76 +1,76 @@
 ---
 id: toggle-switch
-title: Toggle Switch
+title: 拨动开关
 ---
-# Toggle Switch
+# 拨动开关
 
-The toggle switch widget allows the user to change a setting between two states.
+切换开关小部件允许用户在两​​种状态之间更改设置。
 
-The Toggle switch widget should be used if we want to make a binary choice, such as turning something **on or off** or **enable or disable**.
+如果我们想要做出二元选择，例如打开或关闭某物或**启用或禁用**，则应使用切换开关小部件。
 
-## How To Use Toggle Switch Widget
+## 如何使用切换开关小部件
 
-<iframe height="500" src="https://www.youtube.com/embed/NtP_9YC0hXs" title="Toggle Switch Widget" frameborder="0" allowfullscreen width="100%"></iframe>
 
-## Properties
 
-### Label
+## 特性
 
-This property can be used to set a label for the switch. Default Label: **Toggle label**
+### 标签
 
-### Default status
+此属性可用于设置开关的标签。默认标签：**切换标签**
 
-The property is used to set the default status (enabled or disabled) of the toggle switch component when the app is loaded. By default, the checkbox component is set to `{{false}}`/disabled.
+### 默认状态
 
-## Event
+该属性用于设置应用程序加载时切换开关组件的默认状态（启用或禁用）。默认情况下，复选框组件设置为 `{{false}}` /禁用。
 
-### On change
-This event is triggered whenever the toggle switch is clicked.
+## 事件
+
+### 改变
+只要单击切换开关，就会触发此事件。
 
 :::info
-Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
-## General
-### Tooltip
+## 一般的
+### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Toggle switch" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 切换开关" />
 
 </div>
 
-## Layout
+## 布局
 
-### Show on desktop
+### 在桌面上显示
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-## Styles
+## 风格
 
-### Text color
+### 文字颜色
 
-Change the color of the text in the widget by providig the `Hex color code` or choosing a color from the picker.
+通过提供 `十六进制颜色代码` 或从选择器中选择颜色来更改小部件中文本的颜色。
 
-### Toggle switch color
+### 切换开关颜色
 
-Change the color of the toggle switch in the widget by providig the `Hex color code` or choosing a color from the picker.
+通过提供 `十六进制颜色代码` 或从选择器中选择一种颜色，更改小部件中切换开关的颜色。
 
-### Visibility
+### 可见性
 
-This is to control the visibility of the widget. If `{{false}}` the widget will not visible after the app is deployed. It can only have boolean values i.e. either `{{true}}` or `{{false}}`. By default, it's set to `{{true}}`.
+这是为了控制小部件的可见性。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。它只能有布尔值，即 `{{true}}` 或 `{{false}}`。默认情况下，它设置为 `{{true}}` 。
 
-### Disable
+### 禁用
 
-This property only accepts boolean values. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
+此属性只接受布尔值。如果设置为 `{{true}}`，小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

@@ -1,111 +1,111 @@
 ---
 id: text-input
-title: Text Input
+title: 文本输入
 ---
-# Text Input
+# 文本输入
 
-Text Input widget lets users enter and edit text.
+文本输入小部件允许用户输入和编辑文本。
 
 :::tip
-The Text Input should be preferred when user input is a single line of text.
+当用户输入的是单行文本时，应首选文本输入。
 :::
 
-## How To Use Text Input Widget
+## 如何使用文本输入小部件
 
-<iframe height="500" src="https://www.youtube.com/embed/ke5DTJje260" title="Text Input Widget" frameborder="0" allowfullscreen width="100%"></iframe>
 
-## Properties
 
-### Default value
+## 特性
 
-The default value that the widget will hold when the app is loaded.
+### 默认值
 
-### Placeholder
+加载应用程序时小部件将保留的默认值。
 
-It specifies a hint that describes the expected value.
+### 占位符
 
-## Events
+它指定描述预期值的提示。
+
+## 活动
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/text-input/events.png" alt="ToolJet - Widget Reference - Text input" />
+<img className="screenshot-full" src="/img/widgets/text-input/events.png" alt="ToolJet - 小部件参考 - 文本输入" />
 
 </div>
 
-### On change
-This event fires whenever the user types something on the text input.
+### 改变
+只要用户在文本输入中键入内容，就会触发此事件。
 
-### On Enter Pressed
-This event fires whenever the user presses the enter button on keyboard after entering some text on text input component.
+### 按下回车
+只要用户在文本输入组件上输入一些文本后按下键盘上的回车按钮，就会触发此事件。
 
-### On focus
-This event fires whenever the user clicks inside the text input component.
+### 重点
+只要用户在文本输入组件内单击，就会触发此事件。
 
-### On blur
-This event fires whenever the user clicks outside the text input component.
+### 模糊
+只要用户在文本输入组件外单击，就会触发此事件。
 
 :::info
-Check [Action Reference](/docs/category/actions-reference) docs to get detailed information about all the **Actions**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
-## Validation
+## 验证
 
-### Regex
+### 正则表达式
 
-Use this field to enter a Regular Expression that will validate the password constraints.
+使用此字段输入将验证密码约束的正则表达式。
 
-### Min length
+### 最小长度
 
-Enter the number for a minimum length of password allowed.
+输入允许的最小密码长度的数字。
 
-### Max length
+### 最长长度
 
-Enter the number for the maximum length of password allowed.
+输入允许的最大密码长度的数字。
 
-### Custom validation
+### 自定义验证
 
-If the condition is true, the validation passes, otherwise returns a string that should be displayed as the error message. For example: `{{components.passwordInput1.value === 'something' ? true: 'value should be something'}}`.
+如果条件为真，则验证通过，否则返回应显示为错误消息的字符串。例如：`{{components.passwordInput1.value === 'something' ? true： `价值应该是某种东西` }}`。
 
-## General
-### Tooltip
+## 一般的
+### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Text input" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 文本输入" />
 
 </div>
 
-## Layout
+## 布局
 
-### Show on desktop
+### 在桌面上显示
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-## Styles
+## 风格
 
-### Text Color
-Use this property to set the color of the text inside the text input component. You can select the color from the color picker or set the value using Hex color code.
+### 文字颜色
+使用此属性设置文本输入组件内文本的颜色。您可以从颜色选择器中选择颜色或使用十六进制颜色代码设置值。
 
-### Border color
+### 边框颜色
  
-Add a color to the border of the text-input component using this property. You can select the color from the color picker or set the value using Hex color code.
+使用此属性为文本输入组件的边框添加颜色。您可以从颜色选择器中选择颜色或使用十六进制颜色代码设置值。
 
-### Border Radius
-Use this property to modify the border radius of the widget. The field expects only numerical values from `1` to `100`, and default is `0`. 
+### 边框半径
+使用此属性修改小部件的边框半径。该字段只需要从 `1` 到 `100` 的数值，默认值为 `0` 。
 
-### Visibility
-It is to control the visibility of the widget. If `{{false}}` the widget will not be visible after the app gets deployed. It can only have boolean values i.e. either `{{true}}` or `{{false}}`. By default, it's set to `{{true}}`.
+### 可见性
+它是控制小部件的可见性。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。它只能有布尔值，即 `{{true}}` 或 `{{false}}`。默认情况下，它设置为 `{{true}}` 。
 
-### Disable
-This property only accepts boolean values. If set to `{{true}}`, the widget will lock and become non-functional. By default, its value is set to `{{false}}`.
+### 禁用
+此属性只接受布尔值。如果设置为 `{{true}}` ，小部件将锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。
 
 :::info
-Check the **component specific actions** available for this component **[here](/docs/actions/control-component)**.
+检查此组件可用的**组件特定操作** **[此处](/docs/actions/control-component)**。
 :::

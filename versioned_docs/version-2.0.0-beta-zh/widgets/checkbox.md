@@ -1,108 +1,108 @@
 ---
 id: checkbox
-title: Checkbox
+title: 复选框
 ---
-# Checkbox
+# 复选框
 
-Checkbox widget can be used for allowing the users to make a binary choice, e.g,. unselected or selected.
-
-:::info
-The checkbox widget consists of a single checkbox input.
-:::
-
-## How To Use Checkbox Widget
-
-<iframe height="500" src="https://www.youtube.com/embed/Ryu2k2bqkWw" title="Checkbox Widget" frameborder="0" allowfullscreen width="100%"></iframe>
-
-## Properties
-
-### Label
-
-The text is to be used as the label for the checkbox. This field expects a `String` input.
-
-### Default Status
-
-The property is used to set the default status (enabled or disabled) of the checkbox widget when the app is loaded. By default, the checkbox component is set to `{{false}}`/disabled.
-
-### Events
-
-To add an event to a checkbox component, click on the widget handle to open the widget properties on the right sidebar. Go to the **Events** section and click on **+ Add handler**.
-
-<div style={{textAlign: 'center'}}>
-
-<img className="screenshot-full" src="/img/widgets/checkbox/events.png" alt="ToolJet - Widget Reference - Checkbox" />
-
-</div>
-
-#### On check
-
-On check event is triggered when checkbox input is checked.
-#### On uncheck
-
-On uncheck event is triggered when checkbox input is unchecked.
+复选框小部件可用于允许用户做出二元选择，例如。未选中或已选中。
 
 :::info
-Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
+复选框小部件由单个复选框输入组成。
 :::
 
-### General
-#### Tooltip
+## 如何使用复选框小部件
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
 
-<div style={{textAlign: 'center'}}>
+## 特性
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Checkbox" />
+### 标签
 
-</div>
+文本将用作复选框的标签。该字段需要一个 `字符串` 输入。
 
-### Layout
+### 默认状态
 
-<div style={{textAlign: 'center'}}>
+该属性用于设置加载应用程序时复选框小部件的默认状态（启用或禁用）。默认情况下，复选框组件设置为 `{{false}}` /禁用。
 
-<img className="screenshot-full" src="/img/widgets/checkbox/layout.png" alt="ToolJet - Widget Reference - Checkbox" />
+### 活动
 
-</div>
-
-#### Show on desktop
-
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-#### Show on mobile
-
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-
-## Styles
+要向复选框组件添加事件，请单击小部件句柄以打开右侧栏中的小部件属性。转到 **Events** 部分并单击 **+ 添加处理程序**。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/checkbox/styles.png" alt="ToolJet - Widget Reference - Checkbox" />
+<img className="screenshot-full" src="/img/widgets/checkbox/events.png" alt="ToolJet - 小部件参考 - 复选框" />
 
 </div>
 
-### Text color
+#### 检查中
 
-Change the color of the Text in checkbox by entering the `Hex color code` or choosing a color of your choice from the color-picker. 
+选中复选框输入时触发选中事件。
+####取消选中
 
-### Checkbox color
-
-You can change the color of the checkbox by entering the `Hex color code` or choosing a color of your choice from the color-picker.
-
-### Visibility
-
-Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`.
-
-### Disable
-
-This is `off` by default, toggle `on` the switch to lock the widget and make it non-functional. You can also programmatically set the value by clicking on the `Fx` button next to it. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
+取消选中复选框输入时触发取消选中事件。
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
-## Actions
+### 一般的
+#### 工具提示
 
-| Action      | Description | Properties |
-| ----------- | ----------- | ------------------ |
-| `setChecked` | Set checkbox state. | pass status as parameter. ex: `components.checkbox1.setChecked(true)` |
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
+
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
+
+<div style={{textAlign: 'center'}}>
+
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 复选框" />
+
+</div>
+
+### 布局
+
+<div style={{textAlign: 'center'}}>
+
+<img className="screenshot-full" src="/img/widgets/checkbox/layout.png" alt="ToolJet - 小部件参考 - 复选框" />
+
+</div>
+
+#### 在桌面上显示
+
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+#### 在手机上显示
+
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+
+## 风格
+
+<div style={{textAlign: 'center'}}>
+
+<img className="screenshot-full" src="/img/widgets/checkbox/styles.png" alt="ToolJet - 小部件参考 - 复选框" />
+
+</div>
+
+### 文字颜色
+
+通过输入 `十六进制颜色代码` 或从颜色选择器中选择您选择的颜色来更改复选框中文本的颜色。
+
+### 复选框颜色
+
+您可以通过输入 `十六进制颜色代码` 或从颜色选择器中选择您选择的颜色来更改复选框的颜色。
+
+### 可见性
+
+打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。
+
+### 禁用
+
+默认情况下这是 `关闭` ，切换 `打开` 开关以锁定小部件并使其无法运行。您还可以通过单击旁边的 `Fx` 按钮以编程方式设置该值。如果设置为 `{{true}}`，小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。
+
+:::info
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
+:::
+
+## 动作
+
+| 行动         | 说明             | 属性                                                              |
+| ------------ | ---------------- | ----------------------------------------------------------------- |
+| `setChecked` | 设置复选框状态。 | 将状态作为参数传递。例如：`components.checkbox1.setChecked(true)` |

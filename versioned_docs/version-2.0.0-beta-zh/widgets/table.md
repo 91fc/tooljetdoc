@@ -1,296 +1,295 @@
 ---
 id: table
-title: Table
+title: 表格
 ---
-# Table
+# 表格
 
-Tables can be used for both displaying and editing data.
+表格可用于显示和编辑数据。
 
-<iframe height="500" src="https://www.youtube.com/embed/hTrdkUtz3aA" title="ToolJet Table Widget" frameborder="0" allowfullscreen width="100%"></iframe>
 
-## Table data
+
+## 表数据
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/data.png" alt="ToolJet - Widget Reference - Table" width="400" />
+<img className="screenshot-full" src="/img/widgets/table/data.png" alt="ToolJet - 小部件参考 - 表格" width="400" />
 
 </div>
 
-Array of objects to be displayed on the table. It is commonly used to display data from query (`{{queries.restapi1.data}}`). Table data expects an array of objects, example: 
+要在表格上显示的对象数组。它通常用于显示来自查询的数据（`{{queries.restapi1.data}}`）。表数据需要一个对象数组，例如：
 
 ```
 {{[{ id: 1, name: 'Sarah', email: 'sarah@example.com'}]}}
 ```
 
-The table component will **auto-generate all the columns** as soon as the expected table data(array of objects) is provided.
+一旦提供了预期的表数据（对象数组），表组件将**自动生成所有列**。
 
-## Columns
+## 列
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/columns.png" alt="ToolJet - Widget Reference - Table" width="400" />
+<img className="screenshot-full" src="/img/widgets/table/columns.png" alt="ToolJet - 小部件参考 - 表格" width="400" />
 
 </div>
 
-### Cell data types
+### 单元格数据类型
 
-You can define the cell types as per your table's data source using the following:
+您可以使用以下命令根据表格的数据源定义单元格类型：
 
-- <b>String | Default</b>: It is used to render the data for cell types: <i>text or textarea</i>,
-- <b>Number</b>: This cell type will only expect the <b>numerical</b> values and can be sorted in ascending or descending order
-- <b>Badge</b>: It is a labeling component used to display data with badges for e.g <b><i>status of a shipment</i></b>
-- <b>Multiple badges</b>: Similar to badge, used to display multiple data badges in the form of array of objects,
-- <b>Tags</b>: Used to display an array of objects in the form of tags, e.g <b><i>status, levels, steps</i></b>
-- <b>Dropdown</b>: When data is in the form of an array of options to be selected, e.g <b><i>select priority</i></b>
-- <b>Radio</b>: Used to make a selection from a group of options, e.g <b><i>select your salary-range</i></b>
-- <b>Multiselect</b>: Similar to dropdown but to collect multiple user inputs from a list of options,
-- <b>Toggle switch</b>: Allows a user to change a setting between two states, e.g <b><i>select between Yes/No</i></b>,
-- <b>Date picker</b>: Allowing users to display and select dates, e.g <b><i>delivery date</i></b>
-- <b>Image</b>: This cell type expects the URL of image and will display the image in the cell. It also has the option to style the image.
+- <b>字符串 |默认</b>：用于呈现单元格类型的数据：<i>文本或文本区域</i>，
+- <b>Number</b>：此单元格类型将只需要<b>numerical</b> 值，并且可以按升序或降序排序
+- <b>Badge</b>：这是一个标签组件，用于显示带有徽章的数据，例如 <b><i>status of a shipment</i></b>
+- <b>多个徽章</b>：类似于徽章，用于以对象数组的形式显示多个数据徽章，
+- <b>标签</b>：用于以标签形式显示对象数组，例如<b><i>状态、级别、步骤</i></b>
+- <b>Dropdown</b>：当数据是要选择的选项数组的形式时，例如 <b><i>select priority</i></b>
+- <b>Radio</b>：用于从一组选项中进行选择，例如 <b><i>select your salary-range</i></b>
+- <b>Multiselect</b>：类似于下拉菜单，但从选项列表中收集多个用户输入，
+- <b>拨动开关</b>：允许用户在两​​种状态之间更改设置，例如<b><i>在是/否之间选择</i></b>，
+- <b>日期选择器</b>：允许用户显示和选择日期，例如<b><i>交货日期</i></b>
+- <b>Image</b>：此单元格类型需要图像的 URL，并将在单元格中显示图像。它还可以选择设置图像样式。
 
 :::info
-Check this **[how-to guide](/docs/how-to/access-cellvalue-rowdata)** on dynamically change the color of text in a row and column in the table.
+检查此 **[操作指南](/docs/how-to/access-cellvalue-rowdata)** 以动态更改表中行和列中文本的颜色。
 :::
 
-### Displaying Data
+### 显示数据
 
-The data object should be an array of objects. Table columns can be added, removed, rearranged from the inspector. `key` property is the accessor key used to get data from a single element of a table data object. For example:
+数据对象应该是一个对象数组。可以从检查器中添加、删除、重新排列表格列。 `key` 属性是用于从表数据对象的单个元素获取数据的访问器键。例如：
 
-If the table data is:
+如果表数据是：
 
 ```js
 [
     {
-        "review": {
-            "title": "An app review"
+         `审查` ： {
+            "title": "应用评论"
         },
-    "user": {
-            "name": "sam",
-            "email": "sam@example.com"
+     `用户` ：{
+             `名字` ： `山姆` ，
+             `电子邮件` ： `sam@example.com` 
         },
     }
 ]
 ```
 
-To display email column, the key for the column should be `user.email`.
+要显示电子邮件列，该列的键应该是 `user.email` 。
 
 
-### Saving data
-Enable `editable` property of a column to make the cells editable. If a data type is not selected, `string` is selected as the data type.
+### 保存数据
+启用列的 `可编辑` 属性以使单元格可编辑。如果未选择数据类型，则选择 `字符串` 作为数据类型。
 
-If the data in a cell is changed, `changeSet` property of the table object will have the index of the row and the field that changed.
-For example, if the name field of second row of example in the 'Displaying Data' section is changed, `changeSet` will look like this:
+如果单元格中的数据发生更改，表对象的 `changeSet` 属性将具有更改的行和字段的索引。
+例如，如果更改了 `显示数据` 部分中示例第二行的名称字段，则 `changeSet` 将如下所示：
 
 ```js
 {
-    2: {
-        "name": "new name"
+    2：{
+        "name": "新名字"
     }
 }
 ```
 
-Along with `changeSet`, `dataUpdates` property will also be changed when the value of a cell changes. `dataUpdates` will have the whole data of the changed index from the table data. `dataUpdates` will look like this for our example:
+与 `changeSet` 一起，`dataUpdates` 属性也会在单元格的值发生变化时发生变化。 `dataUpdates` 将从表数据中获得更改索引的全部数据。对于我们的示例，`dataUpdates` 将如下所示：
 
 ```js
 [{
-    "review": {
-        "title": "An app review"
+     `审查` ： {
+        "title": "应用评论"
     },
-    "user": {
-        "name": "new name",
-        "email": "sam@example.com"
+     `用户` ：{
+        "名称": "新名称",
+         `电子邮件` ： `sam@example.com` 
     },
 }]
 ```
 
-If the data of a cell is changed, "save changes" button will be shown at the bottom of the table. This button when clicked will trigger the `Bulk update query` event. This event can be used to run a query to update the data on your data source.
+如果更改了单元格的数据， `保存更改` 按钮将显示在表格的底部。单击此按钮将触发 `批量更新查询` 事件。此事件可用于运行查询以更新数据源上的数据。
 
-## Validation
+## 验证
 
-Under column properties, expand the detailed view of a column type to access a toggle button called `make editable`. You can toggle it `ON` to apply the validations for each column respectively using the following.
+在列属性下，展开列类型的详细视图以访问名为 `使可编辑` 的切换按钮。您可以将其切换为 `ON` 以分别使用以下内容对每列应用验证。
 
-### Regex
+### 正则表达式
 
-Use this field to enter a Regular Expression that will validate the password constraints.
-### Min length
+使用此字段输入将验证密码约束的正则表达式。
+### 最小长度
 
-Enter the number for a minimum length of password allowed.
+输入允许的最小密码长度的数字。
 
-### Max length
+### 最长长度
 
-Enter the number for the maximum length of password allowed.
+输入允许的最大密码长度的数字。
 
-### Custom validation
+### 自定义验证
 
-If the condition is true, the validation passes, otherwise return a string that should be displayed as the error message. For example: `{{components.passwordInput1.value === 'something' ? true: 'value should be something'}}`
+如果条件为真，则验证通过，否则返回应显示为错误消息的字符串。例如：`{{components.passwordInput1.value === 'something' ?真： `价值应该是某种东西` }}`
 
-## Action buttons
+## 动作按钮
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/table/action.png" alt="ToolJet - Widget Reference - Table" width="400" />
+<img className="screenshot-full" src="/img/widgets/table/action.png" alt="ToolJet - 小部件参考 - 表格" width="400" />
 
 </div>
 
-Action buttons will be displayed as the last column of the table. The styles of these buttons can be customised and `on click` actions can be configured. when clicked, `selectedRow` property of the table will have the table data of the row.
+操作按钮将显示为表格的最后一列。这些按钮的样式可以自定义，并且可以配置 `点击` 操作。单击时，表格的 selectedRow 属性将具有该行的表格数据。
 
-| Property | Description |
-| -------- | ------------ |
-| Background color (Action Button) | Background color of the action button. |
-| Text color (Action Button) | Color of button-text of the action button. |
+| 物业                 | 说明                     |
+| -------------------- | ------------------------ |
+| 背景颜色（操作按钮） | 操作按钮的背景颜色。     |
+| 文本颜色（操作按钮） | 操作按钮的按钮文本颜色。 |
 
-## Options
+## 选项
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::
 
-### Server-side pagination
+### 服务器端分页
 
-Server-side pagination can be used to run a query whenever the page is changed. Go to events section of the inspector and change the action for `on page changed` event. Number of records per page needs to be handled in your query. If server-side pagination is enabled, `pageIndex` property will be exposed on the table object, this property will have the current page index. `pageIndex` can be used to query the next set of results when page is changed.
+服务器端分页可用于在页面更改时运行查询。转到检查器的事件部分并更改 `on page changed` 事件的操作。每页的记录数需要在您的查询中处理。如果启用了服务器端分页，`pageIndex` 属性将在表对象上公开，该属性将具有当前页面索引。 `pageIndex` 可用于在页面更改时查询下一组结果。
 
-When Server-side pagination is enabled, you'll be able to set three other table properties:
-- **Enable previous page button**: When server-side pagination is enabled, this button is enabled by default. Toggle this off to disable the previous page button from the table.
-- **Enable next page button**: When server-side pagination is enabled, this button is enabled by default. Toggle this off to disable the next page button from the table.
-- **Total records server side**: Set a numerical value to display particular number of records.
+启用服务器端分页后，您将能够设置其他三个表格属性：
+- **启用上一页按钮**：启用服务器端分页时，默认启用此按钮。关闭此选项以禁用表格中的上一页按钮。
+- **启用下一页按钮**：启用服务器端分页时，默认启用此按钮。关闭此选项以禁用表格中的下一页按钮。
+- **服务器端总记录数**：设置一个数值以显示特定的记录数。
 
-### Client-side pagination
+### 客户端分页
 
-Client-side pagination is enabled by default. When the client-side pagination is enabled(`{{true}}`), another property **Number of rows per page** will be shown that can be used to set the number of records per page. By default, the value is set to 10 and if it is disabled(`{{false}}`) then it will show all the records in the single page.
+默认启用客户端分页。当启用客户端分页时（`{{true}}`），将显示另一个属性**每页行数**，可用于设置每页记录数。默认情况下，该值设置为 10，如果它被禁用（`{{false}}`），那么它将在单个页面中显示所有记录。
+### 服务器端搜索
 
-### Server-side search
+如果启用服务器端搜索，则在更改 searchText 属性的内容后会触发 on search 事件。 `searchText` 可用于运行特定查询以搜索数据源中的记录。
 
-If server-side search is enabled, `on search` event is fired after the content of `searchText` property is changed. `searchText` can be used to run a specific query to search for the records in your data source.
+### 显示下载按钮
 
-### Show download button
+在表页脚显示或隐藏下载按钮。
 
-Show or hide download button at the Table footer.
+### 隐藏/显示列
 
-### Hide/Show columns
+表格标题有一个选项（眼睛图标）来显示/隐藏表格中的一个或多个列。
 
-Table header has an option(Eye icon) to show/hide one or many columns on the table. 
+### 显示过滤器按钮
 
-### Show filter button
-
-Show or hide filter button at the Table header. The following filters are available:
-- **contains**
-- **does not contain**
-- **matches**
-- **does not match**
-- **equals**
-- **does not equal to**
-- **is empty**
-- **is not empty**
-- **greater than**
-- **greater than or equal to**
-- **less than**
-- **less than or equal to**
+在表格标题处显示或隐藏过滤器按钮。以下过滤器可用：
+- **包含**
+- **不含**
+- **火柴**
+- **不匹配**
+- **等于**
+- **不等于**
+- **是空的**
+- **不为空**
+- **比...更棒**
+- **大于或等于**
+- **少于**
+- **小于或等于**
 
 
-### Show update buttons
+### 显示更新按钮
 
-It's enabled by default. Table footer will show two update buttons **Save changes** & **Discard changes** whenever a cell is edited. Toggle `off` to hide update buttons.
+它默认启用。每当编辑单元格时，表页脚将显示两个更新按钮**保存更改**和**放弃更改**。切换 `关闭` 以隐藏更新按钮。
 
-### Bulk selection
+### 批量选择
 
-To let the user select one or more rows from the current page of a table, enable 'Bulk selection' from the inspector. The values of selected rows will be exposed as `selectedRows`.
+要让用户从表格的当前页面中选择一行或多行，请从检查器中启用 `批量选择` 。所选行的值将显示为 `selectedRows` 。
 
-### Highlight selected row
+### 高亮选中的行
 
-Enable this option to have the last selected(clicked on) row to be highlighted.
+启用此选项可突出显示最后选择（单击）的行。
 
-### Disable sorting
+### 禁用排序
 
-Enable this option to lock the sorting of columns when clicked on column name.
+启用此选项可在单击列名称时锁定列的排序。
 
-### Server-side sort
-When Server-side sort is enabled, clicking on the column headers will not automatically sort the table, instead, the `Sort applied` event will be fired and the applied sorting will be exposed as `sortApplied`. You can use this data to run any query that feeds data to the table in a manner that reflects the sorting applied.
+### 服务器端排序
+启用服务器端排序时，单击列标题不会自动对表格进行排序，而是会触发 `应用排序` 事件，并将应用的排序显示为 `sortApplied` 。您可以使用此数据运行任何查询，以反映所应用排序的方式将数据馈送到表中。
 
-### Server-side filter
-When Server-side filter is enabled, applying filters will not automatically filter the table, instead, the `Filter changed` event will be fired and the applied filters will be exposed as `filters`. You can use this data to run any query that feeds data to the table in a manner that reflects the filters applied.
+### 服务器端过滤器
+启用服务器端过滤器后，应用过滤器不会自动过滤表格，而是会触发 `过滤器已更改` 事件，并将应用的过滤器公开为 `过滤器` 。您可以使用此数据运行任何查询，以反映所应用过滤器的方式将数据提供给表。
 
-### Show search box
+### 显示搜索框
 
-It can be used to show or hide Table Search box. Client-side search is enabled by default and server-side search can be enabled from the events section of the inspector. Whenever the search text is changed, the `searchText` property of the table component is updated. If server-side search is enabled, `on search` event is fired after the content of `searchText` property is changed. `searchText` can be used to run a specific query to search for the records in your data source.
+它可用于显示或隐藏表格搜索框。默认情况下启用客户端搜索，并且可以从检查器的事件部分启用服务器端搜索。每当搜索文本发生变化时，表格组件的 `searchText` 属性就会更新。如果启用服务器端搜索，则在更改 searchText 属性的内容后会触发 on search 事件。 `searchText` 可用于运行特定查询以搜索数据源中的记录。
 
-If you don't wish to use the search feature altogether, you can disable it from the inspector.
+如果您不想完全使用搜索功能，可以从检查器中禁用它。
 
-### Loading state (Boolean)
+### 加载状态（布尔值）
 
-Loading state shows a loading skeleton for the table. This property can be used to show a loading status on the table while data is being loaded. `isLoading` property of a query can be used to get the status of a query.
+加载状态显示表格的加载骨架。此属性可用于在加载数据时在表上显示加载状态。查询的 isLoading 属性可用于获取查询的状态。
 
-## Events
+## 事件
 
-- **[Row hovered](#row-hovered)**
-- **[Row clicked](#row-clicked)**
-- **[Save changes](#save-changes)**
-- **[Cancel changes](#cancel-changes)**
-- **[Page changed](#page-changed)**
-- **[Search](#search)**
-- **[Sort applied](#sort-applied)**
-- **[Cell value changed](#cell-value-changed)**
-- **[Filter changed](#filter-changed)**
+- **[行悬停](#行悬停)**
+- **[行被点击](#行被点击**
+- **[保存更改](#保存更改)**
+- **[取消更改](#取消更改)**
+- **[页面已更改](#页面已更改)**
+- **[搜索](#搜索)**
+- **[应用排序](#应用排序)**
+- **[单元格值已更改](#单元格值已更改)**
+- **[过滤器已更改](#f过滤器已更改)**
 
-### Row hovered
+### 行悬停
 
-This event is triggered when the mouse pointer is moved over a row in the table. The `hoveredRowId` exposed variable of the table will include the id of the latest hovered row and `hoveredRow` property of the table will have the data of the hovered row in the object format.
+当鼠标指针移到表中的一行上时会触发此事件。表格的 `hoveredRowId` 公开变量将包含最新悬停行的 ID，表格的 `hoveredRow` 属性将包含对象格式的悬停行的数据。
 
-### Row clicked
+### 行被点击
 
-This event is triggered when a table row is clicked. The `selectedRowId` exposed variable of the table will include the id of the selected row and the `selectedRow` property of the table object will have the table data of the selected row.
+单击表格行时会触发此事件。表格的 `selectedRowId` 公开变量将包含所选行的 ID，表格对象的 `selectedRow` 属性将包含所选行的表格数据。
 
-### Save changes
+### 保存更改
 
-If any cell of the table is edited, the `save changes` button appears at the footer of the table. Save changes event is triggered when this button is clicked.
+如果表格的任何单元格被编辑， `保存更改` 按钮会出现在表格的底部。单击此按钮时会触发保存更改事件。
 
-### Cancel changes
+### 取消更改
 
-If any cell of the table is edited, the `Discard changes` button appears at the footer of the table. Cancel changes event is triggered when this button is clicked.
+如果表格的任何单元格被编辑， `放弃更改` 按钮会出现在表格的底部。单击此按钮时会触发取消更改事件。
 
-### Page changed
+### 页面已更改
 
-If server-side pagination is enabled, this event is fired when the current page is changed. This event is triggered after updating the `pageIndex` variable.
+如果启用了服务器端分页，则当当前页面更改时会触发此事件。此事件在更新 `pageIndex` 变量后触发。
 
-### Search
+### 搜索
 
-This event is triggered when a text is entered to the search input box of the table. `searchText` variable is updated before triggering this event.
+当在表格的搜索输入框中输入文本时会触发此事件。 `searchText` 变量在触发此事件之前更新。
 
-### Sort applied
+### 应用排序
 
-This event is triggered when the column name header is clicked to apply sorting in `asc` or `desc`. The `sortApplied` variable is updated with an object having `column` and `direction` values.
+单击列名称标题以应用 `asc` 或 `desc` 中的排序时会触发此事件。 `sortApplied` 变量被更新为具有 `column` 和 `direction` 值的对象。
 
-### Cell value changed
+### 单元格值已更改
 
-If any cell of the table is edited, the `cell value changed` event is triggered.
+如果表格的任何单元格被编辑，就会触发 `单元格值已更改` 事件。
 
-### Filter changed
+### 过滤器已更改
 
-This event is triggered when filter is added, removed, or updated from the filter section of the table. `filters` property of the table is updated to reflect the status of filters applied. The objects will have properties: `condition`, `value`, and `column`. 
+当从表的过滤器部分添加、删除或更新过滤器时，将触发此事件。表的 `filters` 属性已更新，以反映所应用过滤器的状态。这些对象将具有属性：`condition`、`value` 和 `column`。
 
-## Exposed variables
+## 暴露的变量
 
-| variable      | description |
-| ----------- | ----------- |
-| currentData      | Data that is currently being displayed by the table ( including edits if any ) |
-| currentPageData  | Data that is displayed on the current page if pagination is enabled ( including edits if any )      |
-| pageIndex | Index of the current page, starting from 1
-| changeSet | Object with row number as the key and object of edited fields and their values as the value |
-| dataUpdates | Just like changeSet but includes the data of the entire row |
-| selectedRow | The data of the row that was last clicked. `selectedRow` also changes when an action button is clicked |
-| searchText | The value of the search field if server-side pagination is enabled |
+| 变量         | 说明                                                           |
+| ------------ | -------------------------------------------------------------- |
+| 当前数据     | 表格当前显示的数据（包括编辑，如果有的话）                     |
+| 当前页面数据 | 如果启用分页，则显示在当前页面上的数据（包括编辑，如果有的话） |
+| 页面索引     | 当前页的索引，从 1                                             | 开始 |
+| 变更集       | 以行号为键的对象，以编辑字段的对象及其值为值                   |
+| 数据更新     | 就像 changeSet 但包括整行的数据                                |
+| 选择行       | 最后单击的行的数据。单击操作按钮时，`selectedRow` 也会发生变化 |
+| 搜索文本     | 启用服务器端分页时搜索字段的值                                 |
 
-## Styles
+## 风格
 
-| Style      | Description |
-| ----------- | ----------- |
-| Text color | Change the color of the text in table by providing `hex color code` or choosing one from the picker |
-| Action button radius | This field can be used to give a radius to all action buttons. The default value is `0` |
-| Table type | Select a type of table from the dropdown. |
-| Cell size |  This decides the size of table cells. You can choose between a `Compact` size for table cells or a `Spacious` size |
-| Visibility | Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not visible after the app is deployed. By default, it's set to `{{true}}`. |
-| Disable | Toggle on to lock the widget. You can programmatically change its value by clicking on the `Fx` button next to it, if set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`. |
-| Border radius | Use this property to modify the border radius of the button. |
+| 款式         | 说明                                                                                                                                                                       |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 文字颜色     | 通过提供 `十六进制颜色代码` 或从选择器中选择一个来更改表格中文本的颜色                                                                                                     |
+| 动作按钮半径 | 该字段可用于为所有操作按钮提供半径。默认值为 `0`                                                                                                                           |
+| 表格类型     | 从下拉列表中选择一种表格。                                                                                                                                                 |
+| 单元格大小   | 这决定了表格单元格的大小。您可以在表格单元格的 `紧凑` 尺寸或 `宽敞` 尺寸之间进行选择                                                                                       |
+| 能见度       | 打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。 |
+| 禁用         | 打开以锁定小部件。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值，如果设置为 `{{true}}` ，该小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。        |
+| 边界半径     | 使用此属性修改按钮的边框半径。                                                                                                                                             |
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

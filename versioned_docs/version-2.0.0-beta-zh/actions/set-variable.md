@@ -1,16 +1,16 @@
 ---
 id: set-variable
-title: Set variable
+title: Set variable 设置变量
 ---
 
-This action allows you to create a variable and assign a `value` to it.
+此操作允许您创建一个变量并为其分配一个 `值` 。
 
 :::info
-You can also trigger actions from the **JavaScript code**. Check it out [here](/docs/how-to/run-actions-from-runjs).
+您还可以从 **JavaScript 代码** 触发操作。在 [此处](/docs/how-to/run-actions-from-runjs) 查看它。
 :::
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference -Set variable](/img/actions/setvar/setvar.png)
+![ToolJet - 动作参考 - 设置变量](/img/actions/setvar/setvar.png)
 
 </div>

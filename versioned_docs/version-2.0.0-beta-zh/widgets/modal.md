@@ -1,101 +1,101 @@
 ---
 id: modal
-title: Modal
+title: 模态框
 ---
-# Modal
+# 模态框
 
-Modal widget renders in front of a backdrop, and it blocks interaction with the rest of the application until the modal is closed. It can be used to add dialog boxes to your app for lightboxes, user notifications, forms, etc.
+模态框小部件呈现在背景前，它会阻止与应用程序其余部分的交互，直到模态框关闭。它可用于将对话框添加到您的应用程序，用于灯箱、用户通知、表单等。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/modal/prop.png" alt="ToolJet - Widget Reference - Modal" />
+<img className="screenshot-full" src="/img/widgets/modal/prop.png" alt="ToolJet - 小部件参考 - 模态框" />
 
 </div>
 
-## How To Use Modal Widget
+## 如何使用模态框小部件
 
-<iframe height="500" src="https://www.youtube.com/embed/co-UZCGpfMI" title="Datepicker Widget" frameborder="0" allowfullscreen width="100%"></iframe>
 
-## Add widgets to Modal
 
-To add widgets to the Modals please refer to **[Tutorial - Adding widgets to a modal](/docs/tutorial/adding-widget#adding-widgets-to-modal)**
+## 将小部件添加到模态框
 
-## Properties
+要将小部件添加到模态框框，请参阅**[教程 - 将小部件添加到模态框框](/docs/tutorial/adding-widget#adding-widgets-to-modal)**
 
-### Title
+## 特性
 
-Title that should be shown on the header of the modal. 
+### 标题
 
-### Loading State
+应显示在模态框标题上的标题。
 
-Loading state can be used to show a spinner on the modal content. Loading state is commonly used with isLoading property of the queries to show a loading status while a query is being run. Enable the toggle **On** or click on `fx` to programmatically set the value `{{true}}` or `{{false}}` .
+### 加载状态
 
-### Hide title bar
+加载状态可用于在模态框内容上显示微调器。加载状态通常与查询的 isLoading 属性一起使用，以在运行查询时显示加载状态。启用开关 **On** 或点击 `fx` 以编程方式设置值 `{{true}}` 或 `{{false}}` 。
 
-Enabling this option hides the title bar in the modal. The value `{{true}}` or `{{false}}` can be set programmatically by clicking on the `Fx` button next to it.
+### 隐藏标题栏
 
-### Hide close button
+启用此选项会隐藏模式中的标题栏。可以通过单击旁边的 `Fx` 按钮以编程方式设置值 `{{true}}` 或 `{{false}}` 。
 
-Enabling this option hides the close button in the modal. The value `{{true}}` or `{{false}}` can be set programmatically by clicking on the `Fx` button next to it.
+### 隐藏关闭按钮
 
-### Hide on escape
+启用此选项会隐藏模式中的关闭按钮。可以通过单击旁边的 `Fx` 按钮以编程方式设置值 `{{true}}` 或 `{{false}}` 。
 
-Enabling this option closes the modal(opened) whenever the escape key is pressed. The value `{{true}}` or `{{false}}` can be set programmatically by clicking on the `Fx` button next to it. This property is enabled by default.
+### 逃脱时隐藏
+
+启用此选项会在按下转义键时关闭模态框（打开）。可以通过单击旁边的 `Fx` 按钮以编程方式设置值 `{{true}}` 或 `{{false}}` 。默认情况下启用此属性。
 
 :::info
-Now hide the modal by simply clicking anywhere outside the modal (for preview or released apps).
+现在只需单击模态框外的任意位置即可隐藏模态框（用于预览或已发布的应用程序）。
 :::
 
-### Modal size
+### 模态框尺寸
 
-Size of the modal. Options are `medium`, `small` and `large`. The default is `small`. You can also programmatically configure the value by clicking on the `Fx` and set the value to `sm`, `md` or `lg`.
+模态框的大小。选项有 `中` 、 `小` 和 `大` 。默认为 `小` 。您还可以通过单击 `Fx` 并将值设置为 `sm` 、 `md` 或 `lg` 以编程方式配置该值。
 
-## Options
+## 选项
 
-### Use default trigger button
+### 使用默认触发按钮
 
-The default trigger button is enabled by default, this button can be used to show the modal. The value `{{true}}` or `{{false}}` can be set programmatically by clicking on the `Fx` button next to it.
+默认触发按钮默认启用，此按钮可用于显示模态框。可以通过单击旁边的 `Fx` 按钮以编程方式设置值 `{{true}}` 或 `{{false}}` 。
 
 :::info
-A modal can be triggered using the default trigger button, [action](/docs/actions/show-modal) or via [JavaScript](/docs/how-to/run-actions-from-runjs#show-modal).
+可以使用默认触发按钮 [action](/docs/actions/show-modal) 或通过 [JavaScript](/docs/how-to/run-actions-from-runjs#show-modal) 触发模式。
 :::
 
-### Trigger button label
+### 触发按钮标签
 
-It can be used to set the label of the trigger button.
+可用于设置触发按钮的标签。
 
-## Events
+## 活动
 
-Modal supports the following two events:
-- **On open**
-- **On close**
+Modal支持以下两种事件：
+- **打开**
+- **关闭**
 
 :::info
-Just like any other event on ToolJet, you can set multiple handlers for the events supported by Modal. Check all the [actions here](/docs/category/actions-reference).
+就像 ToolJet 上的任何其他事件一样，您可以为 Modal 支持的事件设置多个处理程序。检查所有 [此处的操作](/docs/category/actions-reference)。
 :::
 
-## Layout
+## 布局
 
-### Show on desktop
+### 在桌面上显示
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-## Styles
+## 风格
 
 
-| Style      | Description | value |
-| ----------- | ----------- | ------ |
-| Header background color | Change the background color of the header in modal | Enter the Hex color code or choose a color of your choice from the color picker |
-| Header title color | Change the color of the Title in modal | Enter the Hex color code or choose a color of your choice from the color picker |
-| Body background color | Change the background color of the body in modal | Enter the Hex color code or choose a color of your choice from the color picker |
-| Visibility | Toggle on or off to control the visibility of the default trigger button that comes with modal | You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the button will not visible after the app is released. By default, it's set to `{{true}}`. |
-| Disable | Toggle on to disable the default trigger button that comes with modal | You can programmatically change its value by clicking on the `Fx` button next to it, if set to `{{true}}`, the button will be locked and becomes non-functional. By default, its value is set to `{{false}}`. |
-| Trigger button background color | Change the background color of the default trigger button of modal | Enter the Hex color code or choose a color of your choice from the color picker |
-| Trigger button text color | Change the color of the label in default trigger button of modal | Enter the Hex color code or choose a color of your choice from the color picker |
+| 款式             | 说明                               | 价值                                                                                                                                                            |
+| ---------------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 标题背景颜色     | 更改模态框标题的背景颜色           | 输入十六进制颜色代码或从颜色选择器中选择您喜欢的颜色                                                                                                            |
+| 标题标题颜色     | 更改模态框标题的颜色               | 输入十六进制颜色代码或从颜色选择器中选择您喜欢的颜色                                                                                                            |
+| 正文背景颜色     | 在模态框中更改正文的背景颜色       | 输入十六进制颜色代码或从颜色选择器中选择您喜欢的颜色                                                                                                            |
+| 能见度           | 打开或关闭以控制模态框             | 附带的默认触发按钮的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，应用发布后按钮将不可见。默认情况下，它设置为 `{{true}}` 。    |
+| 禁用             | 切换以禁用模态框                   | 附带的默认触发按钮。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值，如果设置为 `{{true}}` ，该按钮将被锁定并变得无效。默认情况下，它的值设置为 `{{false}}` 。 |
+| 触发按钮背景颜色 | 更改模态框默认触发按钮的背景色     | 输入十六进制颜色代码或从颜色选择器中选择您喜欢的颜色                                                                                                            |
+| 触发按钮文字颜色 | 更改模态框默认触发按钮中标签的颜色 | 输入十六进制颜色代码或从颜色选择器中选择您喜欢的颜色                                                                                                            |
 
 :::info
-Trigger Button styles are only visible when **Use default trigger button** under Options is toggled on.
+触发按钮样式仅在打开选项下的**使用默认触发按钮**时可见。
 :::

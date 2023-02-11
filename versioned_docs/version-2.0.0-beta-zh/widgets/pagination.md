@@ -1,69 +1,69 @@
 ---
 id: pagination
-title: Pagination
+title: 分页
 ---
-# Pagination
+# 分页
 
-Pagination enables the user to select a specific page from a range of pages. It is used to separate the content into discrete pages.
+分页使用户能够从一系列页面中选择特定页面。它用于将内容分成离散的页面。
 
 :::tip
-You can club pagination widget with the List View widget.
+您可以将分页小部件与列表视图小部件组合在一起。
 :::
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/pagination/pagination.png" alt="ToolJet - Widget Reference - Pagination" />
+<img className="screenshot-full" src="/img/widgets/pagination/pagination.png" alt="ToolJet - 小部件参考 - 分页" />
 
 </div>
 
-## Properties
+## 特性
 
-### Number of pages
+### 页数
 
-You can use this to predefined the total number of pages. It is calculated by dividing the length of the data array that will be passed, by the data limit which is the number of posts we will show on each page. 
+您可以使用它来预定义总页数。它的计算方法是将要传递的数据数组的长度除以数据限制，即我们将在每个页面上显示的帖子数。
 
-### Default page index
-It is used to set and display the default page index when the app initially loads. You can also put a conditional logic to set its value as per your use case.
+### 默认页面索引
+它用于在应用程序初始加载时设置和显示默认页面索引。您还可以根据您的用例放置条件逻辑来设置其值。
 
-## Event 
+## 事件
 
-### On Page Change
+### 页面更改
 
-This event is triggered whenever the user switches to another page index. You can explore various actions associated with this event as per app logic.
+只要用户切换到另一个页面索引，就会触发此事件。您可以根据应用程序逻辑探索与此事件关联的各种操作。
 
-## General
-### Tooltip
+## 一般的
+### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - Widget Reference - Pagination" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="ToolJet - 小部件参考 - 分页" />
 
 </div>
 
-## Layout
+## 布局
 
-### Show on desktop
+### 在桌面上显示
 
-Toggle on or off to display the widget in desktop view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
-### Show on mobile
+打开或关闭以在桌面视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
+### 在手机上显示
 
-Toggle on or off to display the widget in mobile view. You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}`.
+打开或关闭以在移动视图中显示小部件。您可以通过单击 `Fx` 来设置值 `{{true}}` 或 `{{false}}` ，以编程方式确定该值。
 
-## Styles
+## 风格
 
-### Visibility
+### 可见性
 
-Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not be visible after the app is deployed. By default, it's set to `{{true}}`.
+打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。
 
-### Disable
+### 禁用
 
-This is `off` by default, toggle `on` the switch to lock the widget and make it non-functional. You can also programmatically set the value by clicking on the `Fx` button next to it. If set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`.
+默认情况下这是 `关闭` ，切换 `打开` 开关以锁定小部件并使其无法运行。您还可以通过单击旁边的 `Fx` 按钮以编程方式设置该值。如果设置为 `{{true}}`，小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::
 

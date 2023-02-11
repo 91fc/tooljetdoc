@@ -1,16 +1,16 @@
 ---
 id: logout
-title: Logout
+title: Logout 注销
 ---
 
-This action allows you to log out of the application (ToolJet).
+此操作允许您注销应用程序 (ToolJet)。
 
 :::info
-You can also trigger actions from the **JavaScript code**. Check it out [here](/docs/how-to/run-actions-from-runjs).
+您还可以从 **JavaScript 代码** 触发操作。在 [此处](/docs/how-to/run-actions-from-runjs) 查看它。
 :::
 
 <div style={{textAlign: 'center'}}>
 
-![ToolJet - Action reference -  Logout](/img/actions/logout/logout.png)
+![ToolJet - 操作参考 - 注销](/img/actions/logout/logout.png)
 
 </div>

@@ -1,95 +1,95 @@
 ---
 id: button-group
-title: Button Group
+title: 按钮组
 ---
-# Button group
+# 按钮组
 
-Button group widget can be used to take actions.
-
-<div style={{textAlign: 'center'}}>
-
-<img className="screenshot-full" src="/img/widgets/button-group/button-group.png" alt="Button group" />
-
-</div>
-
-## Properties
-### Events
-
-To add an event to a button group, click on the widget handle to open the widget properties on the right sidebar. Go to the **Events** section and click on **Add handler**.
+按钮组小部件可用于执行操作。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/button-group/events.png" alt="Button group events" />
+<img className="screenshot-full" src="/img/widgets/button-group/button-group.png" alt="按钮组" />
 
 </div>
 
-#### On click
-On click event is triggered when the button group is clicked. Just like any other event on ToolJet, you can set multiple handlers for on click event.
+## 特性
+### 活动
+
+要将事件添加到按钮组，请单击小部件句柄以打开右侧栏中的小部件属性。转到 **Events** 部分并单击 **Add handler**。
+
+<div style={{textAlign: 'center'}}>
+
+<img className="screenshot-full" src="/img/widgets/button-group/events.png" alt="按钮组事件" />
+
+</div>
+
+#### 点击
+单击按钮组时会触发单击事件。就像 ToolJet 上的任何其他事件一样，您可以为单击事件设置多个处理程序。
 
 :::info
-Check [Action Reference](/docs/category/actions-reference) docs to get the detailed information about all the **Actions**.
+查看 [Action Reference](/docs/category/actions-reference) 文档以获取有关所有 **Actions** 的详细信息。
 :::
 
-### Properties
+### 特性
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/button-group/properties.png" alt="Button group properties" />
+<img className="screenshot-full" src="/img/widgets/button-group/properties.png" alt="按钮组属性" />
 
 </div>
 
-| Properties  | description | Expected value |
-| ----------- | ----------- | -------------- |
-| label | label is used to set the heading of the button group. | Any **String** value |
-| values |Values for button group items. | **Array** of strings  |
-| labels | It can be used to set the labels of the button group items. |  Array of **strings**|
-| Default  selected | Initial selected values can be set using this. | Array of **strings**  |
-| Enable multiple selection | Toggle this to allow multiple button selection. | Toggle to true/false |
+| 属性     | 说明                         | 期望值             |
+| -------- | ---------------------------- | ------------------ |
+| 标签     | label 用于设置按钮组的标题。 | 任何 **String** 值 |
+| values   | 按钮组项目的值。             | **字符串数组**     |
+| 标签     | 可用于设置按钮组项的标签。   | **字符串数组**     |
+| 默认选择 | 可以使用它来设置初始选择值。 | **字符串数组**     |
+| 启用多选 | 切换此项以允许选择多个按钮。 | 切换为真/假        |
 
-### General
-#### Tooltip
+### 一般的
+#### 工具提示
 
-A Tooltip is often used to specify extra information about something when the user hovers the mouse pointer over the widget.
+当用户将鼠标指针悬停在小部件上时，工具提示通常用于指定有关某事的额外信息。
 
-Under the <b>General</b> accordion, you can set the value in the string format. Now hovering over the widget will display the string as the tooltip.
+在 **通用** 折叠栏下，您可以设置字符串格式的值。现在将鼠标悬停在小部件上会将字符串显示为工具提示。
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/tooltip.png" alt="Button group Tooltip" />
+<img className="screenshot-full" src="/img/tooltip.png" alt="按钮组工具提示" />
 
 </div>
 
-### Layout
+### 布局
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/button-group/layout.png" alt="Button group layout" />
+<img className="screenshot-full" src="/img/widgets/button-group/layout.png" alt="按钮组布局" />
 
 </div>
 
-| Layout  | description | Expected value |
-| ----------- | ----------- | ------------ |
-| Show on desktop | Toggle on or off to display desktop view. | You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}` |
-| Show on mobile | Toggle on or off to display mobile view. | You can programmatically determine the value by clicking on `Fx` to set the value `{{true}}` or `{{false}}` |
+| 布局         | 说明                       | 期望值                                                                      |
+| ------------ | -------------------------- | --------------------------------------------------------------------------- |
+| 在桌面上显示 | 打开或关闭以显示桌面视图。 | 您可以通过单击 `Fx` 以设置值 `{{true}}` 或 `{{false}}` 来以编程方式确定该值 |
+| 在手机上显示 | 打开或关闭以显示移动视图。 | 您可以通过单击 `Fx` 以设置值 `{{true}}` 或 `{{false}}` 来以编程方式确定该值 |
 
-### Styles
+### 样式
 
 <div style={{textAlign: 'center'}}>
 
-<img className="screenshot-full" src="/img/widgets/button-group/styles.png" alt="Button group properties" />
+<img className="screenshot-full" src="/img/widgets/button-group/styles.png" alt="按钮组属性" />
 
 </div>
 
-| Style      | Description |
-| ----------- | ----------- | 
-| Background color |  You can change the background color of the widget by entering the Hex color code or choosing a color of your choice from the color picker. |
-| Text color |  You can change the color of the Text in button by entering the Hex color code or choosing a color of your choice from the color picker. |
-| Visibility | Toggle on or off to control the visibility of the widget. You can programmatically change its value by clicking on the `Fx` button next to it. If `{{false}}` the widget will not visible after the app is deployed. By default, it's set to `{{true}}`. |
-| Disable | Toggle on to lock the widget. You can programmatically change its value by clicking on the `Fx` button next to it, if set to `{{true}}`, the widget will be locked and becomes non-functional. By default, its value is set to `{{false}}`. |
-| Border radius | Use this property to modify the border radius of the button. |
-| Selected text color | Use this property to modify the background colour of text in selected button |
-| Selected background color | Use this property to modify the background colour of selected button |
+| 款式           | 说明                                                                                                                                                                       |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 背景颜色       | 您可以通过输入十六进制颜色代码或从颜色选择器中选择您选择的颜色来更改小部件的背景颜色。                                                                                     |
+| 文字颜色       | 您可以通过输入十六进制颜色代码或从颜色选择器中选择您选择的颜色来更改文本输入按钮的颜色。                                                                                   |
+| 能见度         | 打开或关闭以控制小部件的可见性。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值。如果为 `{{false}}`，则在部署应用程序后小部件将不可见。默认情况下，它设置为 `{{true}}` 。 |
+| 禁用           | 打开以锁定小部件。您可以通过单击旁边的 `Fx` 按钮以编程方式更改其值，如果设置为 `{{true}}` ，该小部件将被锁定并变得无法使用。默认情况下，它的值设置为 `{{false}}` 。        |
+| 边界半径       | 使用此属性修改按钮的边框半径。                                                                                                                                             |
+| 所选文字颜色   | 使用此属性修改所选按钮中文本的背景颜色                                                                                                                                     |
+| 选定的背景颜色 | 使用此属性修改所选按钮的背景颜色                                                                                                                                           |
 
 :::info
-Any property having `Fx` button next to its field can be **programmatically configured**.
+任何在其字段旁边具有 `Fx` 按钮的属性都可以**以编程方式配置**。
 :::

@@ -5,7 +5,7 @@ title: Heroku
 
 # Deploying ToolJet on Heroku
 
-<iframe width="800" height="500" src="https://www.youtube.com/embed/ApDtwE1OXY0" frameborder="0" allowfullscreen width="100%"></iframe>
+
 
 ### Follow the steps below to deploy ToolJet on Heroku:
 

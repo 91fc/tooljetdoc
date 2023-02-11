@@ -1,41 +1,41 @@
 ---
 id: generate-file
-title: Generate file
+title: Generate file 生成文件
 ---
 
-# Generate file
+# 生成文件
 
-This action allows you to construct files on the fly and let users download it.
-Presently, the only file type supported is `CSV`.
+此操作允许您即时构建文件并让用户下载。
+目前，唯一支持的文件类型是 `CSV` 。
 
-## Options
+## 选项
 
-| Option | Description |
-|--------|-------------|
-| Type   | Type of file to be generated |
-| File name | Name of the file to be generated |
-| Data | Data that will be used to construct the file. Its format will depend on the file type, as specified in the following section |
+| 选项   | 说明                                                           |
+| ------ | -------------------------------------------------------------- |
+| 类型   | 要生成的文件类型                                               |
+| 文件名 | 要生成的文件的名称                                             |
+| 资料   | 将用于构建文件的数据。其格式将取决于文件类型，如以下部分中所述 |
 
-### Data format for CSV
+### CSV 的数据格式
 
-For `CSV` file type, the data field should be supplied with an array objects. ToolJet assumes that the keys of each of
-these objects are the same and that they represent the column headers of the csv file.
+对于 `CSV` 文件类型，数据字段应提供一个数组对象。 ToolJet 假定每个键
+这些对象是相同的，它们代表 csv 文件的列标题。
 
-Example:
+例子：
 
 ```javascript
 {{
   [
-    { name: 'John', email: 'john@tooljet.com' },
-    { name: 'Sarah', email: 'sarah@tooljet.com' },
+    { 姓名：'约翰'，电子邮件：'john@tooljet.com' },
+    { 名称：'Sarah'，电子邮件：'sarah@tooljet.com'}，
   ]
 }}
 ```
 
-Supplying the above snippet will generate a csv file which looks like this:
+提供上面的代码片段将生成一个如下所示的 csv 文件：
 
 ```csv
-name,email
-John,john@tooljet.com
-Sarah,sarah@tooljet.com
+姓名,电子邮件
+约翰,john@tooljet.com
+莎拉,sarah@tooljet.com
 ```
