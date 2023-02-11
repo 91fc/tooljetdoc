@@ -15,16 +15,9 @@ module.exports = {
   projectName: 'ToolJet', // Usually your repo name.
   i18n: {
     defaultLocale: 'zh',
-    locales: ['en', 'zh'],
+    locales: ['zh'],
     path: 'i18n',
     localeConfigs: {
-      en: {
-        label: 'English',
-        direction: 'ltr',
-        htmlLang: 'en-US',
-        calendar: 'gregory',
-        path: 'en',
-      },
       zh: {
         label: '简体中文',
         direction: 'ltr',
@@ -86,7 +79,7 @@ module.exports = {
           items: [
             {
               label: '教程',
-              to: '/docs/1.x.x/category/tutorial',
+              to: '/docs/category/教程',
             },
           ],
         },
@@ -139,7 +132,7 @@ module.exports = {
           customCss: require.resolve('./src/css/custom.css'),
         },
         sitemap: {},
-      // gtag: isProd
+        // gtag: isProd
         //   ? {
         //     trackingID: process.env.GA_MID || "development",
         //     // Optional fields.
