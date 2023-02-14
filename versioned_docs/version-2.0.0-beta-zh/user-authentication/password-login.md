@@ -1,32 +1,32 @@
 ---
 id: password-login
-title: Password Login
+title: 密码登录
 ---
 
-# Password Login
+# 密码登录
 
-Password login is enabled by default for all workspaces. User with admin privilege can enable/disable it. 
+默认情况下，所有工作区都启用密码登录。具有管理员权限的用户可以启用/禁用它。
 
-- Go to the **Workspace Settings** (⚙️) from the left sidebar in the ToolJet dashboard
+- 从 ToolJet 仪表板的左侧栏转到 **工作区设置** (⚙️)
   <div style={{textAlign: 'center'}}>
 
-  <img className="screenshot-full" src="/img/sso/general/workside.png" alt="General Settings: SSO" width="500"/>
+  <img className="screenshot-full" src="/img/sso/general/workside.png" alt="常规设置：SSO" width="500"/>
 
   </div>
 
-- Select `SSO` from sidebar 
+- 从边栏中选择 `SSO` 
   <div style={{textAlign: 'center'}}>
 
-  <img className="screenshot-full" src="/img/sso/general/sso.png" alt="General Settings: SSO" width="500"/>
+  <img className="screenshot-full" src="/img/sso/general/sso.png" alt="常规设置：SSO" width="500"/>
 
   </div>
 
-- Select **Password Login**. You can enable/disable it
+- 选择**密码登录**。您可以启用/禁用它
   <div style={{textAlign: 'center'}}>
 
-  <img className="screenshot-full" src="/img/sso/general/password.png" alt="General Settings: SSO" />
+  <img className="screenshot-full" src="/img/sso/general/password.png" alt="常规设置：SSO" />
 
   </div>
 
-## Retry limits
-The user password authentication method will be disabled after predefined numbers of wrong password attempts. This feature can be disabled using setting `DISABLE_PASSWORD_RETRY_LIMIT` to `true` in environment variables. Number of retries allowed will be 5 by default, it can be override by `PASSWORD_RETRY_LIMIT` environment variable.
+## 重试限制
+在预定次数的错误密码尝试后，将禁用用户密码身份验证方法。可以使用在环境变量中将 `DISABLE_PASSWORD_RETRY_LIMIT` 设置为 `true` 来禁用此功能。默认允许的重试次数为 5 次，可以通过 PASSWORD_RETRY_LIMIT 环境变量覆盖。

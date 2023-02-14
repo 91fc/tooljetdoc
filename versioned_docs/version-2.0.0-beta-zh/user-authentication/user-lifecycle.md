@@ -1,167 +1,167 @@
 ---
 id: user-lifecycle
-title: User Lifecycle
+title: 用户生命周期
 ---
 
-# User Lifecycle
+# 用户生命周期
 
-## Single-Workspace
+## 单工作区
 
-### User onboarding
-- If no user is present in the system, there will be `Sign-up` option in the login page. User can sign up by entering their email address. Tooljet will be sending a welcome email with activation URL to the email address. User can follow the activation URL and onboard to ToolJet.
-
-  <div style={{textAlign: 'center'}}>
-
-  ![ToolJet - Single-Workspace sign up](/img/user-lifecycle/single-ws-signup.png)
-
-  </div>
-
-- User with admin privileges can invite members
+### 用户注册
+- 如果系统中没有用户，登录页面将有 `注册` 选项。用户可以通过输入他们的电子邮件地址进行注册。 Tooljet 将向该电子邮件地址发送一封带有激活 URL 的欢迎电子邮件。用户可以按照激活 URL 并加入 ToolJet。
 
   <div style={{textAlign: 'center'}}>
 
-  ![ToolJet - Single-Workspace invite user](/img/user-lifecycle/user-invite-sw.png)
+  ![ToolJet - 单一工作区注册](/img/user-lifecycle/single-ws-signup.png)
 
   </div>
 
-- Invited user will receive welcome email with activation URL, unregistered user can follow the link and setup Tooljet account
+- 具有管理员权限的用户可以邀请成员
 
   <div style={{textAlign: 'center'}}>
 
-  ![ToolJet - Single-Workspace accept invite](/img/user-lifecycle/accept-invite-sw.png)
+  ![ToolJet - 单工作区邀请用户](/img/user-lifecycle/user-invite-sw.png)
 
   </div>
 
-- Invited user can onboard through SSO login, without using an invitation link
+- 受邀用户将收到带有激活 URL 的欢迎电子邮件，未注册用户可以点击链接并设置 Tooljet 帐户
 
   <div style={{textAlign: 'center'}}>
 
-  ![ToolJet - Single-Workspace accept invite](/img/user-lifecycle/sso-onboard-sw.png)
+  ![ToolJet - 单工作区接受邀请](/img/user-lifecycle/accept-invite-sw.png)
 
   </div>
 
-- If `enable signup` option in enabled in SSO general settings, user can setup account through SSO login without an invite
+- 受邀用户可以通过 SSO 登录加入，无需使用邀请链接
 
   <div style={{textAlign: 'center'}}>
 
-  ![ToolJet - Single-Workspace sign up using SSO](/img/user-lifecycle/sso-enable-signup-sw.png)
+  ![ToolJet - 单工作区接受邀请](/img/user-lifecycle/sso-onboard-sw.png)
 
   </div>
 
-### Archive user
-  - User can be archived by workspace admin from using `Manage User` page
+- 如果在 SSO 常规设置中启用了 `启用注册` 选项，则用户无需邀请即可通过 SSO 登录设置帐户
+
+  <div style={{textAlign: 'center'}}>
+
+  ![ToolJet - 使用 SSO 注册单一工作区](/img/user-lifecycle/sso-enable-signup-sw.png)
+
+  </div>
+
+### 存档用户
+  - 工作区管理员可以使用 `管理用户` 页面存档用户
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Single-Workspace Archive user](/img/user-lifecycle/archive-user.png)
+    ![ToolJet - 单工作区存档用户](/img/user-lifecycle/archive-user.png)
 
     </div>
 
-### Unarchive user
-  - User can be unArchived by workspace admin from using `Manage User` page
+### 取消归档用户
+  - 工作区管理员可以使用 `管理用户` 页面取消存档用户
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Single-Workspace Unarchive user](/img/user-lifecycle/unarchive-sw.png)
+    ![ToolJet - 单工作区取消存档用户](/img/user-lifecycle/unarchive-sw.png)
 
     </div>
 
   :::info
-  Archive or unarchive will affect user login, user won't be able to login using email id and password unless user is in active state
+  存档或取消存档将影响用户登录，除非用户处于活动状态，否则用户将无法使用电子邮件 ID 和密码登录
   :::
 
-## Multi-Workspace
+## 多工作区
 
 :::info
-Check Multi-workspace docs [here](/docs/tutorial/multiworkspace).
+[此处](/docs/tutorial/multiworkspace) 查看多工作区文档。
 :::
 
-### User onboarding
+### 用户入职
 
-  - User can sign up using the sign up link provided on the login page, user will receive a welcome email with activation link. New workspace will be created for the user.
+  - 用户可以使用登录页面上提供的注册链接进行注册，用户将收到一封带有激活链接的欢迎电子邮件。将为用户创建新的工作区。
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Multi-Workspace sign up](/img/user-lifecycle/signup-mw.png)
+    ![ToolJet - 多工作区注册](/img/user-lifecycle/signup-mw.png)
 
     </div>
 
-  - Users can be added to multiple workspaces. Users can create their own workspaces and manage them.
+  - 可以将用户添加到多个工作区。用户可以创建自己的工作区并对其进行管理。
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Multi-Workspace sign up](/img/user-lifecycle/user-mw.png)
+    ![ToolJet - 多工作区注册](/img/user-lifecycle/user-mw.png)
 
     </div>
 
-  - Existing user in active state for a workspace can be invited and on boarded to other workspaces, User will receive an invitation email with join link. If a user does not exist in the system, then they will receive a welcome email to setup the account, user can follow the link and on setup the account, once its done the user will be assigned to the new workspace created for the user.
+  - 可以邀请处于工作区活动状态的现有用户并加入其他工作区，用户将收到一封包含加入链接的邀请电子邮件。如果系统中不存在用户，那么他们将收到一封欢迎电子邮件来设置帐户，用户可以点击链接并设置帐户，一旦完成，用户将被分配到为用户创建的新工作区。
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Multi-Workspace sign up](/img/user-lifecycle/invite-link-mw.png)
+    ![ToolJet - 多工作区注册](/img/user-lifecycle/invite-link-mw.png)
 
     </div>
 
-  - Invited user can onboard through SSO login,  without using an invitation link from the workspace [login page](/docs/user-authentication/general-settings#login-url)
+  - 受邀用户可以通过 SSO 登录登录，而无需使用来自工作区 [登录页面](/docs/user-authentication/general-settings#login-url) 的邀请链接
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Single-Workspace accept invite](/img/user-lifecycle/sso-onboard-sw.png)
+    ![ToolJet - 单工作区接受邀请](/img/user-lifecycle/sso-onboard-sw.png)
 
     </div>
 
-  - If `enable sign up` option in enabled in SSO [general settings](/docs/user-authentication/general-settings#enable-signup) for the workspace, user can setup account through SSO login without an invite from the workspace [login page](/docs/user-authentication/general-settings#login-url)
+  - 如果在工作区的 SSO [常规设置](/docs/user-authentication/general-settings#enable-signup) 中启用了 `启用注册` 选项，则用户可以通过 SSO 登录设置帐户，而无需来自工作区的邀请 [登录页面](/docs/user-authentication/general-settings#login-url)
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Single-Workspace sign up using SSO](/img/user-lifecycle/sso-enable-signup-sw.png)
+    ![ToolJet - 使用 SSO 注册单一工作区](/img/user-lifecycle/sso-enable-signup-sw.png)
 
     </div>
 
-### Archive user
-  - User can be archived by workspace admin from using `Manage User` page
+### 存档用户
+  - 工作区管理员可以使用 `管理用户` 页面存档用户
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Single-Workspace Archive user](/img/user-lifecycle/archive-user.png)
+    ![ToolJet - 单工作区存档用户](/img/user-lifecycle/archive-user.png)
 
     </div>
 
-### Unarchive user
-  - User can be unarchive by workspace admin from using `Manage User` page
+### 取消归档用户
+  - 工作区管理员可以使用 `管理用户` 页面取消存档用户
 
     <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - Single-Workspace Unarchive user](/img/user-lifecycle/unarchive-user-mw.png)
+    ![ToolJet - 单工作区取消存档用户](/img/user-lifecycle/unarchive-user-mw.png)
 
     </div>
 
   :::info
-  Archive or unarchive will not affect user login, user can login and use other workspaces where user is in active state.
+  归档或取消归档不会影响用户登录，用户可以登录并使用用户处于活动状态的其他工作区。
   :::
 
-### Switch between workspaces
+### 在工作区之间切换
 
   <div style={{textAlign: 'center'}}>
 
-  ![ToolJet - Single-Workspace sign up using SSO](/img/user-lifecycle/switch.png)
+  ![ToolJet - 使用 SSO 注册单一工作区](/img/user-lifecycle/switch.png)
 
   </div>
 
 
-## User status
+## 用户状态
 
-| Status   | Able to log in   | How to activate                      |
-| -------- | ---------------- | ------------------------------------ |
-| active   | Yes              |                                      |
-| invited  | No (Yes with SSO)| Login through SSO or invitation link |
-| archived | No               | Not able to activate. Invite from `Manage Users` page, status will be changed to invited |
+| 状态 | 可以登录          | 如何激活                                             |
+| ---- | ----------------- | ---------------------------------------------------- |
+| 活跃 | 是                |                                                      |
+| 邀请 | 否（使用 SSO 是） | 通过 SSO 或邀请链接登录                              |
+| 存档 | 否                | 无法激活。从 `管理用户` 页面邀请，状态将更改为已邀请 |
 
-## Multi-Workspace SSO flow
-  - Diagram shows how SSO configurations are chosen in common login page and workspace login page. Instance level SSO is configured in environment variables and Workspace level SSO is configured in respective `Manage SSO` page.
+## 多工作区 SSO 流程
+  - 图表显示了如何在公共登录页面和工作区登录页面中选择 SSO 配置。实例级 SSO 在环境变量中配置，工作区级 SSO 在相应的 `管理 SSO` 页面中配置。
 
   <div style={{textAlign: 'center'}}>
 
-    ![ToolJet - SSO Flow](/img/user-lifecycle/sso-flow.png)
+    ![ToolJet - SSO 流程](/img/user-lifecycle/sso-flow.png)
 
   </div>

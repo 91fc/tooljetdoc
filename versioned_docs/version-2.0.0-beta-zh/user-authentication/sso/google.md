@@ -1,85 +1,85 @@
 ---
 id: google
-title: Google
+title: 谷歌
 ---
 
-# Google Single Sign-on
+# 谷歌单点登录
 
-- Go to the **Workspace Settings** (⚙️) from the left sidebar in the ToolJet dashboard
+- 从 ToolJet 仪表板的左侧栏转到 **工作区设置** (⚙️)
   <div style={{textAlign: 'center'}}>
 
-  <img className="screenshot-full" src="/img/sso/general/workside.png" alt="General Settings: SSO" width="500"/>
+  <img className="screenshot-full" src="/img/sso/general/workside.png" alt="常规设置：SSO" width="500"/>
 
   </div>
 
-- Select `SSO` from sidebar and then select **Google**. Google login will be **disabled** by default,
+- 从边栏中选择 `SSO`，然后选择 **Google**。默认情况下，谷歌登录将被**禁用**，
   <div style={{textAlign: 'center'}}>
 
-  <img className="screenshot-full" src="/img/sso/google/googlessov2.png" alt="General Settings: SSO" />
+  <img className="screenshot-full" src="/img/sso/google/googlessov2.png" alt="常规设置：SSO" />
 
   </div>
 
-- Enable Google. You can see `Redirect URL` generated
+- 启用谷歌。可以看到生成了`Redirect URL`
   <div style={{textAlign: 'center'}}>
 
-  <img className="screenshot-full" src="/img/sso/google/googlesso2v2.png" alt="General Settings: SSO" />
+  <img className="screenshot-full" src="/img/sso/google/googlesso2v2.png" alt="常规设置：SSO" />
 
   </div>
 
-- Go to **[Google cloud console](https://console.cloud.google.com/)** and create a project.
+- 转到 **[Google 云控制台](https://console.cloud.google.com/)** 并创建一个项目。
   <div style={{textAlign: 'center'}}>
 
-  <img className="screenshot-full" src="/img/sso/google/create-project.png" alt="General Settings: SSO" width="500"/>
+  <img className="screenshot-full" src="/img/sso/google/create-project.png" alt="常规设置：SSO" width="500"/>
 
   </div>
 
-- Go to the **[Google cloud console credentials page](https://console.cloud.google.com/apis/credentials)**, and create an OAuth client ID
+- 转到 **[Google 云控制台凭据页面](https://console.cloud.google.com/apis/credentials)**，并创建一个 OAuth 客户端 ID
   <div style={{textAlign: 'center'}}>
 
-  <img className="screenshot-full" src="/img/sso/google/create-oauth.png" alt="General Settings: SSO" width="700"/>
+  <img className="screenshot-full" src="/img/sso/google/create-oauth.png" alt="常规设置：SSO" width="700"/>
 
   </div>
 
-- You'll be asked to select user type in consent screen. To allow only users within your workspace, select 'Internal', otherwise,
-select 'External'.
+- 系统会要求您在同意屏幕中选择用户类型。要仅允许工作区内的用户，请选择 `内部` ，否则，
+选择 `外部` 。
   <div style={{textAlign: 'center'}}>
 
-  <img className="screenshot-full" src="/img/sso/google/oauth-type.png" alt="General Settings: SSO" width="700"/>
+  <img className="screenshot-full" src="/img/sso/google/oauth-type.png" alt="常规设置：SSO" width="700"/>
 
   </div>
 
-- You'll be led to an app registration page where you can set OAuth scopes. Select 'Add or remove scopes' and add the scopes
-userinfo.email and userinfo.profile as shown in the image. This will allow ToolJet to store the email and name of the
-user who is signing in
+- 您将被带到一个应用程序注册页面，您可以在其中设置 OAuth 范围。选择 `添加或删除范围` 并添加范围
+userinfo.email 和 userinfo.profile 如镜像所显示。这将允许 ToolJet 存储电子邮件和姓名
+正在登录的用户
   <div style={{textAlign: 'center'}}>
 
-  <img className="screenshot-full" src="/img/sso/google/scope.png" alt="General Settings: SSO" width="700"/>
+  <img className="screenshot-full" src="/img/sso/google/scope.png" alt="常规设置：SSO" width="700"/>
 
   </div>
 
-- Set the domain on which ToolJet is hosted as an authorized domain
+- 将托管 ToolJet 的域设置为授权域
   <div style={{textAlign: 'center'}}>
 
-  <img className="screenshot-full" src="/img/sso/google/authorized-urls.png" alt="General Settings: SSO" width="700"/>
+  <img className="screenshot-full" src="/img/sso/google/authorized-urls.png" alt="常规设置：SSO" width="700"/>
 
   </div>
 
-- Set the `Redirect URL` generated at manage SSO `Google` page under Authorised redirect URIs
+- 在授权重定向 URI 下设置在管理 SSO `Google` 页面生成的`重定向 URL`
   <div style={{textAlign: 'center'}}>
 
-  <img className="screenshot-full" src="/img/sso/google/authorized-redirect-urls.png" alt="General Settings: SSO" width="700"/>
+  <img className="screenshot-full" src="/img/sso/google/authorized-redirect-urls.png" alt="常规设置：SSO" width="700"/>
 
   </div>
 
-Lastly, set the `client id` in google manage SSO page. This value will be available from your [Google cloud console credentials page](https://console.cloud.google.com/apis/credentials)
+最后，在谷歌管理 SSO 页面中设置 `client id`。该值可从您的 [Google 云控制台凭据页面](https://console.cloud.google.com/apis/credentials) 获得
 
-The Google sign-in button will now be available in your ToolJet login screen, if you are not enabled Multi-Workspace.
+如果您未启用多工作区，Google 登录按钮现在将在您的 ToolJet 登录屏幕中可用。
 
-## Multi-Workspace
-If you have enabled Multi-Workspace you can configure Google SSO as mentioned above, for setting default SSO for the instance use environment variable.
+## 多工作区
+如果您启用了 Multi-Workspace，则可以如上所述配置 Google SSO，以便为实例使用环境变量设置默认 SSO。
 
-| variable                              | description                                                   |
-| ------------------------------------- | -----------------------------------------------------------   |
-| SSO_GOOGLE_OAUTH2_CLIENT_ID           | Google OAuth client id |
+| 变量                        | 说明                 |
+| --------------------------- | -------------------- |
+| SSO_GOOGLE_OAUTH2_CLIENT_ID | 谷歌 OAuth 客户端 ID |
 
-Redirect URL should be `<host>/sso/google`
+重定向 URL 应该是 `<host>/sso/google`
